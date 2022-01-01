@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pocket Store - Shop Owner App</string>
+    <string name="full_name">Shop Owner\'s Name</string>
+    <string name="address">Address</string>
+    <string name="btn_continue">Continue</string>
+    <string-array name="shoptype_array">
+        <item>Conventional</item>
+        <item>Bakery</item>
+        <item>Stationary</item>
+    </string-array>
+    <string name="title_activity_pending_orders_maps">Map</string>
+</resources>

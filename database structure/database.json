@@ -1,0 +1,295 @@
+{
+
+    "customers":{
+
+        "uniqueCustomerId":{
+
+            "uid": "",
+
+            "username": "",
+        
+            "customerPhoneNumber": "",
+
+            "homeAddress": "",
+            "homeLatitude": 23.80,
+            "homeLongitude": 91.25,
+
+            "status": false,
+
+            "shopsNearby":{
+
+                "uniqueShopId": {
+                    
+                    "shopName": "",
+
+                    "shopType": "",
+
+                    "shopPhoneNumber": "",
+
+                    "shopAddress": "",
+                    "shopLatitude": 23.78,
+                    "shopLongitude": 91.23,
+
+                    "status": "",
+
+                    "perimeterRadius": 500                    
+                    
+                }
+
+            },
+
+            "pendingOrders": {
+
+                "uniqueOrderPushId": {
+        
+                        
+                        "shopName": "",
+        
+                        "shopType": "",
+        
+                        "shopPhoneNumber": "",
+        
+                        "shopAddress": "",
+                        "shopLatitude": 23.78,
+                        "shopLongitude": 91.23,
+                
+        
+                    "productList": {
+                        
+                        "uniqueProductPushId":{
+                            "name": "",
+                            "quantity": "",
+                            "totalPrice": 1250
+                        }
+                            
+                    },
+
+                    "totalPrice": 2500,
+                        
+                    "orderPlacementTime": "",
+        
+                    "customerConfirmation": false,
+        
+                    "shopOwnerConfirmation": false
+
+                }
+
+            }
+
+        }
+
+    },
+
+
+
+    "shops": {
+
+        "uniqueShopId": {
+            
+            "uid": "",
+
+            "shopPhoneNumber": "",
+
+            "shopownerName":"",
+
+            "shopName": "",
+
+            "shopType": "",
+
+            "shopAddress": "",
+            "shopLatitude": 23.78,
+            "shopLongitude": 91.23,
+
+            "perimeterRadius": 500, 
+
+            "status": "",
+            
+            "products":{
+
+                "uniqueProductPushId":{
+                    "name": "",
+                    "quantity": "",
+                    "pricePerUnit": 100
+                }
+
+            },
+
+            "customerQueue": {
+
+                "uniqueCustomerId":{
+
+                    "username": "",
+        
+                    "customerPhoneNumber": "",
+
+                    "homeAddress": "",
+                    "customerLatitude": 23.78,
+                    "customerLongitude": 91.23
+
+                }
+
+            },
+
+            "chatFeed": {
+
+                "uniqueMessagePushId": {
+
+                    "authorUsername": "",
+
+                    "content": "",
+
+                    "receipientUsername": "",
+
+                    "time": ""
+                }
+
+            },
+            
+            "connectedToCustomer": {
+                
+                "uniqueCustomerId":"",
+
+                    "username": "",
+        
+                    "customerPhoneNumber": "",
+
+                    "homeAddress": "",
+                    "customerLatitude": 23.78,
+                    "customerLongitude": 91.23
+
+            
+            },
+
+            "pendingOrders":{
+
+                "uniqueOrderId": {
+                    
+                        "customerUsername": "",
+            
+                        "customerPhoneNumber": "",
+        
+                        "homeAddress": "",
+                        "latitude": 23.78,
+                        "longitude": 91.23,
+        
+                    "productList": {
+                        
+                        "uniqueProductPushId":{
+                            "name": "",
+                            "quantity": "",
+                            "totalPrice": 1250
+                        }
+                            
+                    },
+
+                    "totalPrice": 2500,
+        
+                    "distanceFromShop": 20,
+                        
+                    "orderPlacementTime": "",
+        
+                    "customerConfirmation": false,
+        
+                    "shopOwnerConfirmation": false
+
+                }
+
+            },
+
+            "completeOrdersMetaData":{
+
+                "uniqueOrderId": {
+        
+                    "productList": {
+                        
+                        "uniqueProductPushId":{
+                            "name": "",
+                            "quantity": "",
+                            "totalPrice": 1250
+                        }
+                            
+                    },
+        
+                    "distanceFromShop": 20,
+                        
+                    "orderPlacementTime": "",
+
+                    "orderCompletionTime": ""
+
+                }
+
+            },
+
+
+            "shopReview": {
+
+                "uniqueReviewId":{
+
+                    "reviewId":"",
+
+                    "shopName":"",
+
+                    "author":"",
+                    
+                    "reviewBody": "",
+
+                    "rating": "bad"
+
+                }
+
+            }
+
+        }
+
+    },
+
+
+    "connectedCustomerShopInteractions": {
+
+        "connectedCustomerShopInteractionsId":{
+
+                "customerUsername": "",
+    
+                "customerPhoneNumber": "",
+
+                "homeAddress": "",
+                "customerHomeLatitude": 23.78,
+                "customerHomeLongitude": 91.23,
+
+
+                "shopName": "",
+
+                "shopType": "",
+
+                "shopPhoneNumber": "",
+
+                "shopAddress": "",
+                "shopLatitude": 23.78,
+                "shopLongitude": 91.23,
+
+            "productList": {
+                
+                "uniqueProductPushId":{
+                    "name": "",
+                    "quantity": "",
+                    "totalPrice": 1250
+                }
+                
+            },
+
+            "customerConfirmed": false,
+
+            "shopConfirmed": false,
+
+            "totalPrice": 1200,
+
+            "callDuration": 5,
+                    
+            "customerReadyToConnect": false
+
+        }
+
+    }
+
+
+}

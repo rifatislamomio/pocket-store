@@ -1,0 +1,3 @@
+settings page.
+
+with options -> change store status (busy, open, closed) & allow/disallow notification, permissions etc.

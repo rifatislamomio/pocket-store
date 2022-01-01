@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="824" viewBox="0 0 414 824">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.229" cy="0" r="1.137" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7be495"/>
+      <stop offset="1" stop-color="#329d9c"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.058" r="1.35" xlink:href="#radial-gradient"/>
+    <filter id="Colour_BG" x="6" y="626" width="432" height="175" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#329d9c" flood-opacity="0.212"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Colour_BG-2" x="6" y="626" width="432" height="175" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur-2"/>
+      <feFlood flood-color="#329d9c" flood-opacity="0.212"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-getStarted">
+      <rect width="414" height="824"/>
+    </clipPath>
+  </defs>
+  <g id="getStarted" clip-path="url(#clip-getStarted)">
+    <rect width="414" height="824" fill="#fff"/>
+    <g id="Main_App_Icon" data-name="Main App Icon" transform="translate(171 59)">
+      <path id="Plus-1" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" fill="url(#radial-gradient)"/>
+      <path id="Plus-2" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" transform="translate(38.755)" fill="url(#radial-gradient)"/>
+    </g>
+    <text id="This_is_Health_UX_Ki" data-name="This is Health UX Ki" transform="translate(207.5 170)" fill="#205072" font-size="21" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-66.37" y="0">Welcome to</tspan><tspan x="-46.305" y="28">SHOPPY</tspan></text>
+    <text id="A_health_vertical_UI" data-name="A health vertical UI" transform="translate(207 232)" fill="#68b2a0" font-size="13" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-96.252" y="0">Daily needs at your door step</tspan></text>
+    <text id="Already_have_an_acco" data-name="Already have an acco" transform="translate(207 755)" fill="rgba(104,178,160,0.55)" font-size="13" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-109.518" y="0">Already have an account?</tspan><tspan y="0" fill="#68b2a0"> </tspan><tspan y="0" fill="#205072">Sign In</tspan></text>
+    <g id="Elements_Pagination_Dots" data-name="Elements/ Pagination Dots" transform="translate(161 647)">
+      <g id="Atoms_Pagination_Numbers_Active" data-name="Atoms/ Pagination Numbers/ Active" transform="translate(21)">
+        <circle id="Dot_1" data-name="Dot 1" cx="4" cy="4" r="4" fill="#56c596"/>
+      </g>
+      <g id="Atoms_Pagination_Numbers_Default" data-name="Atoms/ Pagination Numbers/ Default">
+        <circle id="Dot_2" data-name="Dot 2" cx="4" cy="4" r="4" fill="rgba(224,236,222,0.34)"/>
+      </g>
+      <g id="Atoms_Pagination_Numbers_Default_Copy" data-name="Atoms/ Pagination Numbers/ Default Copy" transform="translate(42)">
+        <circle id="Dot_2-2" data-name="Dot 2" cx="4" cy="4" r="4" fill="rgba(224,236,222,0.34)"/>
+      </g>
+      <g id="Atoms_Pagination_Numbers_Default_Copy_2" data-name="Atoms/ Pagination Numbers/ Default Copy 2" transform="translate(63)">
+        <circle id="Dot_2-3" data-name="Dot 2" cx="4" cy="4" r="4" fill="rgba(224,236,222,0.34)"/>
+      </g>
+      <g id="Atoms_Pagination_Numbers_Default_Copy_3" data-name="Atoms/ Pagination Numbers/ Default Copy 3" transform="translate(84)">
+        <circle id="Dot_2-4" data-name="Dot 2" cx="4" cy="4" r="4" fill="rgba(224,236,222,0.34)"/>
+      </g>
+    </g>
+    <g id="Elements_Buttons_Gradient_Primary" data-name="Elements/ Buttons/ Gradient/ Primary" transform="translate(51 671)">
+      <g transform="matrix(1, 0, 0, 1, -51, -671)" filter="url(#Colour_BG)">
+        <rect id="Colour_BG-3" data-name="Colour BG" width="312" height="55" rx="21" transform="translate(51 671)" fill="url(#radial-gradient-3)"/>
+      </g>
+      <text id="Button" transform="translate(60.081 20)" fill="#fff" font-size="13" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="49.379" y="13">GET STARTED</tspan></text>
+    </g>
+    <g id="Main_App_Icon-2" data-name="Main App Icon" transform="translate(171 59)">
+      <path id="Plus-1-2" data-name="Plus-1" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" fill="url(#radial-gradient)"/>
+      <path id="Plus-2-2" data-name="Plus-2" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" transform="translate(38.755)" fill="url(#radial-gradient)"/>
+    </g>
+    <text id="This_is_Health_UX_Ki-2" data-name="This is Health UX Ki" transform="translate(207.5 170)" fill="#205072" font-size="21" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-66.37" y="0">Welcome to</tspan><tspan x="-46.305" y="28">SHOPPY</tspan></text>
+    <text id="A_health_vertical_UI-2" data-name="A health vertical UI" transform="translate(207 232)" fill="#68b2a0" font-size="13" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-96.252" y="0">Daily needs at your door step</tspan></text>
+    <text id="Already_have_an_acco-2" data-name="Already have an acco" transform="translate(207 755)" fill="rgba(104,178,160,0.55)" font-size="13" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-109.518" y="0">Already have an account?</tspan><tspan y="0" fill="#68b2a0"> </tspan><tspan y="0" fill="#205072">Sign In</tspan></text>
+    <g id="Elements_Buttons_Gradient_Primary-2" data-name="Elements/ Buttons/ Gradient/ Primary" transform="translate(51 671)">
+      <g transform="matrix(1, 0, 0, 1, -51, -671)" filter="url(#Colour_BG-2)">
+        <rect id="Colour_BG-4" data-name="Colour BG" width="312" height="55" rx="21" transform="translate(51 671)" fill="url(#radial-gradient-3)"/>
+      </g>
+      <text id="Button-2" data-name="Button" transform="translate(60.081 20)" fill="#fff" font-size="13" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="49.379" y="13">GET STARTED</tspan></text>
+    </g>
+  </g>
+</svg>

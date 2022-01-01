@@ -1,0 +1,1 @@
+show list of items listed by the shop owner for this shop.

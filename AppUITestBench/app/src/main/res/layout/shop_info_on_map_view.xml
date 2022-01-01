@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:orientation="horizontal"
+        android:background="@drawable/hintboxgradient">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/et_address"
+            android:text="Sugandha Store"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeui"
+            android:importantForAutofill="no"
+            android:textColor="#454545"
+            android:textSize="24sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            android:paddingStart="15dp"
+
+           />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/segoeui"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:importantForAutofill="no"
+            android:layout_marginStart="20dp"
+            android:text="Open"
+            android:textAlignment="center"
+            android:textColor="@color/startColor"
+            android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_weight="1"
+                android:drawablePadding="08dp"
+                android:fontFamily="@font/segoeui"
+                android:importantForAutofill="no"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="+880 1715-092439"
+                android:textAlignment="center"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="135dp"
+                android:textAlignment="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/verification_page_button"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Enter"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+

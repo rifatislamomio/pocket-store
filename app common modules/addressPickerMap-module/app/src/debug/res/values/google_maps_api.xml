@@ -1,0 +1,15 @@
+<resources>
+    <!--
+    TODO: Restrict API key.
+
+    Package name:
+    com.example.addresspickermap_module
+
+    SHA-1 certificate fingerprint:
+    B1:DD:3B:DB:02:A5:3E:80:C4:C4:94:C3:BF:3A:B7:B3:32:B2:A9:98
+
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBJa8u1ucttPOQD_HfJcQgsfmkzN6FCUHU
+    </string>
+</resources>

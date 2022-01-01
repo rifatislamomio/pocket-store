@@ -1,0 +1,4 @@
+user info form page after phone number verification is done.
+
+form contains ->
+(1) username, (2) shop name, (3) shop type - bakery, conventional, stationary, (4) address, (5) password

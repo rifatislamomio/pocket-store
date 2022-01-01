@@ -1,0 +1,3 @@
+the home page shown to user after successful login/signup or already logged in.
+
+this page will contain a map showing all the stores in map.

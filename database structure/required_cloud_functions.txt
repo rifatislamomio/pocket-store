@@ -1,0 +1,43 @@
+Shopowner App:
+
+1. whenever a new shop signs up with an address ->
+ 
+    (i) Check the "customers" node to find nearby customers.
+    (ii) Add the shop's id in found customer's "customers/uniqueCustomerId/nearbyShops" node.
+
+
+
+Customer App:
+
+1. whenever a new customer signs up with an address or changes home address ->
+
+    (i) If exists, clear customer app's "customers/uniqueCustomerId/nearbyShops" node's entries.
+    (ii) Search the "shops" node and create entries for "customers/uniqueCustomerId/nearbyShops".
+
+2. whenever customer enters a shop ->
+
+    (i) Make entry in the "shops/uniqueShopId/customerQueue" node.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+long way down the road ;v
+
+orders can be placed only from Customer app! when an order is placed in "orders" node,
+firebase functions should trigger and make an entry in "shops/shopId/pendingOrders"

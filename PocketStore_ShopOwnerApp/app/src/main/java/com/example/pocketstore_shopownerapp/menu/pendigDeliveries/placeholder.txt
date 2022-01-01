@@ -1,0 +1,3 @@
+show a list of deliveries that are pending/not confirmed by customer.
+
+Deliveries can be cancelled from here.

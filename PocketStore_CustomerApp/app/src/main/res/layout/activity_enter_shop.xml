@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".enterShop.EnterShopActivity">
+    <include layout="@layout/toolbar_menu"/>
+    <TextView
+        android:id="@+id/shop_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop Name"
+        android:textAllCaps="true"
+        android:fontFamily="@font/segoeui"
+        android:textSize="28sp"
+        android:drawableStart="@drawable/ic_shop"
+        android:textColor="#1B1B1B"
+        android:textAlignment="center"
+        android:drawablePadding="5dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/tab_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:fontFamily="@font/segoeui"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:background="#00FFFFFF"
+            android:textColor="#00c569"/>
+        <Button
+            android:id="@+id/tab_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Queue"
+            android:fontFamily="@font/segoeui"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="#00c569"
+            android:textAllCaps="false"
+            android:background="@drawable/selected_tab"/>
+        <Button
+            android:id="@+id/tab_browse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browse"
+            android:fontFamily="@font/segoeui"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#00c569"
+            android:background="#00FFFFFF"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".CustomerQueueFragment"
+            android:id="@+id/cqueueframelayout"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@id/enterQueueBtn">
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/enterQueueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/verification_page_button"
+            android:fontFamily="@font/montserrat_bold"
+            android:onClick="enterQueueClicked"
+            android:padding="20dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:text="Enter Customer Queue"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+</LinearLayout>

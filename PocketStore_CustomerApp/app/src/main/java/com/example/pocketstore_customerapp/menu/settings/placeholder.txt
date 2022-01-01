@@ -1,0 +1,1 @@
+app settings. turn off notification, disallow location permission etc.

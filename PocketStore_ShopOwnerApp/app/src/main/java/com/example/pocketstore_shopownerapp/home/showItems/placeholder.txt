@@ -1,0 +1,5 @@
+show list of items enlisted by the shop-owner.
+
+items are deleted/edited from here as well.
+
+input item option opens addNewItem page.

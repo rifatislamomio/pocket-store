@@ -1,0 +1,5 @@
+[DONE USING 'addressPicker-module.aar']
+
+this is accessed from setupProfile form's address option.
+
+a map view from where user will select his/her home address.

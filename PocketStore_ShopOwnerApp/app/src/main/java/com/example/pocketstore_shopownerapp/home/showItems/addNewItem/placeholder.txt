@@ -1,0 +1,5 @@
+this page is accessed through showitems page's "add item" option.
+
+take item entry (name, quantity, price) by product barcode scanning or by text input.
+
+there will probably be more than one activity here (since barcode scanning is done using camera).

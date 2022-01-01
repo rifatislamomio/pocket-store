@@ -1,0 +1,1 @@
+edit profile information -> (1) store name, (2) address, (3) password, (phone number?)

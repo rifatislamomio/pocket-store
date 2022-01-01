@@ -1,0 +1,106 @@
+<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="shortcut icon" href="/images/icons/favicon.ico">
+	
+		<meta charset="UTF-8">
+		
+		<title>Review</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="/css/linearicons.css">
+			<link rel="stylesheet" href="/css/font-awesome.min.css">
+			<link rel="stylesheet" href="/css/bootstrap.css">
+			<link rel="stylesheet" href="/css/magnific-popup.css">
+			<link rel="stylesheet" href="/css/nice-select.css">							
+			<link rel="stylesheet" href="/css/owl.carousel.css">				
+			<link rel="stylesheet" href="/css/review.css">
+		</head>
+		<body>	
+		  
+
+			<!-- Start testimonial Area -->
+		    <section class="testimonial-area section-gap">
+		        <div class="container">
+		            <div class=" justify-content-center">
+		                <div class="menu-content pb-70 col-lg-8">
+		                    <div class="title text-center">
+								<div class="logout">  
+                                    
+                                    <form action="/logout" method="post">
+                                    <button class="logoutButton" type="submit" id="logout_btn">
+                                        Logout
+                                    </button>
+                                    </form>
+								</div>
+								<h1 style="color:  #2e8f67;"class="mb-10">Customer Review</h1> <br> <br> <br>
+								
+								<div><h3></h3>
+
+									<form action="/postReview" method="POST" 
+                                    name="reviewPostForm" onsubmit="return validateReview()">
+									<label for="w3review">Give a review</label>
+									<textarea id="rb" 
+                                    name="reviewBody" rows="5" cols="50">
+									
+									  </textarea>
+									  <br>
+									  <div class="radiobtn">
+									  <input type="radio" id="good" name="rating" value="Good"  >
+									  <label style="color: #2e8f67;" for="good">Good</label>
+  										<input type="radio" id="Moderate" name="rating" value="Moderate">
+  										<label style="color: #fddb3a;" for="female">Moderate</label>
+ 										<input type="radio" id="bad" name="rating" value="Bad">
+										 <label style="color: red;" for="other">Bad</label>
+										</div>
+									  
+									  <button type="submit" class="post">
+										  Post
+									  </button>
+									 
+									</form>
+                                    
+                                </div>
+		                    
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="active-testimonial">
+
+                            {{#each reviews}}
+
+                                <div class="single-testimonial item d-flex flex-row">
+		                            <div class="desc">
+									    <p style="color: red;">{{this.rating}}</p>
+									    <p>
+		                                {{this.reviewBody}}
+		                                </p>
+		                                <h4>{{this.author}}</h4>
+		                            </div>
+		                        </div>
+
+                            {{/each}}
+
+		            </div>
+		        </div>
+		    </section>
+		    <!-- End testimonial Area -->
+		
+			
+
+			<script src="/js/jquery-2.2.4.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>			
+			<script src="/js/superfish.min.js"></script>	
+			<script src="/js/jquery.magnific-popup.min.js"></script>	
+			<script src="/js/simple-skillbar.js"></script>							
+			<script src="/js/owl.carousel.min.js"></script>							
+			<script src="/js/review.js"></script>	
+
+            <script src="/js/reviewForm.js"></script>
+
+		</body>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".menu.scanner.ScannerActivity">
+    <include layout="@layout/toolbar_menu" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Scan QR Code to Login into the Web App"
+            android:textAlignment="center"
+            android:textColor="#44E497"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Scan"
+            android:layout_centerInParent="true"
+            android:text="Scan"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="45dp"
+            android:textSize="19sp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/verification_page_button"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

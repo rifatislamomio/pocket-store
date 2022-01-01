@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFFFFF">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:background="#00FFFFFF"
+            android:layout_marginEnd="5dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/menu_btn">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="7.5dp"
+                android:paddingBottom="7.5dp"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:hint="Search a shop"
+                android:paddingStart="15dp"
+                android:textSize="15sp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/location_search_textbox"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/clear_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_clear_24"
+                android:background="#00FFFFFF"
+                android:layout_marginEnd="12dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

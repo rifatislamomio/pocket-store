@@ -1,0 +1,54 @@
+{
+
+    "customers" : {
+
+        "1234" : {
+
+            "username": "demislam",
+
+            "customerLatitude": 10,
+            "customerLongitude": 12
+        }
+
+    },
+
+    "shops": {
+
+        "2345": {
+
+            "shopName": "shop 1",
+
+            "shopType": "conventional",
+
+            "shopPhoneNumber": "+123",
+            
+            "shopAddress": "China",
+            "shopLatitude": -1,
+            "shopLongitude": 12,
+            
+            "perimeterRadius": 150,
+
+            "status": "inactive"
+
+        },
+
+        "5678" : {
+            
+            "shopName": "shop 2",
+            
+            "shopType": "stationary",
+
+            "shopPhoneNumber": "+456",
+            
+            "shopAddress": "India",
+            "shopLatitude": 54,
+            "shopLongitude": 43,
+            
+            "perimeterRadius": 50,
+
+            "status": "inactive"
+        }
+
+    }
+
+}

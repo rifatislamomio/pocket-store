@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="397dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/hintboxgradient"
+            android:text="Name"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/segoeui"
+            android:paddingLeft="10dp"/>
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hintboxgradient"
+            android:text="30kg"
+            android:fontFamily="@font/segoeui"
+            android:textSize="20dp"
+            android:paddingLeft="35dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="280dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hintboxgradient"
+            android:text="100"
+            android:textSize="20dp"
+            android:textColor="@color/startColor"
+            android:fontFamily="@font/segoeui"
+            android:paddingLeft="10dp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+

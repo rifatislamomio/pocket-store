@@ -1,0 +1,25 @@
+<resources>
+    <!--
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B1:DD:3B:DB:02:A5:3E:80:C4:C4:94:C3:BF:3A:B7:B3:32:B2:A9:98%3Bcom.example.pocketstore_shopownerapp.menu.pendigDeliveries
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.pocketstore_shopownerapp.menu.pendigDeliveries
+
+    SHA-1 certificate fingerprint:
+    B1:DD:3B:DB:02:A5:3E:80:C4:C4:94:C3:BF:3A:B7:B3:32:B2:A9:98
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBJa8u1ucttPOQD_HfJcQgsfmkzN6FCUHU
+    </string>
+</resources>

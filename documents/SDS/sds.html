@@ -1,0 +1,4812 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Software Design Specification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  ul.nav-pills {
+      position:fixed;
+  }
+  div.col-8 div {
+      height: 200px;
+  }
+  .navbar{
+  color: black;
+}
+.navbar .col-sm-2 .col-4 .bg-dark{
+  color: black;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+caption {
+  color: black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .sidebar-color { 
+    background-color:#f7f7f7; 
+  } 
+</style>
+</head>
+<body style="background-color:#fafafa; color:black" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <!-- Brand/logo -->
+ 
+  <img style="width:15%"></img>
+  <header class="page header text-white"><h1 style="padding-left:10px;
+     color: #00C569;">Software Design Specification </h1></header>
+
+  <!-- Links -->
+
+
+</ul>
+</nav>
+
+<div class="wrapper">
+  <div class="sidebar">
+
+        
+          
+          <div class="container-fluid">
+            <div class="row">
+              <nav class="col-sm-2 col-4 sidebar-color">
+                <ul class="nav nav-pills flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link " href="#section0.0">Cover Page</a>
+                  </li>
+                
+          
+                  <li class="nav-item">
+                    <a class="nav-link" href="#section1">Introduction</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#sec2.1">Document Convention</a>
+                  </li>
+          
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Description of<br>Design Components</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec3.1">Server Side</a>
+                      <a class="dropdown-item" href="#sec3.2">Client Side</a>
+                      <a class="dropdown-item" href="#sec3.3">Third Party Services</a>
+                    </div>
+                  </li>
+          
+          
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#sec4.1">Component Design</a>
+                  </li>
+
+          
+                   <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Class diagrams</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec5.1">Detailed Class Diagram(s)</a>
+                      <a class="dropdown-item" href="#sec5.2">Detailed Class Description(s)</a>
+                    </div>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Database Design</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec6.1">ER Diagram</a>
+                      <a class="dropdown-item" href="#sec6.2">Details About Tables</a>
+                    </div>
+                  </li>
+
+
+                  <li class="nav-item">
+                <a class="nav-link " href="#section7">Implementation plan</a>
+                  </li>
+        
+                </ul>
+    </nav>
+
+    <div style="padding-top:30px; padding-left:30px; padding-right:150px;" class="col-sm-10 col-8">
+
+
+      <h2 style="color:#00C569;">0. Cover Page</h2>
+      <center>
+    
+      <p>
+      <h3 id="section0.0">Software Design Specification</h3>
+      <br>
+      <h5>for</h5>
+      <br>
+        <h5>"Pocket Store"</h5>
+        <br>
+      
+        <h5> Version 1.0.1</h5>
+        <br>
+      
+          <table>
+            <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Prepared By</b>
+            </caption>
+      
+            <tr>
+              <td><b>Name</b></td>
+              <td><b>ID</b></td>
+            </tr>
+            <tr>
+              <td>Mohammed Safat Hosssain</td>
+              <td>1731263042</td>
+            </tr>
+            
+            <tr>
+              <td>Ferdous Zeaul Islam</td>
+              <td>1731136042</td>
+            
+            </tr>
+            
+            <tr>
+              <td>Rifat Islam</td>
+              <td>1731536042</td>
+            </tr>
+            
+          </table>
+          <br>
+          <h5>CSE327 Section-2</h5><br>
+          <h5>Group: Procrastinators</h5><br>
+          <h5>Group Number: 10</h5>
+          <br>
+          <h5>Date: August 28, 2020</h5> </p>
+          </center>
+          <br><br><br><br>
+	
+	
+	
+  <!-- Section-1 -->
+
+	
+        <h2 style="color:#00C569;" id="section1">1. Introduction</h2>
+        
+        <p>The project is a platform between at home customers and local small businesses, 
+          where they can interact without the need to go  outside. 
+          The interaction will primarily happen using the customer and shop-owner version of the android app.
+          There is also going to be a website to post and/or view reviews on shops registered through the app.
+        </p>
+
+
+
+        <!-- Section-2 -->
+
+        <br><br><br>
+        <h2 style="color:#00C569;" id="sec2.1">2. Document Convention</h2>
+    
+        <p>The document is written following the IEEE template for SDS (Software
+          Design Specification). The headers, sub-headers, paragraphs are written using HTML tags- 'h2', 'h3', 'h4' and 'p'
+          respectively.
+          </p>
+        
+        
+        
+      <br><br>      
+
+
+	<!-- Section-3 -->
+
+
+ <h2 style="color:#00C569;">3. Description of Design Components</h2>
+        <h4 id="sec3.1">3.1 Server Side</h4>
+        <p><b>Database:</b> Firebase real time database will be used throughout this project. All kinds of user data and application data
+        will be stored on the real-time database. Data will be stored as JSON and synchronized in realtime to every connected
+        client. The same type of database will be used for the real-time order generation systems for customer-shopowner conversations.
+        
+        <p><b>Cloud Functions:</b> Cloud functions will handle the database events triggered by the mobile applications. For the
+          web
+          application, it will handle the request and response accordingly to the responses. The whole thing will run in a
+          managed
+          environment by the server.</p>
+
+        <h4 id="sec3.2">3.2 Client Side</h4>
+        <p>
+          <b>Mobile Application:</b> The customer application will allow users to place orders by exploring nearby shops. The shop-owner
+          application will allow the shop-owner to handle and deliver those orders.
+        </p>
+
+        <p><b>Application:</b>  Web application will run any HTML5 supported web browser on any device. Web application will be for
+        customers review only.</p>
+
+        <h4 id="sec3.3">3.3 Third Party Services</h4>
+        <p>Several APIs will be used as third party services. </p>
+        <p>
+         <b>Firebase Auth:</b> Firebase authentication will be used in our all three applications to ensure a secure authentication
+          system on mobile and web applications. Phone number verification systems will be implemented with this API and the
+          verified users will be able to login with their email and password.
+        </p>
+        
+        <p><b>Sinch SDK:</b> Sinch will be used for real-time VoIP calling service between the customer and the shop-owner. Sinch is the
+        backbone of our application’s built-in app-to-app calling feature.</p>
+
+        <p><b>Google Barcode Scanning:</b> Barcode Scanning API will be used in our built-in barcode scanner for shop-owner application. It will decode the
+        barcode of a product and the product details will be listed on the shop-owners product list.</p>
+        
+        <br><br><br>
+        
+
+
+    <!-- Section-4 -->
+
+
+<h2  style="color:#00C569;">4. High-Level Component Design</h2>
+<p> The diagram below describes the dependency of various components.</p>
+
+
+  <img src="misc/design components dependency.svg" height="700" width="800" class="center">
+
+  <br> <br> <br>
+
+
+        <h2 style="color:#00C569;">5. Class diagrams</h2>
+        <br>
+        <h4 id="sec5.1">5.1 Detailed Class Diagram(s)</h4>
+        
+      <br>
+
+        <h5><u>Customer App</u>-
+          <a href="https://app.lucidchart.com/documents/view/be9cc483-169f-426f-8b0b-03855f4ac5e1">
+            link to work
+            </a>
+        </h5>
+        <br>
+        <img src="customer app uml class diagram/part-1 Customer App UMLClassDiagram.svg" 
+        height="1350" width="800" class="center">
+        <img src="customer app uml class diagram/part-2 Customer App UMLClassDiagram.svg" 
+        height="500" width="500" class="center">
+        <img src="customer app uml class diagram/part-3 Customer App UMLClassDiagram.svg" 
+        height="1400" width="800" class="center">
+        <img src="customer app uml class diagram/part-4 Customer App UMLClassDiagram.svg" 
+        height="1400" width="800" class="center">
+
+        <br><br>
+
+        <h5><u>ShopOwner App</u>-<a href="https://app.lucidchart.com/documents/view/81d3de6d-6d12-4f24-9281-b05452d464f1">
+          link to work
+          </a>
+        </h5>
+        <br>
+        <p>Classes fo phone number verification, setup profile and login pages are the same as customer app their diagram is not repeated here. The only different model class "shopUser" is given in the descriptions.</p>
+        <img src="shopowner app uml class diagram/part-2 Shop Owner App UML Class Diagram.svg" 
+        height="1200" width="800" class="center">
+        <img src="shopowner app uml class diagram/part-3 Shop Owner App UML Class Diagram.svg" 
+        height="1200" width="800" class="center">
+
+
+        <br><br>
+        
+        <h5><u>Web App</u>-<a href="https://app.lucidchart.com/invitations/accept/11bef9cf-c8ef-4314-8998-ef7a4d8ef1d0">
+            link to work
+          </a>
+        </h5>
+        <br>
+        <img src="webappUMLDiagram/WebAppUMLDiagram.svg" height="1200" width="800" class="center">
+        <br><br><br>
+        
+        <h4 id="sec5.2">5.2 Detailed Class Description(s)</h4>
+        
+        
+        <h2>Customer App Classes:</h2>
+
+<!--section heading-->
+<h3> 1.<u>Phone Number Verification Pages</u>: </h3> <p>The classes used for phone number verification feature are given below,</p>
+
+
+
+    <!--class start-->
+    <p>1.1 <u>Class Name</u> : EnterPhoneNumberActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Take phone number input from user.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            
+            
+            <ul>
+
+                <li>onVerifyingPhoneNumberUI(), </li>
+                <li> onPhoneNumberVerificationDoneUI(),</li>
+                <li> onPhoneNumberVerificationFailedUI(String: errorMessage)</li>
+
+            </ul>
+            
+        
+        
+            <p> <u>Purpose</u>These methods define UI responses and are invoked by the “EnterPhoneNumberPresenter”. </p> 
+
+        </ul>
+        
+    
+
+
+    <br>
+    <!--class end-->
+
+   
+
+<!--class start-->
+<p>1.2 <u>Class Name</u> : EnterPhoneNumberPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle business logic and facilitate phone number verification for the view.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+         
+         
+     
+     </li>
+     <!-- ekta method end-->
+
+     <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>EnterPhoneNumberView, reference to the view (activity)</li>
+             
+        </ol>
+
+     <!-- arekta method start -->
+     <li> 
+         <p> <u>Name</u>-verifyPhoneNumber(String: phoneNumber) </p>        
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: phoneNumber, the phone number string passed from user input </li>
+             
+            
+             
+
+         </ol>
+     
+         <p> <u>Purpose</u>Start the phone verification process using phone number verification service </p> 
+     
+     </li>
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+    <!--class start-->
+    <p>1.3 <u>Class Name</u> : VerificationCodeActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Take verification code input from user.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+         
+            
+            
+            <ul>
+
+                <li>onVerifyingPhoneNumberUI(), </li>
+                <li>  onCodeVerificationDoneUI(),</li>
+                <li>onCodeVerificationFailedUI(String: errorMessage)</li>
+
+            </ul>
+            
+        
+        
+            <p> <u>Purpose</u>These methods define UI responses and are invoked by the “VerificationCodePresenter”. </p> 
+
+        </ul>
+        
+    
+
+
+    <br>
+    <!--class end-->
+
+<!--class start-->
+<p>1.4 <u>Class Name</u> :VerificationCodePresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: : Handle business logic, facilitate verification code checking and user authentication service for the view.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>VerificationCodeView, reference to the view (activity)</li>
+             
+        </ol>
+
+        <br>
+        
+
+        <li> <u> Name:</u> signInWithVerificationCode(String: phoneNumber)</li> 
+         
+         
+     
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: phoneNumber, the phone number string passed from user input </li>
+             
+            
+             
+
+         </ol>
+     
+         <p> <u>Purpose</u>Start the phone code checking service and sign in user if successful.</p> 
+     
+     
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+<!--section heading-->
+<h3>2.<u>Setup Profile Pages</u>: </h3> <p>The classes used for setting up a profile feature after phone number verification are given below,</p>
+
+
+
+    <!--class start-->
+    <p>2.1 <u>Class Name</u> : SetupProfileActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Take user information from input in a form from user in the last step of sign up.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            
+            
+            <ul>
+
+                <li>onSettingUpProfileUI(), </li>
+                <li> onSetupProfileSuccessfulUI(),</li>
+                <li>onPhoneNumberVerificationFailedUI(String: errorMessage)onSetupProfileFailedUI(String: errorMessage)	</li>
+
+            </ul>
+            
+        
+        
+            <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “SetupProfilePresenter”. </p> 
+
+        </ul>
+        
+    
+
+
+    <br>
+    <!--class end-->
+<!--class start-->
+
+
+
+
+
+<p>2.2 <u>Class Name</u> :SetupProfilePresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle business logic, facilitate profile setup in database.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+    
+      <li>       
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>SetupProfileView, reference to the view (activity)</li>
+             
+        </ol>
+
+        <br>
+
+       <li>  <u> Name:</u>setupProfile(User: user)</li> 
+         
+         
+     
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>User: user,  the class containing information provided in the setup profile form.</li>
+             
+            
+             
+
+         </ol>
+     
+         <p> <u>Purpose</u>: Verify and store user information to database.</p> 
+     
+     </li>
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+
+
+<p>2.3 <u>Class Name</u> :User</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for Setup Profile presenter and view.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+        
+         
+         
+     
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>userId, String, unique userId stored in the database</li>
+             <li>userName, String, name of the user.</li>
+             <li>userPhoneNumber, String, phone number of the user</li>
+             <li>userAddress, String, home address of the user</li>
+             <li>latitude, double, latitude of the home address of user</li>
+             <li>longitude, double, longitude of the user </li>
+             
+        </ol>
+     <br>
+         <li>getters,setters</li>
+     
+     
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+<!--class start-->
+<p>2.4 <u>Class Name</u> : AddressPickerActivity </p>
+  
+<!--Purpose-->
+<p><u>Purpose</u>: Take user address from map for the setup profile form.</p>
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+
+<!--public methods-->
+<p> <u> Public Methods</u>: </p>
+<ul>
+    
+    <!-- ekta method start -->
+    
+        
+        
+        <ul>
+
+            <li>onFetchingAddressUI(), </li>
+            <li> onFetchingAddressSuccessUI(),</li>
+            <li>onFetchingAddressFailedUI(String: errorMessage)
+
+            </li>
+
+        </ul>
+        
+    
+    
+        <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “AddressPickerPresenter”. </p> 
+
+    </ul>
+    
+
+
+
+<br>
+<!--class end-->
+
+
+<p>2.5 <u>Class Name</u> :AddressPickerPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle business logic, facilitate reverse geo-coding service to fetch address from latitude, longitude.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>AddressPickerView, reference to the view (activity)</li>
+             <li>Geocode config variable</li>
+             
+        </ol>
+
+        <br>
+
+         <li><p>Name: fetchAddress(double: latitude, double: lonngitude)</p></li>
+        
+         
+         
+     
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>double: latitude,  latitude of the location</li>
+             <li>double: longitude,  longitude of the location</li>
+             
+             
+        </ol>
+     
+     
+        <p> <u>Purpose</u>:   These methods define UI responses and are invoked by the “AddressPickerPresenter”. </p>  
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+<p>2.6 <u>Class Name</u> :AddressComposite</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for Address-Picker presenter and view</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+        
+         </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>addressString, String, picked location’s address in plain text</li>
+             <li>latitude, double, picked location’s latitude</li>
+             <li>longitude, double, picked location’s longitude</li>
+             
+        </ol>
+     <br>
+         <li>getters,setters</li>
+     
+     
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+
+<!--section heading-->
+<h3>3.<u>Login Page</u>: </h3> <p>The classes used for logging in an existing user are given below,
+
+</p>
+
+
+
+    <!--class start-->
+    <p>3.1 <u>Class Name</u> : LoginActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Take user input in login form.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            
+            
+            <ul>
+
+                <li>onVerifyingLoginUI(), </li>
+                <li> onVerifyingLoginUI(),</li>
+                <li>onLoginFailedUI(String: errorMessage)	</li>
+
+            </ul>
+            
+        
+        
+            <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “LoginPresenter”. </p> 
+
+        </ul>
+        
+    
+
+
+    <br>
+    <!--class end-->
+
+
+    <p>3.2 <u>Class Name</u> : LoginPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle business logic, facilitate login verification process.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>LoginView, reference to the view (activity)</li>
+             
+        </ol>
+
+        <br>
+
+         <li><p>Name: loginUser(User: user)</p></li>
+        
+         
+         
+     
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>User: user, the class containing information provided in the login form.</li>
+            
+          
+        </ol>
+     
+     
+        <p> <u>Purpose</u>:   Check database and verify user credentials and log in the user. </p>  
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+<!--section heading-->
+<h3>4.<u>View Nearby Shops in Map (home page)</u>: </h3> <p>Viewing shops nearby user’s homes feature requires classes,
+<p>4.1 <u>Class Name</u> ::HomeActivity</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Show a map containing nearby shops as map markers with color codes refering to their status. </p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+      
+              
+     
+         <li><p>  onFetchingNearbyShopsUI() </p></li>
+         <li><p>onFetchFailedUI(String errorMessage)</p></li>
+
+         <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “HomePresenter”. </p> 
+        
+         <li> <p> Name- onFetchDoneUI(List&lt;NearbyShop&gt;)</p></li>
+
+            <p> <u>Parameter</u>- </p>
+            <ol>
+
+                <li>List&lt;NearbyShop&gt;, list of NearbyShop objects containing information on nearby shops</li>
+               
+             
+           </ol>
+
+           <p> <u>Purpose</u>: Show the list of nearby shops in map fetched from database. Invoked by 	“HomePresenter” </p> 
+
+           <li><p> Name- onUpdateNearbyShopsUI(List<NearbyShop>)</p></li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+
+                <li>List&lt;NearbyShop&gt;, list of newly updated list of NearbyShop objects for UI</li>
+               
+             
+           </ol>
+         
+           <p> <u>Purpose</u>: Show the updated list of nearby shops in map fetched from database. Invoked by 	“HomePresenter” </p> 
+     
+     <!-- ekta method end-->
+
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+    <p>4.2 <u>Class Name</u> : HomePresenter</p>
+    
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>:Facilitate the nearby stores fetch process from database, handle the customer shop entering option. </p>
+    
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+     <!--public methods-->
+     <p> <u> Public Methods</u>: </p>
+     <ul>
+         
+         <!-- ekta method start -->
+          
+                  
+         
+             <li><p> Constructor </p></li>
+
+             <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>HomeView, reference to the view (activity)</li>
+                <li>HomeDatabaseHandler, reference to database handler</li>
+                
+            </ol>
+
+            <br>
+
+             <li><p> Name- fetchNearbyShops()</p></li>
+    
+             <p> <u>Purpose</u>:Start the fetch nearby shops process from database using the private database 	handler attribute </p> 
+             <li><p> Name- goInsideShop(NearbyShop)</p></li>
+            
+             
+    
+                <p> <u>Parameter</u>- </p>
+                <ol>
+    
+                    <li>NearbyShop</li>
+                   
+                 
+               </ol>
+    
+               <p> <u>Purpose</u>:  Enter the shop, i.e make an entry in the shop’s customer queue in database.</p> 
+
+               <li>onFetchNearbyShopsDoneFromDB(DataSnapshot),	</li>
+               <li>onNewShopAddedInDB(DataSnapshot),</li>
+               <li>onShopRemovedInDB(DataSnapshot), </li>
+               <li>onShopUpdatedInDB(DataSnapshot</li>
+    
+               
+                
+             
+               <p> <u>Purpose</u>: The methods are implemented by the “HomePresenter” from the “HomeDatabaseHandlerCallbacks” interface. These are invoked by the “HomeDatabaseHandler” when there is an subsequent change in data in the database and provide the presenter with updated data. </p> 
+         
+         <!-- ekta method end-->
+    
+    
+    
+     </ul>
+     <!--public methods end-->
+    
+       
+    
+    
+    <br>
+    <!--class end-->
+
+
+    <p>4.3 <u>Class Name</u> :HomeDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle fetching nearby shops information from the database and contain listeners for any change in data inside the database</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>HomeDatabaseHandlerCallbacks, reference to database database callback(presenter)</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p> <u> Name</u>: fetchNearbyStoresFromDB()</p></li>
+        
+         
+         
+     
+     </li>
+    
+     
+        <p> <u>Purpose</u>:   Fetch nearby shop objects from the database using the DatabaseReference 	attribute of the class. </p>  
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+<p>4.4 <u>Class Name</u> :  NearbyShop</p>
+    
+    
+<!--Purpose-->
+<p><u>Purpose</u>:Model class for a nearby shop. </p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+      
+              
+     
+         <li><p> Constructor </p></li>
+        
+         
+
+            <p> <u>Parameter</u>- </p>
+            <ol>
+
+                <li>shopId, String, unique ID of the shop stored in database</li>
+                <li>shopType, String, type of the shop three types allowed- conventional, stationary, 			bakery.</li>
+                <li>shopName, String, name of the shop</li>
+                <li>shopAddress, String, address of the shop in plain text</li>
+                <li>shopLatitude, double, latitude of the shop’s location</li>
+                <li>shopLongitude, double, longitude of the shop’s location</li>
+                <li>status, String, status of the shop three types allowed- open, closed, busy</li>
+                <li>perimeterRadius, int, radius of the area that the shop covers in meters- this is fixed to 		100 meters initially.</li>
+               
+             
+           </ol>
+
+         
+
+           <li>getters, setters	</li>
+         
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+<!--section heading-->
+<h3>5.<u>Inside Shop Customer Queue Page</u>: </h3> <p>The customer queue visible after going inside the shop feature consists of,
+
+<p>5.1 <u>Class Name</u> : CustomerQueueActivity </p>
+  
+<!--Purpose-->
+<p><u>Purpose</u>: Show a list of customers waiting in queue of the shop.</p>
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+
+<!--public methods-->
+<p> <u> Public Methods</u>: </p>
+<ul>
+    
+    <!-- ekta method start -->
+    
+        
+        
+        <ul>
+
+            <li>onFetchingCustomerQueueUI(),, </li>
+            <li>onFetchDoneUI(List&lt;CustomerWaitingInQueue&gt;), </li>
+            <li>onFetchFailedUI(String: errorMessage), 	</li>
+            <li>onUpdateCustomerQueueUI(List&lt;CustomerWaitingInQueue&gt;)</li>
+
+            <p> <u>Purpose</u>: Open the customer-shopowner conversation by app-to-app voice call page. Invoked by “CustomerQueuePresenter”.</p> 
+            <li><p><u>Name</u>:onShopOwnerWantsToConnectUI()  </p></li>
+            <p> <u>Purpose</u>: Open the customer-shopowner conversation by app-to-app voice call page. Invoked by “CustomerQueuePresenter”.</p> 
+        </ul>
+        
+
+    
+        
+
+    </ul>
+<br>
+
+
+
+    <p>5.2 <u>Class Name</u> : CustomerQueuePresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Manage database actions and corresponding UI response to change in customer queue, let the user enter/exit shop, detect when shopowner opts to connect.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>CustomerQueueView, reference to the view (activity)</li>
+                <li>CustomerQueueDatabaseHandler, reference to database handler</li>
+                <li>ShopOwnerWantsToConnectDatabaseHandler, reference to database handler which detects when shopowner wants to connect</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p> <u>Name</u> : fetchCustomerQueue() </p></li>
+
+         <p> <u>Purpose</u>:  Start the fetch process of customer queue from database and provide list to UI. </p> 
+         
+         <li><p> <u>Name</u> :enterShop()</p></li>
+
+         <p> <u>Purpose</u>:  Enter user into shop, i.e create entry for user in database and list view. </p> 
+
+         <li><p> <u>Name</u> :exitShop()</p></li>
+
+         <p> <u>Purpose</u>:  Exit user into shop, i.e remove entry for user in database and list view. </p> 
+
+         <li>onFetchDoneFromDB(DataSnapshot),	</li>
+         <li>onNewCustomerAddedInDB(DataSnapshot),</li>
+         <li>onCustomerRemovedInDB(DataSnapshot),</li>
+        
+         
+         <p> <u>Purpose</u>: These methods are implemented by the “CustomerQueuePresenter” from the “CustomerQueueDatabaseHandlerCallbacks” interface. These are invoked by the “CustomerQueueDatabaseHandler” when there is an subsequent change in data in the database and provide the presenter with updated data </p>  
+
+         <li>onShopOwnerWantsToConnect()</li>
+
+         <p> <u>Purpose</u>:  This method is implemented by the “CustomerQueuePresenter” from the “ShopOwnerWantsToConnectDatabaseHandlerCallbacks” interface. This method is invoked by the “CustomerQueueDatabaseHandler”, when the user is the first in queue and shopowner has opted to connect with next customer.  </p> 
+     
+     </li>
+     
+     
+     
+       
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+<p>5.3 <u>Class Name</u> :ShopOwnerWantsToConnectDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Hold listeners for database change signalling shopowner wants to connect with user.
+
+</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+            
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>“ShopOwnerWantsToConnectDatabaseHandlerCallbacks”, reference to callback(presenter) to notify any event in database</li>
+                
+            </ol>
+
+            <br>
+        
+     </li>
+    
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+<p>5.4 <u>Class Name</u> : CustomerQueueDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle fetching customer queue of the entered shop from the database, contains listeners for any change in data inside the database and responsible for enter/exit of user.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>CustomerQueueDatabaseHandlerCallbacks, reference to callback(presenter) which is notified when any change in database occurs</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p> <u>Name</u> : fetchCustomerQueueFromDB() </p></li>
+
+         <p> <u>Purpose</u>:  Fetch the current list of customers from database. </p> 
+         
+         <li><p> <u>Name</u> :addUserToCustomerQueueInDB(CustomerWaitingInQueue: user)</p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>user, CustomerWaitingInQueue, the user as a CustomerWaitingInQueue object.	</li>
+            
+          
+        </ol>
+
+
+         <p> <u>Purpose</u>:  Insert user to the current list of customers in database as a 	CustomerWaitingInQueue object. </p> 
+
+         <li><p> <u>Name</u> :removeUserFromCustomerQueueInDB(String: userId)</p></li>
+
+         <p> <u>Purpose</u>:  Remove user from the current list of customers in database using user id </p> 
+
+         
+     
+     </li>
+     
+     
+     
+       
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+<p>5.5 <u>Class Name</u> :CustomerWaitingInQueue</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for customers in the queue list of the shop.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+         
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: customerWaitingInQueueId, customer’s unique id (uid assigned at signup)</li>
+             <li>String: customerPhoneNumber</li>
+             <li>double: customerHomeAddress</li>
+             <li>double: customerHomeLatitude</li>
+             <li>double: customerHomeLongitude</li>
+            
+          
+        </ol>
+     
+     
+        <li><p>getters & setters</p></li>
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+<h3> 6.<u>Inside Shop Browse Products Page:  </u>: </h3> 
+
+
+
+    <!--class start-->
+    <p>6.1 <u>Class Name</u> : BrowseProductsActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Show a list of products (if any) inputted by the shop.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            
+            
+            
+
+                <li>onFetchingShopProductsUI(),  </li>
+                <li> onFetchDoneUI(List&lt;ShopProduct&gt;), </li>
+                <li>onFetchFailedUI(String: errorMessage), </li>
+                <li>onUpdateCustomerQueueUI(List&lt;ShopProduct&gt;)</li>
+
+                    <p>  <u>Purpose</u> :These methods define UI responses and are invoked by the “EnterPhoneNumberPresenter”. </p>  </p>
+                    
+                <li> <u>Name</u> :onShopOwnerWantsToConnectUI() </li>
+                <p>  <u>Purpose</u>  : These methods define UI responses and are invoked by the “EnterPhoneNumberPresenter”. </p>  </p> </p>  </p>
+
+     </ul>
+        
+    <br>
+    <!--class end-->
+
+
+
+    <p>6.2 <u>Class Name</u> : BrowseProductsPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Manage database actions and corresponding UI response to change in shop products list, detect when shopowner opts to connect.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>BrowseProductsView, reference to the view (activity)</li>
+                <li>BrowseProductsDatabaseHandler, reference to database handler</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p> <u>Name</u> : fetchShopProducts() </p></li>
+
+         <p> <u>Purpose</u>:  Start the fetch process of products inputted by the shop from database and provide 	the list to UI. </p> 
+         
+         <li>onFetchDoneFromDB(DataSnapshot),</li>
+         <li>onNewProductAddedInDB(DataSnapshot),</li>
+         <li>onProductRemovedInDB(DataSnapshot),</li>
+
+         
+         <p> <u>Purpose</u>: These methods are implemented by the “BrowseProductsPresenter” from the “BrowseProductsDatabaseHandlerCallbacks” interface. These are invoked by the “BrowseProductsDatabaseHandler” when there is an subsequent change in data in the database and provide the presenter with updated data.</p> 
+        
+         <li>onShopOwnerWantsToConnect()</li>
+         <p>  <u>Purpose</u>: These methods are implemented by the “BrowseProductsPresenter” from the “BrowseProductsDatabaseHandlerCallbacks” interface. These are invoked by the “BrowseProductsDatabaseHandler” when there is an subsequent change in data in the database and provide the presenter with updated data.</p> </p> 
+         
+     
+     </li>
+     
+     
+     
+       
+     <!-- arekta method end -->
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+
+<p>6.3 <u>Class Name</u>: BrowseProductsDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle fetching products inputted by the shop from the database, contains listeners for any change in data inside the database.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>BrowseProductsDatabaseHandlerCallbacks, reference to callback(presenter) which is notified when any change in database occurs</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p>Name:fetchShopProductsFromDB()</p></li>
+
+          <p><u>Purpose</u>: Handle fetching products inputted by the shop from the database, contains listeners for any change in data inside the database.</p></p>
+        
+         
+         
+     
+     </li>
+     
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+<p>6.4 <u>Class Name</u> :ShopProduct</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Model class for products in the shop’s browse products list.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+         
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: productId, product’s unique id (uid assigned at signup)</li>
+             <li>String: productName</li>
+             <li>int: quantity</li>
+             <li>String: quantityUnit,</li>
+             <li>Decimal: pricePerQuantity</li>
+            
+          
+        </ol>
+     
+     
+        <li><p>getters & setters</p></li>
+
+
+ </ul>
+ <!--public methods end-->
+
+
+<br>
+
+<!--section heading-->
+<h3> 7.<u>Inside Shop ChatFeed</u>: </h3> <p>The global chatfeed for customers waiting in queue is implemented using classes,</p>
+
+
+
+    <!--class start-->
+    <p>7.1 <u>Class Name</u> : ShopChatFeedActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>:Show list of chat messages by customers waiting in queue and allow user to write in feed. </p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            
+            
+            
+
+                <li>onFetchingChatFeedUI(),  </li>
+                <li>onFetchDoneUI(List&lt;ChatMessage&gt;), </li>
+                <li>onFetchFailedUI(String: errorMessage), </li>
+                <li>onUpdateChatFeedUI(List&lt;hatMessage&gt;)</li>
+
+                    <p> <u>Purpose</u> :  These methods define UI responses and are invoked by the “EnterPhoneNumberPresenter”. </p>  </p> 
+
+                <li> <u>Name</u>: onShopOwnerWantsToConnectUI()</li>
+
+                <p> <u>Purpose</u> :   Open the customer-shopowner conversation by app-to-app voice call page. Invoked by “ShopChatFeedPresenter”.
+           
+
+        </ul>
+        
+    <br>
+    <!--class end-->
+
+
+    <p>7.2 <u>Class Name</u> :ShopChatFeedPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Manage database actions and corresponding UI response to change in chat feed, user writes messages to chatfeed, shopowner opts to connect.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+        
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>ShopChatFeedView, reference to the view (activity)</li>
+                <li>ShopChatFeedDatabaseHandler, reference to database handler</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p> <u> Name:</u> loginUser(User: user)</p></li>
+
+         <p><u>Purpose</u>: Start the fetch process of chat messages in the shop’s chatfeed from database and 	provide the list to UI</p>
+        
+         <li><p> <u> Name:</u> sendChatMessage(ChatMessage)</p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>ChatMessage</li>
+            
+          
+        </ol>
+
+        <p><u>Purpose</u>: Send message from user to the chatfeed.</p>
+
+        <li>onFetchDoneFromDB(DataSnapshot),</li>
+        <li>onNewChatMessageAddedInDB(DataSnapshot)</li>
+
+        <p><u>Purpose</u>: These methods are implemented by the “ShopChatFeedPresenter” from the “ShopChatFeedDatabaseHandlerCallbacks” interface. These are invoked by the “ShopChatFeedDatabaseHandler” when there is an subsequent change in data in the database and provide the presenter with updated data.</p>
+
+        <li>onChatMessageSendFailedToDB(DataSnapshot)</li>
+
+        <p><u>Purpose</u>: These method is implemented by the “ShopChatFeedPresenter” from the “ShopChatFeedDatabaseHandlerCallbacks” interface. These are invoked by the “ShopChatFeedDatabaseHandler” when user’s message send attempt fails.</p>
+
+        <li>onShopOwnerWantsToConnect()</li>
+
+        <p><u>Purpose</u>: The method is implemented by the “ShopChatFeedPresenter” from the “ShopOwnerWantsToConnectDatabaseHandlerCallbacks” interface. This method is invoked by the “BrowseProductsDatabaseHandler”, when the user is the first in queue and shopowner has opted to connect with next customer. </p>
+     </li>
+     
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+<p>7.3<u>Class Name</u> :ShopChatFeedDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: : Handle fetching chatfeed of the shop from the database, contains listeners for any change in data inside the database.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+        <p> Constructor </p>
+
+        <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>ShopChatFeedDatabaseHandlerCallbacks, reference to callback(presenter) which is notified when any change occurs in database</li>
+                
+            </ol>
+
+            <br>
+
+        <li><p> <u> Name:</u> fetchShopChatFeedFromDB()</p></li>
+
+        <p><u>Purpose</u>: Fetch all the chat messages from the shop’s chatfeed in database.</p>
+        <li><p> <u> Name:</u> sendMessageToDB(ChatMessage)</p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>ChatMessage, a chat message object to be stored in database</li>
+            
+          
+        </ol>
+
+        <p><u>Purpose</u>:  Send a chat message to the shop’s chatfeed in database.</p>
+        
+         
+         
+     
+     </li>
+    
+ </ul>
+ <!--public methods end-->
+
+   
+
+<br>
+<!--class end-->
+
+
+
+<p>7.4 <u>Class Name</u> :ChatMessage</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for chat messages in the shop’s chatfeed.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+         
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: chatMessageId, product’s unique id (uid assigned at signup)</li>
+             <li>String: authorUsername</li>
+             <li>String: receipientUsername</li>
+             <li>String: content,</li>
+             <li> String: time</li>
+            
+          
+        </ol>
+     
+     
+        <li><p>getters & setters</p></li>
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+
+
+
+<!--section heading-->
+<h3> 8.<u>Order Generation by Conversation with Shopowner Page</u>: </h3> <p>The feature of order generation by conversation between customer & shopowner requires classes,
+
+</p>
+
+<p>8.1 <u>Class Name</u> :CustomerShopOwnerConnectionActivity</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Show UI components of the app-to-app voice call with the shop, show a product list that is generated by editing from both end. The price field of each list item is blocked for the customer user. </p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         
+         <li>onConnectingWithShopOwnerUI(), </li>
+         <li>onConnectionEstablishedUI(), </li>
+         <li>onConnectionFailedUI(String: errorMessage), </li>
+         <li>onCallDisconnectedUI()</li>
+
+         <p><u>Purpose</u>: Model class for chat messages in the shop’s chatfeed.</p>
+        
+
+         <li> <u>Name</u> :onProductListEditedByShoOwnerUI(ProductListItem, int: index),   </li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+            
+                <ol>
+       
+                    <li>User: user, the class containing information provided in the login form.</li>
+                   <li>int: index, index of the exact product list item in the list where edit occurred.</li>
+                 
+               </ol>
+               <p><u>Purpose</u>: : Show edits done to a product list item from the shopowner end. Invoked by 	“CustomerShopOwnerConnectionPresenter”</p>
+            </li>
+            
+          
+        </ol>
+
+        <li>onPlacingOrderUI(), </li>
+        <li>onOrderPlaceSuccessUI(),</li>
+        <li>onOrderPlaceFailedUI(String: errorMessage)</li>
+
+        <p><u>Purpose</u>: The methods provide UI response for subsequent end of conversation order placement 	related events.</p>
+     
+     
+     </li>
+   
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+<p>8.2 <u>Class Name</u> :CustomerShopOwnerConnectionPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Manage and provide- app to app voice call between user and shopowner, realtime updates to product list done by both end, order placement. And control UI responses for all of these.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+    <li><p> Constructor </p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+                <li>CustomerShopOwnerConnectionView, reference to view(activity)</li>
+                <li>CustomerShopOwnerConnectionDatabaseHandler, reference to database handler for customer shopowner realtime interaction</li>
+                <li>VoiceOverInternetHandler, reference to app to app voice call feature handler between customer-shopowner</li>
+                <li>PlaceOrderDatabaseHandler, reference to database handler for order placement</li>               
+            </ol>
+
+            <br>
+
+     <!-- ekta method start -->
+     <li> 
+              <p><u>Name</u>:leaveConversation() </p>
+              <p><u>Purpose</u>: Immediately disconnects the call without placing any order.</p>
+
+             <li> <p><u>Name</u>– updateProductNameForProductListItemAsUserTypes(String: text, String: productListItemId) </p></li>
+              <p> <u>Parameter</u>- </p>
+
+            
+                <ol>
+       
+                    <li>String: text, the text whatever user typed in name field of a product list item.</li>
+                   <li>String: productListItemId, the unique id of the product list item where user typed.</li>
+                 
+               </ol>
+
+               <p><u>Purpose</u>:  Edit the product name field in database and UI.</p></p>
+         
+
+               <li> <p><u>Name</u>: updateProductQuantityForProductListItemAsUserTypes(String: quantity, String: productListItemId) </p></li>
+              <p> <u>Parameter</u>- </p>
+
+            
+                <ol>
+       
+                    <li>String: quantity, the quantity whatever user typed in quantity field of a product list item.</li>
+                   <li>String: productListItemId, the unique id of the product list item where user typed.</li>
+                 
+               </ol>
+
+               <p><u>Purpose</u>: Edit the quantity field in database and UI.</p>
+
+
+
+
+
+               <li> <p><u>Name</u>: addNewProductListItemToProductList(ProductListItem)</p></li>
+              <p> <u>Parameter</u>- </p>
+
+            
+                <ol>
+       
+                    <li>ProductListItem, a hollow ProductListItem object, meaning it contains empty strings and zero in the priceOfWhole quantity attribute.</li>
+                   
+                 
+               </ol>
+
+               <p><u>Purpose</u>: Create a hollow product list item in database and UI to be edited from both end.</p>
+
+
+
+
+
+
+
+               <li> <p><u>Name</u>: setCustomerConfirm(boolean)</p></li>
+               <p> <u>Parameter</u>- </p>
+ 
+             
+                 <ol>
+        
+                     <li>boolean, state of customer confirmation field of the whole order.</li>
+                    
+                  
+                </ol>
+ 
+                <p><u>Purpose</u>: Customer confirmation for the order is to be set in the database.</p>
+
+
+
+
+                <li> <p><u>Name</u>:placeOrderFromCustomerShopOwnerInteraction(CustomerShopOwnerInteraction)</p></li>
+                <p> <u>Parameter</u>- </p>
+  
+              
+                  <ol>
+         
+                      <li>CustomerShopOwnerInteraction, a CustomerShopOwnerInteraction object that holds 		all the relevant data generated during the conversation of both parties.</li>
+                     
+                   
+                 </ol>
+  
+                 <p><u>Purpose</u>: Finalize the order by making database entry.</p>
+
+                 <li>onProductListItemNameEditedInDB(Datasnapshot)</li>
+                 <li>onProductListItemPriceEditedInDB(Datasnapshot)</li>
+                 <li>onShopOwnerConfirmationChangedInDB(Datasnapshot)</li>
+
+
+                 <p><u>Purpose</u>:These methods are implemented by the “CustomerShopOwnerConnectionPresenter” from the “CustomerShopOwnerConnectionDatabaseHandlerCallbacks” interface. These are invoked by the “CustomerShopOwnerConnectionDatabaseHandler” when there is subsequent change in any product list item field or order confirmation field in the database in realtime from the shopowner’s end and provide the presenter with updated data.</p>
+
+                 <li>onConfigDone()</li>
+                 <li>onFailure()</li>
+                 <li>onCallConnected(String: callerId)</li>
+                 <li>onCallDisconnected()</li>
+
+                 <p><u>Purpose</u>:These methods are implemented by the “CustomerShopOwnerConnectionPresenter” from the “CustomerShopOwnerConnectionDatabaseHandlerCallbacks” interface. These are invoked by the “CustomerShopOwnerConnectionDatabaseHandler” when there is subsequent change in any product list item field or order confirmation field in the database in realtime from the shopowner’s end and provide the presenter with updated data.</p></p>
+
+                <li>onPlaceOrderSuccess()</li>
+                <li>onPlaceOrderFailed()</li>
+
+                <p><u>Purpose</u>: These methods are implemented by the “CustomerShopOwnerConnectionPresenter” from the “PlaceOrderDatabaseHandlerCallbacks” interface. These are invoked by the “PlaceOrderDatabaseHandler” after the order has been placed successfully or fails.</p>
+
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         
+            
+          
+        </ol>
+     
+     
+        <li><p>getters & setters</p></li>
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+
+
+
+
+
+
+<p>8.3 <u>Class Name</u> :VoiceOverInternetHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle app to app voice call between user and shopowner.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>String: receiverId, customer's(user) caller id</li>
+                <li>VoiceOverInternetHandlerCallbacks, reference to callback(presenter) to notify when any app-to-app call event occur</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p><u>Name</u>: setupConfigs()</p></li>
+         <p><u>Purpose</u>::Sets up required config variables for the thirdparty voip service.</p></p>
+
+         <li><p><u>Name</u>:answerCall()</p></li>
+         <p><u>Purpose</u>: Answer the call as soon as received, which was initiated from shopowner’s end.</p>
+
+         <li><p><u>Name</u>:hangUpCall()</p></li>
+         <p><u>Purpose</u>:Disconnect the call immediately.</p>
+
+         <li>enableLoudSpeaker()</li>
+         <li>disableLoudSpeaker()</li>
+
+         <p><u>Purpose</u>:The methods control the loud speaker on/off during call.</p>
+
+        
+     
+     </li>
+     
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+    
+
+
+
+
+<p>8.4 <u>Class Name</u> :CustomerShopOwnerConnectionDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle fetching any changes in the generating order, of each product list item, from the shopowner’s end in realtime from the database using listeners. Also sends to database any change in the generating order’s product list items done by the user.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>CustomerShopOwnerConnectionDatabaseHandlerCallbacks, reference to callback(presenter) which is notified when any change in database occur</li>
+                
+            </ol>
+
+            <br>
+
+         <li><p>Name: updateProductNameForProductListItemAsUserTypesDB(String: productName, 	String: productListItemId)</p></li>
+        
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: productName, the edited name of the productId</li>
+             <li>String: productListItemId, the unique id of the exact product list item</li>
+            
+        </ol>
+
+        <p><u>Purpose</u>: Update edits done by the user in a product list item’s name field to the database 	instantly.</p>
+
+        <li><p>Name: updateProductQuantityForProductListItemAsUserTypesDB(String: text, 	String: productListItemId)</p></li>
+        
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: text, the text form of the quantity written by user like- 10kgs, 2hali etc.</li>
+             <li>String: productListItemId, the unique id of the exact product list item</li>
+            
+        </ol>
+
+        <p><u>Purpose</u>: Update edits done by the user in a product list item’s quantity field to the database 	instantly.</p>
+
+
+
+
+
+        <li><p>Name: addNewProductListItemToProductListDB(ProductListItem)</p></li>
+        
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>ProductListItem, a hollow object of ProductListItem class, contains empty strings 		and zero in the priceOfWholeQuantity filed.</li>
+             
+            
+        </ol>
+
+        <p><u>Purpose</u>: Adds an placeholder for new product list item in the database instantly</p>
+
+
+
+         <li><p>Name:setCustomerConfirmStateDB(boolean)</p></li>
+        
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>boolean, state of customer confirmation field of the whole order.</li>
+             
+            
+        </ol>
+
+        <p><u>Purpose</u>:sets customer confirm state in the database instantly.</p></li>
+        
+
+ </ul>
+ <!--public methods end-->
+
+<br>
+<!--class end-->
+
+
+
+
+<p>8.5 <u>Class Name</u> :PlaceOrderDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Handle order placement from the generated products list into database.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+
+         <li><p> Constructor </p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+            <ol>
+                <li>DatabaseReference, reference to specific node in database</li>
+                <li>PlaceOrderDatabaseHandlerCallbacks, reference to database callback(presenter) to notify about order placement success/failure</li>
+            </ol>
+
+            <br>
+
+         <li><p><u>Name</u>:placeOrderInDB(Order) </p></li>
+        
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>Order, object containing all the order’s information.</li>
+            
+        </ol>
+
+        <p><u>Purpose</u>: Create entry of the order into database.</p>
+
+</ul>
+<br>
+
+<p>8.6 <u>Class Name</u> :ProductListItem</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for each product list item in an Order</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: productListItemId, product list item’s unique id </li>
+             <li>String: productName</li>
+             <li>String: quantity, for example- “2kg”, “2 hali”, “1 packet” etc</li>
+             <li>Decimal: priceOfWholeQuantity</li>
+            
+        </ol>
+<br>
+        <li>getters & setters</li>
+
+</ul>
+
+<br>
+
+
+        <p>8.7 <u>Class Name</u> :OrderPlacingCustomer</p>
+
+
+        <!--Purpose-->
+        <p><u>Purpose</u>: Model class for each user(customer) placing the Order.</p>
+        
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+         <!--public methods-->
+         <p> <u> Public Methods</u>: </p>
+         <ul>
+             
+             <!-- ekta method start -->
+             
+                      
+             
+                 <li><p> Constructor </p></li>
+                 <p> <u>Parameter</u>- </p>
+                    
+                 <ol>
+        
+                     <li>String: customerId, customer’s unique id </li>
+                     <li>String: customerUsername</li>
+                     <li>String: customerPhoneNumber</li>
+                     <li>String: customerHomeAddress</li>
+                     <li>double: customerHomeLatitude</li>
+                     <li>double: customerHomeLongitude</li>
+                    
+                </ol>
+        <br>
+                <li>getters & setters</li>
+           
+           
+</ul>
+
+<br>
+
+
+<p>8.8 <u>Class Name</u> :OrderPlacingShop</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for each user(customer) placing the Order.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: shopId, shop’s unique id  </li>
+             <li>String: shopName</li>
+             <li>String: shopPhoneNumber.</li>
+             <li>String: shopAddress.</li>
+             <li>double: shopLatitude</li>
+             <li>double: shopLongitude</li>
+            
+        </ol>
+<br>
+        <li>getters & setters</li>
+   
+   
+</ul>
+
+<br>
+
+
+
+<p>8.9 <u>Class Name</u> :CustomerShopOwnerInteraction</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Model class for the customer-shopowner interaction, i.e genearting order.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>OrderPlacingShop, shop object containing all shop’s information  </li>
+             <li>OrderPlacingCustomer, customer object containing all customer’s information</li>
+             <li>List &lt; ProductListItem &gt;: productList, list of all the products ordered. </li>
+             <li>Decimal: totalPrice, price of the whole order.</li>
+             <li>boolean: customerConfirmed, state of customer confirmation for the order.</li>
+             <li>boolean: shopOwnerConfirmed,  state of shopowner confirmation for the order</li>
+            
+        </ol>
+<br>
+        <li>getters & setters</li>
+   
+   
+</ul>
+
+<br>
+
+
+
+
+
+<p>8.10 <u>Class Name</u> :Order</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Model class for the Order to be placed.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: orderId, unique id of the order</li>
+             <li>OrderPlacingShop, shop object containing all shop’s information</li>
+             <li>OrderPlacingCustomer, customer object containing all customer’s information</li>
+             <li>List&lt;ProductListItem&gt;: productList, list of all the products ordered. </li>
+             <li>Decimal: totalPrice, price of the whole order.</li>
+             <li>String: orderPlacementTime</li>
+             <li>boolean: customerConfirmed, state of customer confirmation for the order.</li>
+             <li>boolean: shopOwnerConfirmed,  state of shopowner confirmation for the order</li>
+            
+        </ol>
+<br>
+        <li>getters & setters</li>
+   
+   
+</ul>
+
+<br>
+
+
+
+
+<!--section heading-->
+<h3> 9.<u>View/Confirm Pernding Orders Page</u>: </h3> <p>The viewing and confirmation of placed orders by customer user requires classes,</p>
+<p>9.1 <u>Class Name</u> :PendingOrdersActivity</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Show list of pending orders.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ 
+     
+              
+     <ul>
+    
+        <!-- ekta method start -->
+        
+            
+            
+           
+    
+                <li>onFetchingPendingOrdersUI(),  </li>
+                <li> onFetchDoneUI(List&lt;PendingOrder&gt;), </li>
+                <li>onFetchFailedUI(String: errorMessage), 	</li>
+                <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “LoginPresenter”. </p>  
+
+                <li><u>Name</u>:onConfirmPendingOrderUI(Order)</li>
+
+                <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “LoginPresenter”. </p>  </p> 
+    
+            
+            
+        
+        
+            
+    
+        </ul>
+         
+      
+
+
+
+        <p>9.2 <u>Class Name</u> :PendingOrdersPresenter</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:: Manage database actions and corresponding UI response to change in pending
+    orders list.
+    </p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+             <li>PendingOrdersView, reference to view(activity)</li>
+             <li>PendingOrderDatabaseHandler, reference to specific node in database</li>
+         </ol>
+
+         <br>
+         
+
+         <li><p><u>Name</u>:fetchPendingOrders() </p></li>
+         <p><u>Purpose</u>:Start the fetch process of pending orders from database and provide the
+            list to UI.</p>
+        
+
+            <li><p><u>Name</u>:confirmOrder(String: orderId) </p></li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li> String: orderId, unique id of the order</li>
+            
+        </ol>
+
+        <p><u>Purpose</u>: Set the customer confirmation to true in database.</p>
+
+        <li>onFetchDoneFromDB(DataSnapshot),</li>
+        <li>onOrderRemovedInDB(DataSnapshot)</li>
+
+        <p><u>Purpose</u>: These methods are implemented by the “PendingOrdersPresenter” from the
+            “PendingOrdersDatabaseHandlerCallbacks” interface. These are invoked by the
+            “PendingOrdersDatabaseHandler” when all pending orders are fetched, an order is
+            removed in the database and provide the presenter with updated data.
+            </p>
+
+</ul>
+<br>
+
+<p>9.3 <u>Class Name</u> :PendingOrderDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:: Handle fetching all pending orders of the user from the database, contains
+    listeners for any change in data inside the database. </p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+             <li>DatabaseReference, reference to specific node in database</li>
+             <li>PendingOrderDatabaseHandlerCallbacks, reference to database callback(presenter) to notify about changes in database</li>
+         </ol>
+
+         <br>
+
+         <li><p><u>Name</u>:fetchPendingOrdersFromDB() </p></li>
+         <p><u>Purpose</u>:Fetch all the pending orders from database.</p>
+
+
+         <li><p><u>Name</u>:confirmPendingOrderInDB(String: orderId) </p></li>
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li> String: orderId, unique id of the order to be confirmed by user(customer).</li>
+            
+        </ol>
+        <p><u>Purpose</u>:Set customer confirmation of a pending order to true</p>
+
+            
+</ul>
+       
+
+<p>9.4 <u>Class Name</u> :PendingOrder</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Model class for the user’s(customer) pending orders.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+              
+     
+         <li><p> Constructor </p></li>
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: orderId, uniqur id of the order</li>
+             <li>OrderPlacingShop, shop object containing all shop’s information</li>
+             <li>List&lt;ProductListItem&gt;: productList, list of all the products ordered</li>
+             <li>Decimal: totalPrice, price of the whole order.</li>
+             <li>String: orderPlacementTime</li>
+             <li>boolean: customerConfirmed, state of customer confirmation for the order.</li>
+             <li>boolean: shopOwnerConfirmed,  state of shopowner confirmation for the order</li>
+             
+            
+        </ol>
+<br>
+        <li>getters & setters</li>
+   
+   
+</ul>
+
+<br>
+
+        
+        
+        
+        <br><br>
+
+
+        <h2>Shopowner App:</h2>
+
+
+
+<!--section heading-->
+<h3> 1.<u>Phone Verification, Setup Profile, Login</u>: </h3> <p>The steps are exactly the same as customer app with the exception only in the Setup Profile form fields and the ShopUser model class.</p>
+
+
+
+    <!--class start-->
+    <p>1.1 <u>Class Name</u> : ShopUser </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Model class for the shop user for setup profile page</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            <li><p> Constructor</p></li>
+            <p> <u>Parameter</u>- </p>
+            
+            <ol>
+
+                <li>String: shopId, unique id of the shop</li>
+                <li> String: shopOwnerName, name of the shopowner</li>
+                <li> String: shopName, name of the shop</li>
+                <li>String: shopType, shop types- conventional, bakery, stationary</li>
+                <li>String: shopPhoneNumber, phone number used in verification </li>
+                <li>String: shopAddress </li>
+                <li>double: shopLatitude</li>
+                <li>double: shopLongitude </li>
+                <li> int: shopPerimeterRadius, radius of the area covered by the shop in meters, initially 		set to 100.</li>
+                
+
+            </ol>
+            
+        </ul>
+        
+    <br>
+    <!--class end-->
+
+        
+    <h3> 2.<u>Customer Queue Page (home page)</u>: </h3> <p>The classes required are,</p>
+    <p>2.1 <u>Class Name</u> : CustomerQueueActivity </p>
+  
+    <!--Purpose-->
+    <p><u>Purpose</u>: Show the customer queue list, let shopowner chose to accept next customer.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    
+    <!--public methods-->
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        
+        <!-- ekta method start -->
+        
+            
+            
+            
+    
+                <li>onFetchingCustomerQueueUI()</li>
+                <li>onFetchDoneUI()</li>
+                <li>onFetchFailedUI(String: errorMessage)</li>
+                <li>onUpdateCustomerQueueUI(List&lt;CustomerWaitingInQueue&gt;)</li>
+    
+            
+            
+        
+        
+            <p> <u>Purpose</u>:These methods define UI responses and are invoked by the “CustomerQueuePresenter”. </p> 
+    
+        </ul>
+
+
+        <p>2.2 <u>Class Name</u> :CustomerQueuePresenter</p>
+
+
+        <!--Purpose-->
+        <p><u>Purpose</u>: Manage database actions and corresponding UI response to change in customer queue, let shopowner accept next customer</p>
+        
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+         <!--public methods-->
+         <p> <u> Public Methods</u>: </p>
+         <ul>
+             
+             <!-- ekta method start -->
+             
+                      
+             
+                 <li><p> Constructor </p></li>
+
+                 <p> <u>Parameter</u>- </p>
+            
+                 <ol>
+     
+                     <li>CustomerQueueView, reference to the view(activity)</li>
+                     <li>CustomerQueueDatabaseHandler, reference to database handler</li>
+                     
+                 </ol>
+     
+                 <br>
+
+                 <li><p><u>Name</u>:fetchCustomerQueue() </p></li>
+
+        
+                <p><u>Purpose</u>: Start the fetch process of customer queue from database and provide list to UI.</p>
+
+                <li><p><u>Name</u>:acceptNextCustomerFromQueue() </p></li>
+
+        
+                <p><u>Purpose</u>: Accept, i.e connect with the customer first in queue</p>
+
+                <li>onFetchDoneFromDB(DataSnapshot),	</li>
+                <li>onNewCustomerAddedInDB(DataSnapshot),</li>
+                <li>onCustomerRemovedInDB(DataSnapshot),</li>
+
+                <p><u>Purpose</u>: These methods are implemented by the “CustomerQueuePresenter” from the “CustomerQueueDatabaseHandlerCallbacks” interface. These are invoked by the “CustomerQueueDatabaseHandler” when there is an subsequent change in data in the database and provide the presenter with updated data</p>
+        
+        </ul>
+        <br>
+
+
+
+
+
+
+
+
+        <p>2.3 <u>Class Name</u> :CustomerQueueDatabaseHandler</p>
+
+
+        <!--Purpose-->
+        <p><u>Purpose</u>: Handle fetching customer queue of the entered shop from the database, contains listeners for any change in data inside the database and responsible for starting the connection with customer first in queue.</p>
+        
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+         <!--public methods-->
+         <p> <u> Public Methods</u>: </p>
+         <ul>
+             
+             <!-- ekta method start -->
+             
+                      
+             
+                 <li><p> Constructor </p></li>
+
+                 <p> <u>Parameter</u>- </p>
+            
+                <ol>
+
+                    <li>DatabaseReference, reference to specific node in database</li>
+                    <li>CustomerQueueDatabaseHandlerCallbacks, reference to database callback(presenter) which will be notified when any data change occurs in database</li>
+                    
+                </ol>
+
+                <br>
+
+
+                 <li><p><u>Name</u>:fetchCustomerQueueFromDB() </p></li>
+
+        
+                <p><u>Purpose</u>:Fetch the current list of customers from database.</p>
+
+                <li><p><u>Name</u>:acceptNextCustomerFromDB() </p></li>
+
+        
+                <p><u>Purpose</u>:Set the “shopOwnerWantsToConnect” fields in the database to true for the first 	customer in queue to alert let the customer</p>
+
+                
+        </ul>
+        <br>
+
+        <p>2.4 <u>Class Name</u> :CustomerWaitingInQueue</p> <p>same as in customer app(point-5.5)</p>
+
+
+
+        <h3> 3.<u>View/Add/Edit Shop Products Pages</u>: </h3> <p>The feature that lets shopowners input a subset of available products requires classes,</p>
+        <p>3.1 <u>Class Name</u> : ShopProductsActivity </p>
+      
+        <!--Purpose-->
+        <p><u>Purpose</u>:Show the already inputted list of products, let shopowner edit and input new ones.</p>
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+        
+        <!--public methods-->
+        <p> <u> Public Methods</u>: </p>
+        <ul>
+            
+            <!-- ekta method start -->
+            
+                
+                    <li>onFetchingProductsUI()</li>
+                    <li>onFetchDoneUI()</li>
+                    <li>onFetchFailedUI(String: errorMessage)</li>
+                    <li>onNewProductAddedUI(ShopProduct)</li>
+                
+            
+            
+                <p> <u>Purpose</u>:These methods define UI responses and are invoked by the “ShopProductsPresenter”. </p> 
+        
+            </ul>
+
+
+
+    
+            <p>3.2 <u>Class Name</u>: ShopProductsPresenter</p>
+
+
+            <!--Purpose-->
+            <p><u>Purpose</u>: Update to database edits made by shopowner and handle corresponding UI response.</p>
+            
+            
+            <!--public attributes-->
+            <p><u>Public Attributes</u>: none</p>
+            
+             <!--public methods-->
+             <p> <u> Public Methods</u>: </p>
+             <ul>
+                 
+                 <!-- ekta method start -->
+                 
+                          
+                 
+                     <li><p> Constructor </p></li>
+
+                     <p> <u>Parameter</u>- </p>
+            
+                     <ol>
+     
+                         <li>ShopProductsView, reference to view(activity)</li>
+                         <li>ShopProductsDatabaseHandler, reference to database handler</li>
+                         
+                     </ol>
+     
+                     <br>
+
+                     <li><p><u>Name</u>:fetchShopProducts() </p></li>
+    
+            
+                    <p><u>Purpose</u>:- Start the fetch process of previously inputted products from database and provide 	list to UI.</p>
+    
+                    <li>addShopProduct(ShopProduct)</li>
+                    <li>updateShopProduct(ShopProduct)</li>
+                    <li>updateShopProduct(ShopProduct)</li>
+
+                    <p> <u>Parameter</u>- </p>
+            
+                    <ol>
+           
+                        <li>ShopProduct, model of a product</li>
+                       
+                     
+                   </ol>
+            
+                    <p><u>Purpose</u>:Alter a particular product in the list to the database & UI.</p>
+    
+                    <li>onFetchDoneFromDB(DataSnapshot)</li>
+
+                    <p><u>Purpose</u>:The method is implemented by the “ShopProductPresenter” from the “ShopProductDatabaseHandlerCallbacks” interface, invoked by the “ShopProductDatabaseHandler” the list of products already inputted by the shopowner have been downloaded</p>
+            </ul>
+            <br>
+
+
+
+
+
+
+            <p>3.3 <u>Class Name</u> :ShopProductsDatabaseHandler</p>
+
+
+            <!--Purpose-->
+            <p><u>Purpose</u>: ShopProductsDatabaseHandler</p>
+            
+            
+            <!--public attributes-->
+            <p><u>Public Attributes</u>: none</p>
+            
+             <!--public methods-->
+             <p> <u> Public Methods</u>: </p>
+             <ul>
+                 
+                 <!-- ekta method start -->
+                 
+                          
+                 
+                     <li><p> Constructor </p></li>
+
+                     <p> <u>Parameter</u>- </p>
+                
+                    <ol>
+
+                        <li>DatabaseReference, reference to specific node in database</li>
+                        <li>ShopProductsDatabaseHandlerCallbacks, reference to database callback(presenter) which will be notified when any data change occurs in database</li>
+                        
+                    </ol>
+
+                    <br>
+
+                     <li><p><u>Name</u>:fetchShopProductsFromDB() </p></li>
+    
+            
+                    <p><u>Purpose</u>:- Fetch process of previously inputted products from database.</p>
+    
+                    <li>addShopProductToDB(ShopProduct)</li>
+                    <li>addShopProductToDB(ShopProduct)</li>
+                    <li>updateShopProductInDB(ShopProduct)</li>
+
+                    <p> <u>Parameter</u>- </p>
+            
+                    <ol>
+           
+                        <li>ShopProduct, model of a product</li>
+                       
+                     
+                   </ol>
+            
+                    <p><u>Purpose</u>:Alter a particular product in the list to the database.</p>
+    
+                    
+            </ul>
+            <br>
+
+            <p>3.4 <u>Class Name</u> :ShopProduct</p> <p>same as in customer app(point-6.4)</p>
+
+
+
+            <p>3.5 <u>Class Name</u> :ProductBarcodeScanActivity </p>
+  
+            <!--Purpose-->
+            <p><u>Purpose</u>:Scan product barcodes to take input from shopowner.</p>
+            
+            <!--public attributes-->
+            <p><u>Public Attributes</u>: none</p>
+            
+            
+            <!--public methods-->
+            <p> <u> Public Methods</u>: </p>
+            <ul>
+                
+                <!-- ekta method start -->
+                
+                    
+                    
+                    <ul>
+            
+                        <li>onScanningUI() </li>
+                        <li> onScanDoneUI()</li>
+                        <li>onScanFailedUI(String: errorMessage)	</li>
+            
+                    </ul>
+                    
+                
+                
+                    <p> <u>Purpose</u>: These methods define UI responses and are invoked by the “ProductBarcodeScanPresenter”.</p> 
+            
+                </ul>
+
+
+
+
+
+      <p>3.6 <u>Class Name</u>: ProductBarcodeScanPresenter</p>
+
+
+                <!--Purpose-->
+                <p><u>Purpose</u>:Handle the product scanner service and corresponding UI response.</p>
+                
+                
+                <!--public attributes-->
+                <p><u>Public Attributes</u>: none</p>
+                
+                 <!--public methods-->
+                 <p> <u> Public Methods</u>: </p>
+                 <ul>
+                     
+                     <!-- ekta method start -->
+                     
+                              
+                     
+                         <li><p> Constructor </p></li>
+
+                         <p> <u>Parameter</u>- </p>
+                    
+                        <ol>
+
+                            <li>ProductBarcodeScanView, reference to view(activity)</li>
+                            <li>BarcodeScanningHandler, reference to barcode scanning sevice handler</li>
+                            
+                        </ol>
+
+                        <br>
+
+                         <li><p><u>Name</u>:scanProductBarcode()</p></li>
+        
+                
+                        <p><u>Purpose</u>:-Start the barcode scanning process.</p>
+        
+                        <li>onScanSuccessful(ScannedProduct)</li>
+                        <li>onScanFailed()</li>
+                        
+    
+                       
+                
+                        <p><u>Purpose</u>: These methods are implemented by the “ProductBarcodeScanPresenter” from the “BarcodeScanningHandlerCallbacks” interface, invoked by the “BarcodeScanningHandler”.</p>
+        
+                        
+                </ul>
+                <br>
+
+
+
+                <p>3.7 <u>Class Name</u>: BarcodeScanningHandler</p>
+
+
+                <!--Purpose-->
+                <p><u>Purpose</u>:Handle the barcode scanning thirdparty service used.</p>
+                
+                
+                <!--public attributes-->
+                <p><u>Public Attributes</u>: none</p>
+                
+                 <!--public methods-->
+                 <p> <u> Public Methods</u>: </p>
+                 <ul>
+                     
+                     <!-- ekta method start -->
+                     
+                              
+                     
+                         <li><p> Constructor </p></li>
+
+                         <p> <u>Parameter</u>- </p>
+            
+                         <ol>
+         
+                             <li>ScannedProduct, a hollow object of the product to be scanned</li>
+                             <li>BarcodeScanningHandlerCallbacks, reference to barcode scanning callback(presenter) which will be notified of success/ failure of the barcode scan process</li>
+                             
+                         </ol>
+         
+                         <br>
+
+                         <li><p><u>Name</u>:startBarcodeScanService()</p></li>
+        
+                
+                        <p><u>Purpose</u>:-Scan barcode and identify product</p>
+        
+                        
+        
+                        
+                </ul>
+                <br>
+
+<p>3.8 <u>Class Name</u> :ScannedProduct</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Model class for scanned/will be scanned product.
+
+</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+        
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: productName</li>
+             <li>Decimal: pricePerUnit</li>
+             <li>String: barcode</li>
+            
+          
+        </ol>
+     <li>getters & setters</li>
+     
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+<!--class end-->
+
+
+
+
+<h3> 4.<u>Order Generation by Conversation with Customer Page</u>: </h3> <p>The main feature of the app that lets shopowners customers converse and form the order together in realtime.</p>
+        <p>4.1 <u>Class Name</u> : CustomerShopOwnerConnectionActivity </p>
+      
+        <!--Purpose-->
+        <p><u>Purpose</u>:Show the on call page, let shopowner edit prices field for product list items.</p>
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+        
+        <!--public methods-->
+        <p> <u> Public Methods</u>: </p>
+        <ul>
+            
+            <!-- ekta method start -->
+            
+                    <li>onConnectingWithCustomerUI()</li>
+                    <li>onConnectionEstablishedUI()</li>
+                    <li>onConnectionFailedUI(String: errorMessage)</li>
+                    <li>onNewProductAddedUI(ShopProduct)</li>
+            
+            
+            
+                <p> <u>Purpose</u>:These methods define UI responses and are invoked by the “ShopProductsPresenter” for subsequent events regarding the ongoing app to app voice call. </p> 
+                <li><u>Name</u>:onProductListEditedByCustomerUI(ProductListItem, int: index) </li>
+
+
+                <p> <u>Parameter</u>- </p>
+            
+                <ol>
+       
+                    <li>ProductListItem, model for a particular product list item in the generating order list</li>
+                   <li>int: index, index of the particular product list item in the genearting order list.</li>
+                 
+               </ol>
+            
+            
+               <p> <u>Purpose</u>:  Make changes to particular product list item in the list view. </p>  
+            <!-- arekta method end -->
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+            <p>4.2 <u>Class Name</u> : CustomerShopOwnerConnectionPresenter </p>
+      
+            <!--Purpose-->
+            <p><u>Purpose</u>:Manage and provide- app to app voice call between customer and shopowner, realtime updates to product list done by both end. And control UI responses for all of these.</p>
+            
+            <!--public attributes-->
+            <p><u>Public Attributes</u>: none</p>
+            
+            
+            <!--public methods-->
+            <p> <u> Public Methods</u>: </p>
+            <ul>
+                
+                <!-- ekta method start -->
+                
+                <li><p> Constructor </p></li>
+
+                <p> <u>Parameter</u>- </p>
+           
+               <ol>
+
+                <li>CustomerShopOwnerConnectionView, reference to view(activity)</li>
+                <li>CustomerShopOwnerConnectionDatabaseHandler, reference to database handler for customer shopowner realtime interaction</li>
+                <li>VoiceOverInternetHandler, reference to app to app voice call feature handler between customer-shopowner</li>
+                <li>CustomerReadyToConnectDatabaseHandler, reference to database handler that lets shopowner know customer is ready to receive call now</li>
+                   
+               </ol>
+
+               <br>
+                    
+                    
+            
+                        <li>onCustomerReadyToConnect()</li>
+                        
+                        <p> <u>Purpose</u>:The method is implemented from “CustomerReadyToConnectDatabaseHandlerCallback” interface and is invoked by “CustomerReadyToConnectDatabaseHandler” when customer is done with voip setup and is ready to join in app to app voice call. </p> 
+                   
+                        <li><u>Name</u>:leaveConversation()</li>
+
+                        <p> <u>Purpose</u>:Immediately disconnects the call without placing any order. </p> 
+
+                        <li><u>Name</u>: updateProductNameForProductListItemAsUserTypes(String: text, String: 		productListItemId)</li>
+
+
+                        <p> <u>Parameter</u>- </p>
+                
+                    <ol>
+           
+                        <li>String: text, the text whatever user typed in name field of a product list item.</li>
+                       <li>String: productListItemId, the unique id of the product list item where user typed</li>
+                     
+                   </ol>
+                        <p> <u>Purpose</u>:Edit the product name field in database and UI. </p> 
+
+
+                        <li><u>Name</u>: updateProductQuantityForProductListItemAsUserTypes(String: quantity, 	String: productListItemId)</li>
+
+
+                        <p> <u>Parameter</u>- </p>
+                
+                    <ol>
+           
+                        <li>String: quantity, the quantity string whatever user typed in quantity field of a 			product list item.</li>
+                       <li>String: productListItemId, the unique id of the product list item where user typed.</li>
+                     
+                   </ol>
+                        <p> <u>Purpose</u>:Edit the product quantity field in database and UI. </p> 
+
+
+
+                        <li><u>Name</u>: updateProductPriceForProductListItemAsUserTypes(Decimal: 	priceOfWholeQuantity, String: productId)</li>
+
+
+                        <p> <u>Parameter</u>- </p>
+                
+                    <ol>
+           
+                        <li>Decimal: priceOfWholeQuantity, the price whatever shopowner typed in quantity 		field of a product list item.</li>
+                       <li>String: productListItemId, the unique id of the product list item where user typed.</li>
+                     
+                   </ol>
+                        <p> <u>Purpose</u>:Edit the product price field in database and UI. </p> 
+
+
+
+
+
+
+
+
+                        <li><u>Name</u>: setShopOwnerConfirm(boolean)</li>
+
+
+                        <p> <u>Parameter</u>- </p>
+                
+                    <ol>
+           
+                        <li>boolean, state of shopowner confirmation field of the whole order.</li>
+                      
+                     
+                   </ol>
+                        <p> <u>Purpose</u>:Shopowner confirmation for the order is to be set in the database </p> 
+
+                        <li>onNewProductListItemAddedByInDB(Datasnapshot)</li>
+                        <li>onProductListItemNameEditedInDB(Datasnapshot)</li>
+                        <li>onProductListItemQuantityEditedInDB(Datasnapshot)</li>
+                        <li>onCustomerConfirmationChangedInDB(Datasnapshot)</li>
+    
+    
+                    
+                
+                
+                   <p> <u>Purpose</u>:  These methods are implemented by the “CustomerShopOwnerConnectionPresenter” from the “CustomerShopOwnerConnectionDatabaseHandlerCallbacks” interface. These are invoked by the “CustomerShopOwnerConnectionDatabaseHandler” when there is subsequent change in any product list item field or order confirmation field in the database in realtime from the customer’s end and provide the presenter with updated data</p>  
+
+                   <li>onConfigDone()</li>
+                   <li>onCallOutgoing()</li>
+                   <li>onFailure()</li>
+                   <li>onCallConnected(String: callerId)</li>
+                   <li>onCallDisconnected()</li>
+
+
+                   <p> <u>Purpose</u>: These methods are implemented by the “CustomerShopOwnerConnectionPresenter” from the “VoiceOverInternetHandlerCallbacks” interface. These are invoked by the “VoiceOverInternetHandler” when there is subsequent events related to the app-to-app voice call occur.</p>  
+
+                <!-- arekta method end -->
+    
+                </ul>
+
+
+<p>4.3 <u>Class Name</u> :CustomerReadyToConnectDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Hold listeners for database change signalling customer is ready to connect with shopowner.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+
+         <p> <u>Parameter</u>- </p>
+            
+                <ol>
+
+                    <li>DatabaseReference, reference to specific node in database</li>
+                    <li>CustomerReadyToConnectDatabaseHandlerCallbacks, reference to database callback(presenter) which will be notified when customer is ready to connect</li>
+                    
+                </ol>
+
+                <br>
+
+</ul>
+
+
+<p>4.4 <u>Class Name</u> :VoiceOverInternetHandler</p>
+
+
+                <!--Purpose-->
+                <p><u>Purpose</u>:Handle app to app voice call between shopowner and customer.</p>
+                
+                
+                <!--public attributes-->
+                <p><u>Public Attributes</u>: none</p>
+                
+                 <!--public methods-->
+                 <p> <u> Public Methods</u>: </p>
+                 <ul>
+                     
+                     <!-- ekta method start -->
+                     
+                              
+                     
+                         <li><p> Constructor </p></li>
+
+                         <p> <u>Parameter</u>- </p>
+            
+                         <ol>
+         
+                             <li>String: receiverID, unique id of the customer the call is going to</li>
+                             <li>String: calledID, unique id of the shopowner who will make the call</li>
+                             <li>VoiceOverInternetHandlerCallbacks, reference to voi sevice callback(presenter) which will be notified when any app to app call related events occur</li>
+                             
+                         </ol>
+         
+                         <br>
+
+
+                         <li><p><u>Name</u>:setupConfigs()</p></li>
+        
+                
+                        <p><u>Purpose</u>:-Sets up required config variables for the thirdparty voip service</p>
+        
+                        <li><p><u>Name</u>:makeCall()</p></li>
+        
+                
+                        <p><u>Purpose</u>:-Initiate the call from shopowner’s end.</p>
+        
+                        <li><p><u>Name</u>:hangUpCall()()</p></li>
+        
+                
+                        <p><u>Purpose</u>:-Disconnect the call immediately.</p>
+
+                        <li>enableLoudSpeaker()</li>
+                        <li>disableLoudSpeaker()</li>
+
+                        <p><u>Purpose</u>:-The methods control the loud speaker on/off during call.</p>
+                        
+                </ul>
+                <br>
+
+
+
+
+
+
+
+
+
+<p>4.5 <u>Class Name</u> : CustomerShopOwnerConnectionDatabaseHandler</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>: Update into database any edits in the product list items done by the shopowner, hold listeners for any change to product list items in database from the cutomer’s end.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     
+     <li><p> Constructor </p></li>
+
+     <p> <u>Parameter</u>- </p>
+
+    <ol>
+
+     <li>DatabaseReference, reference to exact node in database</li>
+     <li>CustomerShopOwnerConnectionDatabaseHandlerCallbacks, reference to callback(presenter) to notify of realtime changes happening to database</li>
+     
+    </ol>         
+     
+         
+         <li><p><u>Name</u>: updateProductNameForProductListItemAsUserTypesToDB(String: text, String: 	productListItemId)</p></li>
+        
+       
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: text, the text whatever user typed in name field of a product list item.</li>
+             <li>String: productListItemId, the unique id of the product list item where shopowner 		typed.</li>
+            
+          
+        </ol>
+     
+     
+        <p> <u>Purpose</u>: Update the edited product name field for particular product list item in database.</p>  
+
+     <!-- arekta method end -->
+
+     <li><p><u>Name</u>: updateProductQuantityForProductListItemAsUserTypesInDB(String: quantity, 	String: productListItemId)</p></li>
+        
+       
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: quantity, the quantity string whatever user typed in quantity field of a 			product list item.</li>
+             <li>String: productListItemId, the unique id of the product list item where shopowner 		typed.</li>
+            
+          
+        </ol>
+     
+     
+        <p> <u>Purpose</u>: Update the edit in product quantity field for particular product list item in database</p>  
+
+
+
+        <!-- arekta method end -->
+
+     <li><p><u>Name</u>: updateProductPriceForProductListItemAsUserTypesInDB(Decimal: 	priceOfWholeQuantity, String: productId)</p></li>
+        
+       
+     <p> <u>Parameter</u>- </p>
+        
+     <ol>
+
+         <li>Decimal: priceOfWholeQuantity, the price whatever shopowner typed in quantity 		field of a product list item.</li>
+         <li>String: productListItemId, the unique id of the product list item where user typed.</li>
+        
+      
+    </ol>
+ 
+ 
+    <p> <u>Purpose</u>: Edit the product price field in database.</p>  
+
+
+
+     <!-- arekta method end -->
+
+     <li><p><u>Name</u>: setShopOwnerConfirm(boolean)</p></li>
+        
+       
+     <p> <u>Parameter</u>- </p>
+        
+     <ol>
+
+         <li>boolean, state of shopowner confirmation field of the whole order.</li>
+        
+    </ol>
+ 
+ 
+    <p> <u>Purpose</u>: Set shopowner confirmation in the database.</p>  
+
+
+    
+</ul>
+<br>
+
+
+
+
+<p>4.6 <u>Class Name</u> :ProductListItem</p> <p>same as in customer app(point-8.6).</p>
+<br>
+<p>4.7 <u>Class Name</u> :CustomerShopOwnerInteraction</p> <p>same as in customer app(point-8.9)</p>
+
+<br>
+
+
+<h3> 5.<u>View/Confirm/Cancel Pernding Orders Page</u>: </h3> <p>Viewing/confirmaing/removing of placed orders by shops owners requires classes,</p>
+        <p>5.1 <u>Class Name</u> : PendingOrdersActivity </p>
+      
+        <!--Purpose-->
+        <p><u>Purpose</u>:Show list of pending orders. </p>
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+        
+        <!--public methods-->
+        <p> <u> Public Methods</u>: </p>
+        <ul>
+            
+            <!-- ekta method start -->
+            
+                
+                
+                
+        
+                    <li>onFetchingPendingOrdersUI(), </li>
+                    <li>onFetchDoneUI(List&lt;Order&gt;), 	</li>
+                    <li>onFetchFailedUI(String: errorMessage), </li>
+                    
+        
+                
+                
+            
+            
+                <p> <u>Purpose</u>:These methods define UI responses related to fetching pending orders and are invoked by the “PendingOrdersPresenter”. </p> 
+                
+                    <li>onConfirmingPendingOrderUI(Order)</li>
+                   <li>onConfirmingPendingOrderUI(Order).</li>
+                   <li>onConfirmPendingOrderFailedUI(String: errorMessage)</li>
+                 
+               
+            
+            
+               <p> <u>Purpose</u>: These methods define UI responses related to pending order confirmation and are invoked by the “PendingOrdersPresenter”.</p>  
+            <!-- arekta method end -->
+
+            </ul>
+
+
+
+            <p>5.2 <u>Class Name</u>: PendingOrderPresenter</p>
+
+
+            <!--Purpose-->
+            <p><u>Purpose</u>: Manage database actions and UI events for- pending order confirmation/cancellation, pending order state change.</p>
+            
+            
+            <!--public attributes-->
+            <p><u>Public Attributes</u>: none</p>
+            
+             <!--public methods-->
+             <p> <u> Public Methods</u>: </p>
+             <ul>
+                 
+                 <!-- ekta method start -->
+                 
+                 <li><p> Constructor </p></li>
+
+                 <p> <u>Parameter</u>- </p>
+            
+                <ol>
+ 
+                 <li>PendingOrdersView, reference to view(activity)</li>
+                 <li>PendingOrderDatabaseHandler, reference to database handler</li>
+                   
+                </ol>     
+
+                     <li><p><u>Name</u>: fetchPendingOrders()</p></li>
+                    
+                     <p> <u>Purpose</u>: Start the fetch process of pending orders from database and tell UI..</p> 
+                     
+                     <li><p><u>Name</u>:confirmPendingOrder(String: orderId)</p></li>
+                    
+                     <p> <u>Purpose</u>:Start the confirmation process of a pending in database and tell UI.</p>  
+                   
+                     <p> <u>Parameter</u>- </p>
+                        
+                     <ol>
+            
+                         <li>String: orderId, unique id of the pending order.</li>
+                         		
+                        
+                      
+                    </ol>
+
+
+
+
+
+                    <li><p><u>Name</u>:cancelPendingOrder(String: orderId)</p></li>
+                    
+                     <p> <u>Purpose</u>:Start the cancellation process of a pending in database and tell UI.</p>  
+                   
+                     <p> <u>Parameter</u>- </p>
+                        
+                     <ol>
+            
+                         <li>String: orderId, unique id of the pending order. </li>
+                    
+                         		
+                        
+                      
+                    </ol>
+<br>
+                    <li>onFetchDoneFromDB(Datasnapshot)</li>
+                    <li>onPendingOrderWasConfirmedByCustomer(Datasnapshot)</li>
+                 
+                 
+                    <p> <u>Purpose</u>: These methods are implemented by the “PendingOrderPresenter” from the “PendingOrderDatabaseHandlerCallbacks” interface. These are invoked by the “PendingOrderDatabaseHandler” when respectively- pending orders fetch is done and customer confirms an order.</p>  
+
+
+        </ul>
+
+
+
+
+        <p>5.3 <u>Class Name</u> :PendingOrderDatabaseHandler</p>
+
+
+        <!--Purpose-->
+        <p><u>Purpose</u>: Handles database actions for- pending order confirmation/cancellation, pending order state change, contains listeners for customer confirmation state change in pending order.</p>
+        
+        
+        <!--public attributes-->
+        <p><u>Public Attributes</u>: none</p>
+        
+         <!--public methods-->
+         <p> <u> Public Methods</u>: </p>
+         <ul>
+             
+             <!-- ekta method start -->
+             
+                    
+             <li><p> Constructor </p></li>
+
+             <p> <u>Parameter</u>- </p>
+        
+            <ol>
+
+             <li>DatabaseReference, reference to exact node in database</li>
+             <li>PendingOrderDatabaseHandlerCallback, reference to callback(presenter) to notify of any changes in database</li>
+                
+            </ol>
+             
+                 
+                 <li><p><u>Name</u>: fetchPendingOrdersFromDB()</p></li>
+                
+                 <p> <u>Purpose</u>: Fetch process of pending orders from database.</p> 
+                 
+                 <li><p><u>Name</u>confirmPendingOrderInDB(String: orderId)</p></li>
+                
+                 <p> <u>Purpose</u>:Confirm a pending in database by setting shopowner confirmation true.</p>  
+               
+                 <p> <u>Parameter</u>- </p>
+                    
+                 <ol>
+        
+                     <li>String: orderId, unique id of the pending order.</li>
+                             
+                    
+                  
+                </ol>
+
+
+
+
+
+                <li><p><u>Name</u>:cancelPendingOrderInDB(String: orderId)</p></li>
+                
+                 <p> <u>Purpose</u>:Cancel a pending by removing pending order from database.</p>  
+               
+                 <p> <u>Parameter</u>- </p>
+                    
+                 <ol>
+        
+                     <li>String: orderId, unique id of the pending order. </li>
+                
+                             
+                    
+                  
+                </ol>
+
+    </ul>
+
+    <p>5.4 <u>Class Name</u> :OrderPlacingCustomer</p> <p>same as in customer app(point-8.7)</p>
+    <br>
+
+
+    <p>5.5 <u>Class Name</u>: PendingOrder</p>
+
+
+<!--Purpose-->
+<p><u>Purpose</u>:Model class for pending orders of shop.</p>
+
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+ <!--public methods-->
+ <p> <u> Public Methods</u>: </p>
+ <ul>
+     
+     <!-- ekta method start -->
+     <li> 
+              
+     
+         <p> Constructor </p>
+         
+     </li>
+     <!-- ekta method end-->
+
+     <!-- arekta method start -->
+     
+          
+         
+         <p> <u>Parameter</u>- </p>
+            
+         <ol>
+
+             <li>String: orderId, unique id of the order</li>
+             <li>OrderPlacingCustomer, object containing all customer’s information</li>
+             <li>List&lt;ProductListItem&gt;: productList, list of all the products ordered. </li>
+             <li>Decimal: totalPrice, price of the whole order.</li>
+             <li>String: orderPlacementTime</li>
+             <li>boolean: customerConfirmed, state of customer confirmation for the order.</li>
+             <li>boolean: shopOwnerConfirmed,  state of shopowner confirmation for the order</li>
+             <li>double: distanceFromShop, customer home address distance from shop</li>
+            
+          
+        </ol>
+     
+     
+        <li><p>getters & setters</p></li>
+
+
+ </ul>
+ <!--public methods end-->
+
+   
+
+
+<br>
+
+
+
+
+
+
+
+
+<p>5.7 <u>Class Name</u> : PendingOrdersInMapActivity</p>
+  
+<!--Purpose-->
+<p><u>Purpose</u>: Show list of pending orders locations in map. </p>
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+
+<!--public methods-->
+<p> <u> Public Methods</u>: </p>
+<ul>
+    
+    <!-- ekta method start -->
+    
+        
+        
+        <ul>
+
+            <li>onShowDetailsAboutMarkerUI(),  </li>
+            
+
+        </ul>
+        
+    
+    
+        <p> <u>Purpose</u>: These methods define UI response to showing pending order information and are invoked by the “PendingOrdersInMapPresenter”.
+
+        </p> 
+
+    </ul>
+
+
+
+
+    <p>5.8 <u>Class Name</u> : PendingOrderInMapPresenter</p>
+  
+<!--Purpose-->
+<p><u>Purpose</u>: Manage model access and UI events for pending orders shown in map. </p>
+
+<!--public attributes-->
+<p><u>Public Attributes</u>: none</p>
+
+
+<!--public methods-->
+<p> <u> Public Methods</u>: </p>
+<ul>
+    
+    <!-- ekta method start -->
+    
+    <li><p> Constructor </p></li>
+
+        <p> <u>Parameter</u>- </p>
+
+        <ol>
+
+        <li>PendingOrdersInMapView, reference to view(activity)</li>
+        <li>List&lt;PendingOrder&gt;, list of pending orders to be shown in map.</li>
+            
+        </ol>
+        
+        
+    <li><p> <u>Name</u> : showDetails(int: index)</p></li>
+
+    <p> <u>Parameter</u>- </p>
+       
+    <ol>
+
+        <li>int: index, index of a pending order whose info is to be shown.</li>
+       
+     
+   </ol>    
+     
+    </ul>
+        
+        
+        
+    <br><br>
+
+
+
+
+    <h2>Web App:</h2>
+    <h3> 1. <u>User Login Page</u>: </h3>
+    <p>The classes used for user login page are given below,</p>
+    <p>1.1 <u>Class Name</u> : LoginController </p>
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>: Handle business logic,controls view, facilitate login verification process.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+    
+        <!-- ekta method start -->
+    
+        <ul>
+    
+            <li>Constructor() </li>
+            <li> getDataFromView()</li>
+            <li>initModel(UserCredential: userCred)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>UserCredential: userCred, the class containing information providing in the login view/form.</li>
+            </ol>
+            <li>verifyUserInput(UserCredential: userCred)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>UserCredential: userCred, the class containing information providing in the login view/form.</li>
+            </ol>
+            <li> login(UserCredential: userCred)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>UserCredential: userCred, the class containing information providing in the login view/form.</li>
+            </ol>
+            <li> startSession()</li>
+            <li> setView(LoginView:view)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>LoginView:view, the class containing the login view.</li>
+            </ol>
+            <li> updateView()</li>
+            <li> loadView()</li>
+    
+    
+        </ul>
+    
+        <p> <u>Purpose:</u> These methods fetch user inputs(login credentials) from view and check database and verify user
+            credentials and log in
+            the user. </p>
+    
+    </ul>
+    
+    <br>
+    
+    
+    
+    
+    
+    
+    <p>1.2 <u>Class Name</u> : LoginView </p>
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>: This class is responsible for rendering the view.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        <!-- ekta method start -->
+        <ul>
+    
+            <li>renderView() </li>
+    
+        </ul>
+    
+        <p> <u>Purpose:</u> This method renders the login page. </p>
+    
+    </ul>
+    
+    <br>
+    
+    
+    
+    
+    <p>1.3 <u>Class Name</u> : UserCredential </p>
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>: Model class for user credential.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        <!-- ekta method start -->
+        <li>
+    
+            <p> Constructor </p>
+        </li>
+    
+        <p> <u>Parameter</u>- </p>
+    
+        <ol>
+    
+            <li>userPhoneNumber, String, phone number of the user</li>
+            <li>userPassword: String, password of the user account</li>
+        </ol>
+        <br>
+        <li>Getters and setters</li>
+    
+    </ul>
+    <br><br>
+
+    <h3> 2. <u>Customer Review Page</u>: </h3>
+    <p>The classes used for customer review page are given below,</p>
+    <p>2.1 <u>Class Name</u> : ReviewController </p>
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>: Handle business logic, controls view, fetch and send users review as json data.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+    
+        <!-- ekta method start -->
+    
+        <ul>
+    
+            <li>Constructor() </li>
+            <li> getDataFromView()</li>
+            <li>initModel(Review: review)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>Review: review, the class contains the review data.</li>
+            </ol>
+            <li>searchShop(String: shopName)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>String shopName, contains the specific shop name.</li>
+            </ol>
+            <li> addReview(Review:review)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>Review: review, the class contains the review data.</li>
+            </ol>
+            <li>loadDatabaseData()</li>
+            <li>setView(ReviewView:view)</li>
+            <p> <u>Parameter</u>- </p>
+            <ol>
+                <li>ReviewView: view, the class containing the review view.</li>
+            </ol>
+            <li> updateView()</li>
+            <li> loadView()</li>
+            <li> logout()</li>
+    
+        </ul>
+    
+        <p> <u>Purpose:</u> These methods fetch user inputs(user review) from view and submit them in database as customer
+            review.
+            These methods also control the view and set the view and fetch data from database as well. </p>
+    
+    </ul>
+    
+    <br>
+    
+    
+    
+    
+    
+    
+    <p>2.2 <u>Class Name</u> : ReviewView </p>
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>: This class is responsible for rendering the view.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        <!-- ekta method start -->
+        <ul>
+    
+            <li>renderView() </li>
+    
+        </ul>
+    
+        <p> <u>Purpose:</u> This method renders the review page. </p>
+    
+    </ul>
+    
+    <br>
+    
+    
+    
+    
+    <p>2.3 <u>Class Name</u> : Review </p>
+    
+    <!--Purpose-->
+    <p><u>Purpose</u>: Model class for user credential.</p>
+    
+    <!--public attributes-->
+    <p><u>Public Attributes</u>: none</p>
+    
+    <p> <u> Public Methods</u>: </p>
+    <ul>
+        <!-- ekta method start -->
+        <li>
+            <p> Constructor </p>
+        </li>
+        <li>setCustomerName(String name)</li>
+        <p> <u>Parameter</u>- </p>
+        <ol>
+            <li>String name, name of the author/customer</li>
+        </ol>
+    
+    
+        <li>setCustomerID(String uID)</li>
+        <p> <u>Parameter</u>- </p>
+        <ol>
+            <li>String uID, unique id of the customer.</li>
+        </ol>
+    
+    
+        <li>setShopID(String sID)</li>
+        <p> <u>Parameter</u>- </p>
+        <ol>
+            <li>String sID, unique id of the shop.</li>
+        </ol>
+    
+    
+        <li>setReviewBody(String text)</li>
+        <p> <u>Parameter</u>- </p>
+        <ol>
+            <li>String text, body of the review text.</li>
+        </ol>
+    
+    
+        <li>setRating(String rate)</li>
+        <p> <u>Parameter</u>- </p>
+        <ol>
+            <li>String rate, rating provided by the customer.</li>
+        </ol>
+    
+    
+        <li>Setters</li>
+    
+    </ul>
+    
+    
+    <br><br>
+
+         
+        <!--add review website class descriptions here-->
+
+
+
+        <br><br><br>
+        <h2 style="color:#00C569;">6. Database Design</h2>
+        <br><br>
+        
+        
+        <h4 id="sec6.1">6.1 Database Diagram</h4>
+
+
+        <img src="database diagrams/Database - Customer.svg" 
+        height="1200" width="600">
+        <br><br>
+        <img src="database diagrams/Database - Shop.svg" 
+        height="2100" width="700">
+        <br><br>
+        <img src="database diagrams/Database - Interactions.svg" 
+        height="1000" width="500">
+
+      
+        <br><br>
+  
+        <h4 id="sec6.2">6.2 Details About Entities</h4>
+        <p>Node wise descriptions of the <b>nosql database</b> used is given below,</p>
+        <ul>
+
+            <!--customer node-->
+            <p><b>"customers"</b>: This node holds all the informations for all the customer accounts</p>
+            <ul>
+            
+                <p><b>"uniqueCustomerId"</b>: <u>Type</u>- String, <u>Purpose</u>- the unique id assigned to this particular customer</p>
+                <ul>
+
+                    <p><b>"uid"</b>: <u>Type</u>- String, <u>Purpose</u>-the unique id of customer (same as the key for this node)</p>
+                    
+                    <p><b>"username"</b>: <u>Type</u>- String, <u>Purpose</u>- customer's name</p>
+                    
+                    <p><b>"customerPhoneNumber"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's verified phone number used</p>
+                    
+                    <p>"<b>homeAddress</b>":<u>Type</u>- String, <u>Purpose</u>- customer's home addrerss</p>
+                    <p>"<b>homeLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- home address latitude</p>
+                    <p><b>"homeLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- home address longitude</p>
+
+                    <p><b>"status"</b>: <u>Type</u>- boolean, <u>Purpose</u>- is customer online or not</p>
+                    
+                    <p><b>"shopsNearby"</b>: this node holds relevant informations of shops nearby customer's home address</p>
+                    <ul>
+                        
+                        <p><b>"uniqueShopId"</b>: the unique id of this particular nearby shop</p> 
+                        <ul>
+
+                            <p><b>"shopName"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's name</p>
+                        
+                            <p><b>"shopType"</b>: <u>Type</u>- String, <u>Purpose</u>- what type of shop this is (required for the icon to show in map)</p>
+
+                            <p><b>"shopPhoneNumber"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's verified phone number</p>
+
+                            <p><b>"shopAddress"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's address</p>
+                            <p>"<b>shopLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- shop address latitude</p>
+                            <p><b>"shopLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- shop address longitude</p>
+
+
+                            <p><b>"shopStatus"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's status either open or closed</p>
+
+                            <p><b>"perimeterRadius"</b>: <u>Type</u>- int, <u>Purpose</u>- area covered by the shop in meters (initially set to 100)</p>
+
+                        </ul>
+
+                    </ul>
+
+                    <p><b>"pendingOrders"</b>: this node holds relevant informations of unreceived orders placed by the customer at nearby shops</p>
+                    <ul>
+
+                        <p><b>"uniqueOrderId"</b>: the unique id of this particular pending order</p> 
+                        <ul>
+
+                            <!--order placed at shop-->
+                                <p><b>"shopName"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's name</p>
+                        
+                                <p><b>"shopType"</b>: <u>Type</u>- String, <u>Purpose</u>- what type of shop this is</p>
+
+                                <p><b>"shopPhoneNumber"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's verified phone number</p>
+
+                                <p><b>"shopAddress"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's address</p>
+                                <p>"<b>shopLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- shop address latitude</p>
+                                <p><b>"shopLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- shop address longitude</p>
+
+
+                            <p><b>"productList"</b>: the node contains information of a list of products in this pending order</p>
+                            <ul>
+
+                                <p><b>"uniqueProductId"</b>: the unique id assigned to the product</p> 
+                                <ul>
+                                    <p><b>"productName"</b>: <u>Type</u>- String, <u>Purpose</u>- product's name</p>
+                                    <p><b>"quantity"</b>: <u>Type</u>- String, <u>Purpose</u>- product's quantity in plain text (5kg, 2 packet etc)</p>
+                                    <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the full quantity</p>    
+                                </ul>
+                            
+                            </ul>
+
+                            <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the whole product list</p>
+
+                            <p><b>"orderPlacementTime"</b>: <u>Type</u>- Date, <u>Purpose</u>- time the order was placed at</p>
+                            <p><b>"customerConfirmation"</b>: <u>Type</u>- boolean, <u>Purpose</u>- customer confirmation staus for this order</p>
+                            <p><b>"shopOwnerConfirmation"</b>: <u>Type</u>- boolean, <u>Purpose</u>- shop confirmation staus for this order</p>
+
+
+                        </ul>
+
+                    </ul>
+
+                </ul>
+
+            </ul>
+
+            <br>
+
+            <!-- shops node -->
+            <p><b>"shops"</b>: This node holds all the informations for all the shop accounts</p>
+            <ul>
+
+                <p><b>"uniqueShopId"</b>: <u>Type</u>- String, <u>Purpose</u>- the unique id assigned to this particular shop</p>
+                <ul>
+
+                    <p><b>"uid"</b>: <u>Type</u>- String, <u>Purpose</u>-the unique id of shop (same as the key for this node)</p>
+
+                    <p><b>"shopName"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's name</p>
+
+                    <p><b>"shopOwnerName"</b>: <u>Type</u>- String, <u>Purpose</u>- shop owner's name</p>
+
+                    <p><b>"shopType"</b>: <u>Type</u>- String, <u>Purpose</u>- what type of shop this is (required for the icon to show in map)</p>
+
+                    <p><b>"shopPhoneNumber"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's verified phone number</p>
+
+                    <p><b>"shopAddress"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's address</p>
+                    <p>"<b>shopLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- shop address latitude</p>
+                    <p><b>"shopLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- shop address longitude</p>
+
+
+                    <p><b>"shopStatus"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's status either open or closed</p>
+
+                    <p><b>"perimeterRadius"</b>: <u>Type</u>- int, <u>Purpose</u>- area covered by the shop in meters (initially set to 100)</p>
+
+                    <p><b>"products"</b>: the node contains information of a list of products inputted by this shop</p>
+                    <ul>
+
+                        <p><b>"uniqueProductId"</b>: <u>Type</u>- String, <u>Purpose</u>- the unique id assigned to this particular inputted product</p>
+                        <ul>
+                            <p><b>"productName"</b>: <u>Type</u>- String, <u>Purpose</u>- product's name</p>
+                            <p><b>"quantity"</b>: <u>Type</u>- int, <u>Purpose</u>- product's exact quantity</p>
+                            <p><b>"pricePerUnit"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the a unit of quantity</p>
+                        </ul>
+
+                    </ul>
+
+                    <p><b>"customerQueue"</b>: the node contains information of a list of customers waiting in line for this shop</p>
+                    <ul>
+                        
+                        <p><b>"uniqueCustomerId"</b>: <u>Type</u>- String, <u>Purpose</u>- the unique id for this particular customer waiting in queue</p>
+                        <ul>
+
+                            <p><b>"customerUsername"</b>: <u>Type</u>- String, <u>Purpose</u>- customer's name</p>
+                    
+                            <p><b>"customerPhoneNumber"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's verified phone number used</p>
+                            
+                            <p>"<b>homeAddress</b>":<u>Type</u>- String, <u>Purpose</u>- customer's home addrerss</p>
+                            <p>"<b>homeLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- home address latitude</p>
+                            <p><b>"homeLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- home address longitude</p>
+                            
+                        </ul>
+
+                    </ul>
+
+                    <p><b>"chatFeed"</b>: the node contains information of a list of messages in a global feed, between customers waiting in queue</p>
+                    <ul>
+                        
+                        <p><b>"uniqueMessageId"</b>: <u>Type</u>- String, <u>Purpose</u>- the unique id for this particular message in chatFeed</p>
+                        <ul>
+
+                            <p><b>"authorUsername"</b>: <u>Type</u>- String, <u>Purpose</u>- name of the message author</p>
+                    
+                            <p><b>"content"</b>:<u>Type</u>- String, <u>Purpose</u>- message body</p>
+                            
+                            <p><b>"receipientUsername"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's home addrerss</p>
+                            <p><b>"time"</b>:<u>Type</u>- Date, <u>Purpose</u>- time message was sent</p>
+
+                        </ul>
+                        
+                    </ul>
+
+                    <p><b>"connectedCustomer"</b>: the node contains information of the customer shop is currently connected(having a conversation) with</p>
+                    <ul>
+                        
+                        <p><b>"uniqueCustomerId"</b>: <u>Type</u>- String, <u>Purpose</u>- customer's unique id</p>
+
+                        <p><b>"customerUsername"</b>: <u>Type</u>- String, <u>Purpose</u>- customer's name</p>
+                    
+                        <p><b>"customerPhoneNumber"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's verified phone number used</p>
+                        
+                        <p>"<b>homeAddress</b>":<u>Type</u>- String, <u>Purpose</u>- customer's home addrerss</p>
+                        <p>"<b>homeLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- home address latitude</p>
+                        <p><b>"homeLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- home address longitude</p>
+
+                    </ul>
+
+
+                    <p><b>"pendingOrders"</b>: this node holds relevant informations of undelivered orders of the shop</p>
+                    <ul>
+
+                        <p><b>"uniqueOrderId"</b>: the unique id of this particular pending order</p> 
+                        <ul>
+
+                            <!--order placing customer-->
+                                <p><b>"customerUsername"</b>: <u>Type</u>- String, <u>Purpose</u>- customer's name</p>
+                    
+                                <p><b>"customerPhoneNumber"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's verified phone number used</p>
+                                
+                                <p>"<b>homeAddress</b>":<u>Type</u>- String, <u>Purpose</u>- customer's home addrerss</p>
+                                <p>"<b>homeLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- home address latitude</p>
+                                <p><b>"homeLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- home address longitude</p>
+                                
+
+                            <p><b>"productList"</b>: the node contains information of a list of products in this pending order</p>
+                            <ul>
+
+                                <p><b>"uniqueProductId"</b>: the unique id assigned to the product</p> 
+                                <ul>
+                                    <p><b>"productName"</b>: <u>Type</u>- String, <u>Purpose</u>- product's name</p>
+                                    <p><b>"quantity"</b>: <u>Type</u>- String, <u>Purpose</u>- product's quantity in plain text (5kg, 2 packet etc)</p>
+                                    <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the full quantity</p>    
+                                </ul>
+                            
+                            </ul>
+
+                            <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the whole product list</p>
+                            
+                            <p><b>"distanceFromShop"</b>: <u>Type</u>- double, <u>Purpose</u>- distance between customer's home to shop</p>
+
+                            <p><b>"orderPlacementTime"</b>: <u>Type</u>- Date, <u>Purpose</u>- time the order was placed at</p>
+                            
+                            <p><b>"customerConfirmation"</b>: <u>Type</u>- boolean, <u>Purpose</u>- customer confirmation staus for this order</p>
+                            <p><b>"shopOwnerConfirmation"</b>: <u>Type</u>- boolean, <u>Purpose</u>- shop confirmation staus for this order</p>
+
+
+                        </ul>
+
+                    </ul>
+
+                    <p><b>"completeOrdersMetaData"</b>: this node holds relevant informations of completed orders of the shop</p>
+                    <ul>
+
+                        <p><b>"uniqueOrderId"</b>: the unique id of this particular pending order</p> 
+                        
+                        <p><b>"productList"</b>: the node contains information of a list of products in this pending order</p>
+                        <ul>
+
+                            <p><b>"uniqueProductId"</b>: the unique id assigned to the product</p> 
+                            <ul>
+                                <p><b>"productName"</b>: <u>Type</u>- String, <u>Purpose</u>- product's name</p>
+                                <p><b>"quantity"</b>: <u>Type</u>- String, <u>Purpose</u>- product's quantity in plain text (5kg, 2 packet etc)</p>
+                                <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the full quantity</p>    
+                            </ul>
+                        
+                        </ul>
+
+                        <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the whole product list</p>
+
+                        <p><b>"distanceFromShop"</b>: <u>Type</u>- double, <u>Purpose</u>- distance between customer's home to shop</p>
+
+                        <p><b>"orderPlacementTime"</b>: <u>Type</u>- Date, <u>Purpose</u>- time the order was placed at</p>
+                            
+                        <p><b>"orderCompletionTime"</b>: <u>Type</u>- Date, <u>Purpose</u>- time when the order was confirmed by customer</p>
+                    
+                    </ul>
+
+                    <p><b>"shopReviews"</b>: the node contains information of a list of reviewes on the shop made by the customers</p>
+                    <ul>
+                        
+                        <p><b>"uniqueReviewId"</b>: <u>Type</u>- String, <u>Purpose</u>- the unique id for this particular review</p>
+                        <ul>
+
+                            <p><b>"reviewId"</b>: <u>Type</u>- String, <u>Purpose</u>- id of the review</p>
+                    
+                            <p><b>"shopName"</b>:<u>Type</u>- String, <u>Purpose</u>- shop's name</p>
+                            
+                            <p><b>"author"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's name who gave the review</p>
+                            
+                            <p><b>"reviewBody"</b>:<u>Type</u>- String, <u>Purpose</u>- text content of the review</p>
+
+                            <p><b>"rating"</b>:<u>Type</u>- String, <u>Purpose</u>- rating among good, neutral, bad</p>
+
+                        </ul>
+                        
+                    </ul>
+
+                </ul>
+
+
+            </ul>
+
+            <br>
+
+            <!--ongoing conversations node-->
+            <p><b>"connectedCustomerShopInteraction"</b>: This node holds all the informations for all currently happening customer-shop conversations</p>
+            <ul>
+
+                <!--order placing customer-->
+                    <p><b>"customerUsername"</b>: <u>Type</u>- String, <u>Purpose</u>- customer's name</p>
+
+                    <p><b>"customerPhoneNumber"</b>:<u>Type</u>- String, <u>Purpose</u>- customer's verified phone number used</p>
+                    
+                    <p>"<b>homeAddress</b>":<u>Type</u>- String, <u>Purpose</u>- customer's home addrerss</p>
+                    <p>"<b>homeLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- home address latitude</p>
+                    <p><b>"homeLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- home address longitude</p>
+                    
+
+                
+                <!--order placed at shop-->
+                    <p><b>"shopName"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's name</p>
+
+                    <p><b>"shopType"</b>: <u>Type</u>- String, <u>Purpose</u>- what type of shop this is</p>
+
+                    <p><b>"shopPhoneNumber"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's verified phone number</p>
+
+                    <p><b>"shopAddress"</b>: <u>Type</u>- String, <u>Purpose</u>- shop's address</p>
+                    <p>"<b>shopLatitude</b>":<u>Type</u>- double, <u>Purpose</u>- shop address latitude</p>
+                    <p><b>"shopLongitude"</b>:<u>Type</u>- double, <u>Purpose</u>- shop address longitude</p>
+
+                
+
+                <p><b>"productList"</b>: the node contains information of a list of products that is being generated by this conversation</p>
+                <ul>
+
+                    <p><b>"uniqueProductId"</b>: the unique id assigned to the product</p> 
+                    <ul>
+                        <p><b>"productName"</b>: <u>Type</u>- String, <u>Purpose</u>- product's name</p>
+                        <p><b>"quantity"</b>: <u>Type</u>- String, <u>Purpose</u>- product's quantity in plain text (5kg, 2 packet etc)</p>
+                        <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the full quantity</p>    
+                    </ul>
+                
+                </ul>
+
+                <p><b>"customerConfirmed"</b>: <u>Type</u>- boolean, <u>Purpose</u>- customer confirmed the generated product list or not</p>
+                <p><b>"shopConfirmed"</b>: <u>Type</u>- boolean, <u>Purpose</u>- shopowner confirmed the generated product list or not</p>
+
+                <p><b>"totalPrice"</b>: <u>Type</u>- String, <u>Purpose</u>- price of the whole product list</p>
+
+                <p><b>"callDuration"</b>: <u>Type</u>- double, <u>Purpose</u>- duration of the ongoing conversation</p>
+
+                <p><b>"customerReadyToConnect"</b>: <u>Type</u>- boolean, <u>Purpose</u>- initially needed for notify shopowner to start the call</p>        
+
+            </ul>
+
+        </ul>
+        
+        <br><br><br>
+
+
+
+
+        <h2 style="color:#00C569;" id="section7">7. Implementation plan</h2>
+        
+        <p>The goal is to finish the project by the end of next month, <b>in 5 iterations</b>
+          The iterations were decided based on importance of feature 
+          and similarities with previous/current iterations.
+        </p>
+
+        <br>
+
+        <h3>Iteration-1</h3>
+        
+        <p>Both App:</p>
+
+          <ul>
+
+            <li>Sign up by phone number verification</li>
+            <li>Setup profile with address taken from map</li>
+            <li>Login, logout</li>
+
+          </ul>
+          
+          <p>Only Customer App:</p>
+
+          <ul>
+
+            <li>View nearby shops as icons in map</li>
+
+          </ul>
+        
+          <p>Backend:</p>
+
+          <ul>
+
+            <li>Compute nearby shops for customers upon each new signup</li>
+
+          </ul>
+
+          <br>
+
+          <h3>Iteration-2</h3>
+
+          <p>Both App:</p>
+
+          <ul>
+
+            <li>Features related to the customer queue (customers to enter shops, shop-owners to receive customers from queue)</li>
+            <li>Initiate the app to app voice call from both end.</li>
+
+          </ul>
+
+          <p>Website:</p>
+
+          <ul>
+
+            <li>Login by verification for both customer and shopowners</li>
+
+          </ul>
+
+          <br>
+
+          <h3>Iteration-3</h3>
+
+          <p>Both App:</p>
+
+          <ul>
+
+            <li>Order generation by taking realtime input from both end while in call</li>
+            <li>Order placement</li>
+
+          </ul>
+
+          <p>Backend:</p>
+
+          <ul>
+
+            <li>Triggers that notify shopowners regular basis of the pending orders</li>
+            <li>Allow authorized get/post access to the website for view/give customer reviews to shops</li>
+
+          </ul>
+
+          <br>
+
+          <h3>Iteration-4</h3>
+
+          <p>Both App:</p>
+
+          <ul>
+
+            <li>View/confirm/cancel(shopowner) pending orders</li>
+
+          </ul>
+
+          <p>Only ShopOwner App:</p>
+
+          <ul>
+
+            <li>Input products through barcode scanning</li>
+            <li>Edit/remove inputted products</li>
+
+          </ul>
+        
+        <br>
+
+        <h3>Iteration-5</h3>
+        <p>Website:</p>
+
+        <ul>
+
+          <li>Give/view reviews on shops</li>
+
+        </ul>
+
+        <p>Both App:</p>
+
+          <ul>
+
+            <li>Menu option for update profile info</li>
+
+          </ul>
+
+          <p>Only Customer App:</p>
+
+          <ul>
+
+            <li>Browse Products while in customer queue</li>
+            <li>Search for shops by product name from map</li>
+            <li>Shop chatfeed feature while in customer queue</li>
+
+          </ul>
+
+<br><br><br>
+
+      <div style="padding-top:20px;" class="row">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

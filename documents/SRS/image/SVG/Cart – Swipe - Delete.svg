@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="812" viewBox="0 0 414 812">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="322" height="178" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="48" height="21" fill="none"/>
+    </clipPath>
+    <filter id="Sugandha_Store" x="124" y="84" width="205" height="48" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1.076" x2="0.5" y2="-0.159" gradientUnits="objectBoundingBox">
+      <stop offset="0.054" stop-color="#2f0000"/>
+      <stop offset="0.191" stop-color="#3f0000"/>
+      <stop offset="0.286" stop-color="#450001"/>
+      <stop offset="0.421" stop-color="#570204"/>
+      <stop offset="0.579" stop-color="#75060a"/>
+      <stop offset="0.754" stop-color="#9f0b13"/>
+      <stop offset="0.941" stop-color="#d4111d"/>
+      <stop offset="1" stop-color="#e71421"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1.071" x2="0.5" y2="-0.1" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.006" stop-color="#1d1917"/>
+      <stop offset="0.556" stop-color="#0e0c0b"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#818386"/>
+      <stop offset="0.129" stop-color="#87898c"/>
+      <stop offset="0.308" stop-color="#999b9e"/>
+      <stop offset="0.516" stop-color="#b6b8bb"/>
+      <stop offset="0.612" stop-color="#c7c9cb"/>
+    </linearGradient>
+    <clipPath id="clip-Cart_Swipe_-_Delete">
+      <rect width="414" height="812"/>
+    </clipPath>
+  </defs>
+  <g id="Cart_Swipe_-_Delete" data-name="Cart – Swipe - Delete" clip-path="url(#clip-Cart_Swipe_-_Delete)">
+    <rect width="414" height="812" fill="#fff"/>
+    <g id="Content" transform="translate(10 152)">
+      <g id="Cart_Item_5" data-name="Cart Item 5" transform="translate(16 618)">
+        <rect id="BG" width="343" height="120" rx="4" transform="translate(0)" fill="none"/>
+      </g>
+      <g id="Delete" transform="translate(279.02 -166.58)">
+        <g id="BG-2" data-name="BG" transform="translate(-0.02 345.58)" fill="#ff3d00" stroke="#fff" stroke-width="1">
+          <rect width="86" height="38" stroke="none"/>
+          <rect x="0.5" y="0.5" width="85" height="37" fill="none"/>
+        </g>
+        <g id="Icon_Delete" transform="translate(34.529 354.58)">
+          <path id="Shape" d="M0,0H18" transform="translate(0 4.705)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+          <path id="Shape-2" data-name="Shape" d="M12,20H2a2,2,0,0,1-2-2V4H3V2A2,2,0,0,1,5,0H9a2,2,0,0,1,2,2V4h3V18A2,2,0,0,1,12,20Z" transform="translate(2.451)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+          <path id="Shape-3" data-name="Shape" d="M0,0V6" transform="translate(7 9.705)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+          <path id="Shape-4" data-name="Shape" d="M0,0V6" transform="translate(11 9.705)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+        </g>
+      </g>
+      <g id="Cart_Item_2" data-name="Cart Item 2" transform="translate(16 210)">
+        <rect id="BG-3" data-name="BG" width="343" height="120" rx="4" transform="translate(0)" fill="none"/>
+      </g>
+      <g id="Cart_Item_1" data-name="Cart Item 1" transform="translate(16 301)">
+        <rect id="BG-4" data-name="BG" width="343" height="41" rx="4" transform="translate(0 79)" fill="none"/>
+        <g id="Counter" transform="translate(-34 -301)">
+          <rect id="BG-5" data-name="BG" width="95" height="30" rx="4" transform="translate(158 87)" fill="rgba(0,0,0,0.06)"/>
+          <g id="minus" transform="translate(232.464 102)">
+            <path id="Shape-5" data-name="Shape" d="M0,0H10" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+          <text id="_3" data-name="3" transform="translate(202.464 107)" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">3</tspan></text>
+          <g id="plus" transform="translate(169 97)">
+            <path id="Shape-6" data-name="Shape" d="M0,0V10" transform="translate(5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+            <path id="Shape-7" data-name="Shape" d="M0,0H10" transform="translate(0 5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+        </g>
+        <g id="Counter-2" data-name="Counter" transform="translate(-34 -249)">
+          <rect id="BG-6" data-name="BG" width="95" height="30" rx="4" transform="translate(158 87)" fill="rgba(0,0,0,0.06)"/>
+          <g id="minus-2" data-name="minus" transform="translate(232.464 102)">
+            <path id="Shape-8" data-name="Shape" d="M0,0H10" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+          <text id="_3-2" data-name="3" transform="translate(202.464 107)" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">3</tspan></text>
+          <g id="plus-2" data-name="plus" transform="translate(169 97)">
+            <path id="Shape-9" data-name="Shape" d="M0,0V10" transform="translate(5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+            <path id="Shape-10" data-name="Shape" d="M0,0H10" transform="translate(0 5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+        </g>
+        <g id="Counter-3" data-name="Counter" transform="translate(-34 -159)">
+          <rect id="BG-7" data-name="BG" width="95" height="30" rx="4" transform="translate(158 87)" fill="rgba(0,0,0,0.06)"/>
+          <g id="minus-3" data-name="minus" transform="translate(232.464 102)">
+            <path id="Shape-11" data-name="Shape" d="M0,0H10" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+          <text id="_3-3" data-name="3" transform="translate(202.464 107)" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">3</tspan></text>
+          <g id="plus-3" data-name="plus" transform="translate(169 97)">
+            <path id="Shape-12" data-name="Shape" d="M0,0V10" transform="translate(5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+            <path id="Shape-13" data-name="Shape" d="M0,0H10" transform="translate(0 5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+        </g>
+        <g id="Counter-4" data-name="Counter" transform="translate(-34 -204)">
+          <rect id="BG-8" data-name="BG" width="95" height="30" rx="4" transform="translate(158 87)" fill="rgba(0,0,0,0.06)"/>
+          <g id="minus-4" data-name="minus" transform="translate(232.464 102)">
+            <path id="Shape-14" data-name="Shape" d="M0,0H10" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+          <text id="_3-4" data-name="3" transform="translate(202.464 107)" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">3</tspan></text>
+          <g id="plus-4" data-name="plus" transform="translate(169 97)">
+            <path id="Shape-15" data-name="Shape" d="M0,0V10" transform="translate(5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+            <path id="Shape-16" data-name="Shape" d="M0,0H10" transform="translate(0 5)" fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Cart_Item_1-2" data-name="Cart Item 1" transform="translate(-7 233)">
+      <rect id="BG-9" data-name="BG" width="374" height="42" rx="4" fill="none"/>
+      <g id="Repeat_Grid_7" data-name="Repeat Grid 7" transform="translate(25 11)" clip-path="url(#clip-path)">
+        <g transform="translate(-25 -11)">
+          <text id="Pran_Chinigura_" data-name="Pran Chinigura " transform="translate(25 11)" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Pran Chinigura </tspan></text>
+        </g>
+        <g transform="translate(-25 37)">
+          <text id="_7up_2_ltr" data-name="7up 2 ltr" transform="translate(25 11)" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">7up 2 ltr</tspan></text>
+        </g>
+        <g transform="translate(-25 85)">
+          <text id="Rupchanda_5_ltr" data-name="Rupchanda 5 ltr" transform="translate(25 11)" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Rupchanda 5 ltr</tspan></text>
+        </g>
+        <g transform="translate(-25 133)">
+          <text id="Mr._Twist" data-name="Mr. Twist" transform="translate(25 11)" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">Mr. Twist</tspan></text>
+        </g>
+      </g>
+    </g>
+    <text id="Queue" transform="translate(81 179)" fill="#00c569" font-size="30" font-family="SegoeUISymbol, Segoe UI Symbol"><tspan x="0" y="0">Queue</tspan></text>
+    <text id="Browse" transform="translate(240 182)" fill="#00c569" font-size="30" font-family="SegoeUISymbol, Segoe UI Symbol"><tspan x="0" y="0">Browse</tspan></text>
+    <path id="Path_273" data-name="Path 273" d="M0,0H122V3.083H0V0Z" transform="translate(227 189.917)" fill="#00c569"/>
+    <g id="Repeat_Grid_8" data-name="Repeat Grid 8" transform="translate(311 239)" clip-path="url(#clip-path-2)">
+      <g transform="translate(-311 -239)">
+        <text id="_100_TK" data-name="100 TK" transform="translate(311 239)" fill="#00c569" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">100 TK</tspan></text>
+      </g>
+    </g>
+    <g id="Repeat_Grid_9" data-name="Repeat Grid 9" transform="translate(311 292)" clip-path="url(#clip-path-2)">
+      <g transform="translate(-311 -239)">
+        <text id="_90_TK" data-name="90 TK" transform="translate(311 239)" fill="#00c569" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">90 TK</tspan></text>
+      </g>
+    </g>
+    <g id="Repeat_Grid_10" data-name="Repeat Grid 10" transform="translate(311 385)" clip-path="url(#clip-path-2)">
+      <g transform="translate(-311 -239)">
+        <text id="_15_TK" data-name="15 TK" transform="translate(311 239)" fill="#00c569" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="17">15 TK</tspan></text>
+      </g>
+    </g>
+    <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(305 438)" fill="#56c596" stroke="#00c569" stroke-width="1">
+      <ellipse cx="30" cy="27.5" rx="30" ry="27.5" stroke="none"/>
+      <ellipse cx="30" cy="27.5" rx="29.5" ry="27" fill="none"/>
+    </g>
+    <text id="_" data-name="+" transform="translate(322 484)" fill="#fff" font-size="48" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">+</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Sugandha_Store)">
+      <text id="Sugandha_Store-2" data-name="Sugandha Store" transform="translate(133 114)" fill="#010101" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">SUGANDHA STORE</tspan></text>
+    </g>
+    <g id="Group_17" data-name="Group 17" transform="translate(-5.87 -91.59)">
+      <path id="Path_247" data-name="Path 247" d="M140.65,265.7c0,.389-.5.7-1.106.7H113.978c-.611,0-1.106-.315-1.106-.7l-2.581-14.94c0-.389.5-.7,1.106-.7h30.851c.611,0,1.106.315,1.106.7Z" transform="translate(-11.252 -56.703)" fill="url(#linear-gradient)"/>
+      <path id="Path_251" data-name="Path 251" d="M135.007,241.289a1.9,1.9,0,0,1-1.833,1.964H98.7a1.9,1.9,0,0,1-1.833-1.964V240.26A1.9,1.9,0,0,1,98.7,238.3h34.472a1.9,1.9,0,0,1,1.833,1.964Z" transform="translate(0 -48.879)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_252" data-name="Path 252" d="M144.966,192.331a1.768,1.768,0,0,1-.763,2.379l-.151.08a1.767,1.767,0,0,1-2.4-.678l-5.08-9.462a1.767,1.767,0,0,1,.763-2.379l.151-.081a1.767,1.767,0,0,1,2.4.678Z" transform="translate(-33.016)" fill="url(#linear-gradient-3)"/>
+      <path id="Path_253" data-name="Path 253" d="M236.366,192.331a1.768,1.768,0,0,0,.763,2.379l.151.08a1.767,1.767,0,0,0,2.4-.678l5.081-9.462a1.767,1.767,0,0,0-.763-2.379l-.151-.081a1.767,1.767,0,0,0-2.4.678Z" transform="translate(-116.439)" fill="url(#linear-gradient-3)"/>
+      <path id="Path_254" data-name="Path 254" d="M245.536,244.351a.94.94,0,1,1-.94-.94A.94.94,0,0,1,245.536,244.351Z" transform="translate(-122.771 -53.129)" fill="url(#linear-gradient-5)"/>
+      <path id="Path_255" data-name="Path 255" d="M173.962,244.351a.94.94,0,1,1-.94-.94A.94.94,0,0,1,173.962,244.351Z" transform="translate(-62.908 -53.129)" fill="url(#linear-gradient-5)"/>
+    </g>
+    <g id="Menu" transform="translate(-11 -7)">
+      <rect id="Rectangle_175" data-name="Rectangle 175" width="24" height="24" transform="translate(35 37)" fill="#fff"/>
+      <path id="Union_4" data-name="Union 4" d="M0,24V20.571H28.5V24ZM0,13.714V10.285H29v3.429ZM0,3.428V0H29V3.428Z" transform="translate(35 38)" fill="#56c596"/>
+    </g>
+  </g>
+</svg>

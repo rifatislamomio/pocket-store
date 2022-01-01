@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="startColor">#FF7BE495</color>
+    <color name="endColor">#FF329D9C</color>
+    <color name="textbox_fill">#54D59F</color>
+    <color name="white">#FFF</color>
+</resources>

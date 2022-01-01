@@ -1,0 +1,92 @@
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_main_app_icon"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Enter Your Phone Number"
+            android:textAlignment="center"
+            android:textColor="#FF205072"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editText_phoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_weight="1"
+            android:background="@drawable/phone_number_textbox"
+            android:drawablePadding="-25dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:inputType="phone"
+            android:maxLength="16"
+            android:paddingStart="5dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="5dp"
+            android:textColor="#001829"
+            android:paddingBottom="6dp"
+            android:text="+880 "
+            android:textAlignment="center"
+            android:textCursorDrawable="@drawable/edit_text_small_cursor"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/verification_page_button"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="20dp"
+            android:textColor="#FFFF"
+            android:text="CONTINUE" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="824" viewBox="0 0 414 824">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.229" cy="0" r="1.137" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7be495"/>
+      <stop offset="1" stop-color="#329d9c"/>
+    </radialGradient>
+    <clipPath id="clip-settings">
+      <rect width="414" height="824"/>
+    </clipPath>
+  </defs>
+  <g id="settings" clip-path="url(#clip-settings)">
+    <rect width="414" height="824" fill="#fff"/>
+    <g id="Main_App_Icon" data-name="Main App Icon" transform="translate(171 59)">
+      <path id="Plus-1" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" fill="url(#radial-gradient)"/>
+      <path id="Plus-2" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" transform="translate(38.755)" fill="url(#radial-gradient)"/>
+    </g>
+    <path id="Plus-2-2" data-name="Plus-2" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" transform="translate(209.755 59)" fill="url(#radial-gradient)"/>
+    <path id="Plus-2-3" data-name="Plus-2" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" transform="translate(209.755 59)" fill="url(#radial-gradient)"/>
+    <path id="Plus-2-4" data-name="Plus-2" d="M20.6,30.233v-3.08a6.68,6.68,0,0,1,6.7-6.663h3.1a3.582,3.582,0,1,0,0-7.165h-3.1a6.68,6.68,0,0,1-6.7-6.663V3.582a3.6,3.6,0,0,0-7.2,0v3.08a6.68,6.68,0,0,1-6.7,6.663H3.6a3.582,3.582,0,1,0,0,7.165H6.7a6.68,6.68,0,0,1,6.7,6.663v3.08a3.6,3.6,0,0,0,7.2,0Z" transform="translate(209.755 59)" fill="url(#radial-gradient)"/>
+    <g id="Backward_arrow" data-name="Backward arrow" transform="translate(16 30)">
+      <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H0V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(16 16) rotate(180)" fill="#56c596" stroke="#56c596" stroke-width="1"/>
+    </g>
+    <text id="Profile" transform="translate(160 279)" fill="#fff" font-size="33" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Profile</tspan></text>
+    <text id="Setting" transform="translate(151 557)" fill="#fff" font-size="35" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Setting</tspan></text>
+    <text id="_Order_History" data-name=" Order History" transform="translate(92 699)" fill="#fff" font-size="35" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0" xml:space="preserve"> Order History</tspan></text>
+    <g id="Edit_Profile" data-name="Edit Profile" transform="translate(-940 -1756)">
+      <rect id="BG" width="379" height="88" transform="translate(966 1998)" fill="none"/>
+      <g id="Icon_Arrow-Right" transform="translate(1317.247 2048.693) rotate(-90)">
+        <path id="Shape" d="M4.539,9.077,0,4.539,4.539,0" transform="translate(0 4.539) rotate(-90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      </g>
+      <text id="Edit_Profile-2" data-name="Edit Profile" transform="translate(1029 2050)" font-size="22" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Edit Profile</tspan></text>
+      <g id="Icon_Edit-Profile" transform="translate(966 2004)">
+        <g id="Group_188" data-name="Group 188" transform="translate(21 31.312)">
+          <g id="Group_186" data-name="Group 186" transform="translate(0.053)">
+            <path id="Path_11" data-name="Path 11" d="M16.4,3.314,12.513.283A1.3,1.3,0,0,0,10.666.52L1.716,11.885a1.051,1.051,0,0,0-.237.521L.154,18.041a1.235,1.235,0,0,0,.474,1.326,1.373,1.373,0,0,0,1.421.142l5.162-2.6a1.854,1.854,0,0,0,.474-.379l8.95-11.317A1.4,1.4,0,0,0,16.4,3.314ZM5.978,14.915,2.995,16.431l.758-3.267L9.009,6.486l2.226,1.752Zm6.677-8.524L10.429,4.64,11.9,2.793l2.226,1.752Z" transform="translate(-0.112 0.002)" fill="#111"/>
+          </g>
+          <g id="Group_187" data-name="Group 187" transform="translate(0 20.836)">
+            <path id="Path_12" data-name="Path 12" d="M15.39,46.368H1.184A1.172,1.172,0,0,1,0,45.184H0A1.172,1.172,0,0,1,1.184,44H15.39a1.172,1.172,0,0,1,1.184,1.184h0A1.172,1.172,0,0,1,15.39,46.368Z" transform="translate(0 -44)" fill="#56c596"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Order_History" data-name="Order History" transform="translate(-934 -1654)">
+      <rect id="BG-2" data-name="BG" width="367" height="90" transform="translate(966 1998)" fill="none"/>
+      <g id="Icon_Arrow-Right-2" data-name="Icon_Arrow-Right" transform="translate(1305 2049.567) rotate(-90)">
+        <path id="Shape-2" data-name="Shape" d="M4.539,9.077,0,4.539,4.539,0" transform="translate(0 4.539) rotate(-90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      </g>
+      <text id="Pending_Order" data-name="Pending Order" transform="translate(1020 2052)" fill="#313131" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Pending Order</tspan></text>
+      <g id="Icon_History" transform="translate(966 2004)">
+        <g id="Group_194" data-name="Group 194" transform="translate(10.779 31.519)">
+          <g id="Group_190" data-name="Group 190" transform="translate(9.929 7.816)">
+            <path id="Path_15" data-name="Path 15" d="M24.654,22.212,28.535,20.1a1.06,1.06,0,0,0,.345-1.466h0a1.06,1.06,0,0,0-1.466-.345L23.533,20.4a1.06,1.06,0,0,0-.345,1.466h0A1.025,1.025,0,0,0,24.654,22.212Z" transform="translate(-23.028 -18.128)" fill="#56c596"/>
+          </g>
+          <g id="Group_193" data-name="Group 193">
+            <g id="Group_191" data-name="Group 191">
+              <path id="Path_16" data-name="Path 16" d="M10.779,0A10.779,10.779,0,1,0,21.559,10.779,10.783,10.783,0,0,0,10.779,0Zm0,19.4A8.624,8.624,0,1,1,19.4,10.779,8.649,8.649,0,0,1,10.779,19.4Z" fill="#111"/>
+            </g>
+            <g id="Group_192" data-name="Group 192" transform="translate(5.454 5.626)">
+              <path id="Path_17" data-name="Path 17" d="M14.438,13.329a1.069,1.069,0,1,0-1.423,1.6L17.5,19.236a1.069,1.069,0,0,0,1.423-1.6Z" transform="translate(-12.648 -13.048)" fill="#111"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Icon_History-2" data-name="Icon_History" transform="translate(966 2207)">
+        <g id="Group_194-2" data-name="Group 194" transform="translate(10.779 31.519)">
+          <g id="Group_190-2" data-name="Group 190" transform="translate(9.929 7.816)">
+            <path id="Path_15-2" data-name="Path 15" d="M24.654,22.212,28.535,20.1a1.06,1.06,0,0,0,.345-1.466h0a1.06,1.06,0,0,0-1.466-.345L23.533,20.4a1.06,1.06,0,0,0-.345,1.466h0A1.025,1.025,0,0,0,24.654,22.212Z" transform="translate(-23.028 -18.128)" fill="#cf1b1b"/>
+          </g>
+          <g id="Group_193-2" data-name="Group 193">
+            <g id="Group_191-2" data-name="Group 191">
+              <path id="Path_16-2" data-name="Path 16" d="M10.779,0A10.779,10.779,0,1,0,21.559,10.779,10.783,10.783,0,0,0,10.779,0Zm0,19.4A8.624,8.624,0,1,1,19.4,10.779,8.649,8.649,0,0,1,10.779,19.4Z" fill="#111"/>
+            </g>
+            <g id="Group_192-2" data-name="Group 192" transform="translate(5.454 5.626)">
+              <path id="Path_17-2" data-name="Path 17" d="M14.438,13.329a1.069,1.069,0,1,0-1.423,1.6L17.5,19.236a1.069,1.069,0,0,0,1.423-1.6Z" transform="translate(-12.648 -13.048)" fill="#111"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_197" data-name="Group 197" transform="translate(44 485)">
+      <g id="Rectangle_193" data-name="Rectangle 193" fill="#fff" stroke="#56c596" stroke-width="1">
+        <rect width="21" height="21" stroke="none"/>
+        <rect x="0.5" y="0.5" width="20" height="20" fill="none"/>
+      </g>
+      <path id="Path_104" data-name="Path 104" d="M270.461,13.125A2.719,2.719,0,0,0,273.25,10.5a2.795,2.795,0,0,0-5.579,0A2.719,2.719,0,0,0,270.461,13.125Zm-5.718-8.4a8.028,8.028,0,0,1,3.347-1.706L269.205,0h2.789l1.116,3.019a9.942,9.942,0,0,1,3.347,1.706l3.347-.656L281.2,6.431l-2.232,2.363a7.051,7.051,0,0,1,.14,1.706c0,.525-.14,1.181-.14,1.706l2.232,2.363-1.395,2.363-3.347-.656a8.027,8.027,0,0,1-3.347,1.706L271.995,21h-2.789l-1.116-3.019a9.942,9.942,0,0,1-3.347-1.706l-3.347.656L260,14.569l2.232-2.363a7.054,7.054,0,0,1-.139-1.706c0-.525.139-1.181.139-1.706L260,6.431l1.395-2.362Z" transform="translate(-259)" fill="#fff" stroke="#000304" stroke-width="1" fill-rule="evenodd"/>
+    </g>
+    <g id="Order_History-2" data-name="Order History" transform="translate(-936 -1550)">
+      <rect id="BG-3" data-name="BG" width="367" height="90" transform="translate(966 1998)" fill="none"/>
+      <g id="Icon_Arrow-Right-3" data-name="Icon_Arrow-Right" transform="translate(1305 2049.567) rotate(-90)">
+        <path id="Shape-3" data-name="Shape" d="M4.539,9.077,0,4.539,4.539,0" transform="translate(0 4.539) rotate(-90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      </g>
+      <text id="Settings-2" data-name="Settings" transform="translate(1020 2052)" fill="#313131" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Settings</tspan></text>
+    </g>
+    <g id="Edit_Profile-3" data-name="Edit Profile" transform="translate(-942 -1446)">
+      <rect id="BG-4" data-name="BG" width="379" height="88" transform="translate(966 1998)" fill="none"/>
+      <g id="Icon_Arrow-Right-4" data-name="Icon_Arrow-Right" transform="translate(1317.247 2048.693) rotate(-90)">
+        <path id="Shape-4" data-name="Shape" d="M4.539,9.077,0,4.539,4.539,0" transform="translate(0 4.539) rotate(-90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      </g>
+      <text id="Order_History-3" data-name="Order History" transform="translate(1029 2050)" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Order History</tspan></text>
+      <g id="Icon_Edit-Profile-2" data-name="Icon_Edit-Profile" transform="translate(966 2004)">
+        <rect id="Rectangle_41" data-name="Rectangle 41" width="7" height="7" rx="3.5" fill="rgba(0,197,105,0.07)"/>
+      </g>
+    </g>
+  </g>
+</svg>

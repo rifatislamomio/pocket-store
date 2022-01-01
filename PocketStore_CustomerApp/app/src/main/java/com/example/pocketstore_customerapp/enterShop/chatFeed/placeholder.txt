@@ -1,0 +1,1 @@
+chat feed page for the shop where customers waiting in the queue can write/view messages.

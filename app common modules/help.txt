@@ -1,0 +1,56 @@
+
+
+addressPickerMaps-module -> 
+
+add this in the build.gradle(app)
+// inside dependencies block  
+implementation 'com.google.android.libraries.places:places:2.3.0'
+implementation 'com.github.GrenderG:Toasty:1.5.0' 
+add this to build.gradle(project)
+// inside allprojects{ repositories{ } }     for Toasty
+maven { url "https://jitpack.io" }
+
+
+PhoneNumberVerification-module -> 
+
+add these in the build.gradle(app)
+// at the start
+apply plugin: 'com.google.gms.google-services'
+// inside dependencies block
+implementation 'com.google.firebase:firebase-database:19.3.1'
+implementation 'com.google.firebase:firebase-auth:19.3.2'
+implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+add this to build.gradle(project)
+// inside allprojects{ repositories{ } }     for Toasty
+maven { url "https://jitpack.io" }
+
+
+CustomerQueue-module ->
+
+add these in the build.gradle(app)
+// at the start
+apply plugin: 'com.google.gms.google-services'
+// inside dependencies block
+implementation 'androidx.recyclerview:recyclerview:1.1.0'
+implementation 'com.google.firebase:firebase-database:19.3.1'
+implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+import ui-module.aar
+
+add this to build.gradle(project)
+// inside allprojects{ repositories{ } }     for Toasty
+maven { url "https://jitpack.io" }
+
+
+voi-module -> inside app's build.gradle
+
+add this below 'compileSdkVersion: ...'
+compileOptions {
+    sourceCompatibility 1.8
+    targetCompatibility 1.8
+}
+
+import sinch-api aar file, add this in dependendcies
+implementation project(path: ':sinch-android-rtc-3.17.4')
+

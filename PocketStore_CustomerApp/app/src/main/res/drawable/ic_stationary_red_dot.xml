@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="35dp"
+    android:height="35dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <path
+        android:fillColor="#78B9EB"
+        android:pathData="M462.6,184c-0.8-1.8-1.9-3.4-3.3-4.7l-62.7-62.6c-3-3-7.1-4.6-11.4-4.6H296v320H192V112h-48v320H64V112H16 c-8.8,0-16,7.2-16,16v320c0,8.8,7.2,16,16,16h432c8.8,0,16-7.2,16-16V190.6C464,188.3,463.5,186.1,462.6,184L462.6,184z" />
+    <path
+        android:fillColor="#FF7956"
+        android:pathData="M104,48H64v64v320h80V112V48H104z" />
+    <path
+        android:fillColor="#FFE477"
+        android:pathData="M192,0v48v48v16v32v48v48v48v48v48v48h104V112V0H192z" />
+    <path
+        android:fillColor="#1E81CE"
+        android:pathData="M464,192h-64c-13.3,0-24-10.7-24-24v-56h15.7l72.3,72V192z" />
+    <path
+        android:fillColor="#FF5023"
+        android:pathData="M96,48h16v360H96V48z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,40h24v16h-24V40z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,88h24v16h-24V88z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,136h24v16h-24V136z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,184h24v16h-24V184z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,232h24v16h-24V232z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,280h24v16h-24V280z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,328h24v16h-24V328z" />
+    <path
+        android:fillColor="#E0E0E2"
+        android:pathData="M192,376h24v16h-24V376z" />
+    <path
+        android:fillColor="#3E3D42"
+        android:pathData="M144,48L104,0L64,48h40H144z" />
+    <path
+        android:fillColor="#F2001D"
+        android:pathData="M 408.9 4 C 439.330889716 4 464 26.3857625085 464 54 C 464 81.6142374915 439.330889716 104 408.9 104 C 378.469110284 104 353.8 81.6142374915 353.8 54 C 353.8 26.3857625085 378.469110284 4 408.9 4 Z" />
+</vector>

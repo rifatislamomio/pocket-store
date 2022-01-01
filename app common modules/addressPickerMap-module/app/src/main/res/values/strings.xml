@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AddressPickerMap-module</string>
+    <string name="title_activity_address_picker_maps">Map</string>
+</resources>

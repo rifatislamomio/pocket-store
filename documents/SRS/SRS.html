@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Software Requirement Specification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  ul.nav-pills {
+      position:fixed;
+  }
+  div.col-8 div {
+      height: 200px;
+  }
+  .navbar{
+  color: black;
+}
+.navbar .col-sm-2 .col-4 .bg-dark{
+  color: black;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+caption {
+  color: black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .sidebar-color { 
+    background-color:#f7f7f7; 
+  } 
+</style>
+</head>
+<body style="background-color:#fafafa; color:black" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <!-- Brand/logo -->
+ 
+  <img style="width:15%"></img>
+  <header class="page header text-white"><h1 style="padding-left:10px;
+     color: #00C569;">Software Requirement Specification </h1></header>
+
+  <!-- Links -->
+
+
+</ul>
+</nav>
+
+<div class="wrapper">
+  <div class="sidebar">
+
+        
+          
+          <div class="container-fluid">
+            <div class="row">
+              <nav class="col-sm-2 col-4 sidebar-color" id="myScrollspy" >
+                <ul class="nav nav-pills flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link " href="#section0.0">Cover Page</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Introduction</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec1.1">Purpose</a>
+                      <a class="dropdown-item" href="#sec1.2">Document Convention</a>
+                      <a class="dropdown-item" href="#sec1.3">Intended Audience and<br> Reading Suggestions</a>
+                      <a class="dropdown-item" href="#sec1.4">Product Scope</a>
+                      <a class="dropdown-item" href="#sec1.5">References</a>
+                    </div>
+                  </li>
+          
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Overall Description</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec2.1">Product Perspective</a>
+                      <a class="dropdown-item" href="#sec2.2">Product Functions</a>
+                      <a class="dropdown-item" href="#sec2.3">User Classes and<br> Characteristics</a>
+                      <a class="dropdown-item" href="#sec2.4">Operating Environment</a>
+                      <a class="dropdown-item" href="#sec2.5">Design and Implementation<br> Constraints</a>
+                      <a class="dropdown-item" href="#sec2.6">User Documentation</a>
+                      <a class="dropdown-item" href="#sec2.7">Assumptions and<br> Dependencies</a>
+                    </div>
+                  </li>
+          
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">External Interface<br>Requirements</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec3.1">User Interfaces</a>
+                      <a class="dropdown-item" href="#sec3.2">Hardware Interfaces</a>
+                      <a class="dropdown-item" href="#sec3.3">Software Interfaces</a>
+                      <a class="dropdown-item" href="#sec3.4">Communications Interfaces</a>
+                    </div>
+                  </li>
+          
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">System Features</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec4.1">UML Use Case Diagram</a>
+                      <a class="dropdown-item" href="#sec4.2">UML Extended Use Cases</a>
+                      
+                     
+                    </div>
+                  </li>
+          
+                   <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Other Nonfunctional<br>Requirements</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#sec5.1">Performance Requirements</a>
+                      <a class="dropdown-item" href="#sec5.2">Safety Requirements</a>
+                      <a class="dropdown-item" href="#sec5.3">Security Requirements</a>
+                      <a class="dropdown-item" href="#sec5.4">Software Quality Attributes</a>
+                      <a class="dropdown-item" href="#sec5.5">Business Rules</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                <a class="nav-link " href="#section6">Other Requirements</a>
+                  </li>
+          
+          
+                </ul>
+    </nav>
+
+    <div style="padding-top:30px; padding-left:30px; padding-right:150px;" class="col-sm-10 col-8">
+
+
+      <h2 style="color:#00C569;">0. Cover Page</h2>
+      <center>
+    
+      <p>
+      <h3 id="section0.0">Software Requirements Specification</h3>
+      <br>
+      <h5>for</h5>
+      <br>
+        <h5>"Pocket Store"</h5>
+        <br>
+      
+        <h5> Version 1.0.1</h5>
+        <br>
+      
+          <table>
+            <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Prepared By</b>
+            </caption>
+      
+            <tr>
+              <td><b>Name</b></td>
+              <td><b>ID</b></td>
+            </tr>
+            <tr>
+              <td>Rifat Islam</td>
+              <td>1731536042</td>
+            </tr>
+            <tr>
+              <td>Ferdous Zeaul Islam</td>
+              <td>1731136042</td>
+      
+            </tr>
+            <tr>
+              <td>Mohammed Safat Hosssain</td>
+              <td>1731263042</td>
+            </tr>
+          </table>
+          <br>
+          <h5>CSE327 Section-2</h5><br>
+          <h5>Group: Procrastinators</h5><br>
+          <h5>Group Number: 10</h5>
+          <br>
+          <h5>Date: August 5, 2020</h5> </p>
+          </center>
+          <br><br><br><br>
+	
+	
+	
+  <!-- Section-1 -->
+
+	
+        <h2 style="color:#00C569;">1. Introduction</h2>
+        <h4 id="sec1.1">1.1 Purpose</h4>
+        <p>“Find a store” system is a platform between small local businesses and at home customers to connect and interact with each other. In 
+        a way the system is an attempt to virtualize the typical interactions between the two party. The inspiration for this project is to 
+        reduce the necessity of going outside for day-to-day household products during the pandemic.
+        <h4 id="sec1.2">1.2 Document Convention</h4>
+        <p>The document is written following the IEEE template for SRS (Software
+          Requirement Specification). The headers, sub-headers, paragraphs are written using HTML tags- 'h2', 'h3' and 'p' respectively. 
+          Tables are used in Section-4 to list the actions and system responses under extended use cases of each feature and on
+          Section 2.3 to show user classes and their pertinent characteristics.</p>
+        
+        <h4 id="sec1.3">1.3 Intended Audience and Reading Suggestions</h4>
+        <p> The primary intended audience of this SRS document are the project team
+          members and our course instructor. It should also be understandable to knowledgable
+          technical person such as software developers and software industry business
+          specialists. </p>
+        <h4 id="sec1.4">1.4 Product Scope</h4>
+        <p>The main product of our system are the two separate Android app for customers 2 &amp;
+          shop-owners 3 . Interaction between the two parties will be done using the two apps. The
+          system also consists of a website that enables customers 2 to view and post reviews and
+          shop-owners 3 to view their transactions analytics. The goals and objectives of the system
+          are stated below,</p> 
+          <p>Goals (what we hope to achieve):</p>
+          <ul>
+          	<li> Substitute/reduce the need for going outside to get day-to-day household items from
+          local stores; particularly- stationary stores, bakeries, convenience stores. </li>
+          	<li> Virtualize the existing interaction between the two party. </li>
+          	<li> Ensure desirable user experience and user expected reliability. </li>
+          </ul>
+          
+          <p>Objectives (how we hope to achieve the goals):</p>
+          <ul>
+          	<li> Mimic the well-known traditional behaviors between customers 2 and shop-owners 3
+          through the android app and website wherever possible. </li> 
+          	<li> Include features that are easy to use and understand such as- connect customers &amp;
+          shop-owners through voice call, form a queue when multiple customers at a shop, take
+          available items input by scanning barcodes etc. (Broadly discussed in section-4) </li>
+          	<li> Design UI components following the designs of existing popular app and websites.</li> 
+	  </ul>
+        <h4 id="sec1.5">1.5 References</h4>
+            <p> [1]"Device compatibility overview  |  Android Developers", Android Developers, 2020. [Online]. Available: https://
+            developer.android.com/guide/practices/compatibility#defined. [Accessed: 05- Aug- 2020]. </p>
+            <p> [2]K. Panetta, "Gartner Top 10 Strategic Technology Trends for 2020", Smarter With Gartner, 2020. [Online]. Available: https://
+            www.gartner.com/smarterwithgartner/gartner-top-10-strategic-technology-trends-for-2020/. [Accessed: 05- Aug- 2020]. </p>
+        <br><br><br>
+
+
+
+        <!-- Section-2 -->
+
+        <h2 style="color:#00C569;">2. Overall Description</h2>
+        <p> 
+        <h4 id="sec2.1">2.1 Product Perspective</h4>
+        <p>The idea of this system is inspired from the current area-wise lockdown enforced all
+          over Bangladesh as a counter measure to the pandemic. By using our android app
+          customers from home can connect with local shops to get day-to-day necessary items,
+          while small businesses struggling dearly due to lock-down can continue business. A
+          simple diagram of the overview of the whole system is given below,</p>
+        
+        
+        <h4 id="sec2.2">2.2 Product Functions</h4>
+        <p>The major features of the system are as follows,
+        <ul>
+          <li> Register shop-owner accounts &amp; customer accounts. </li>
+          <li> Customers can find shops nearby from map or search for shops by items. </li>
+          <li> Shop-owners entry items by scanning product barcode or image to text conversion
+          from product sticker. </li>
+          <li> Customers enter shops wait in queue(if any), browse items &amp; chat with other
+          customers while waiting.</li>
+          <li> Orders are placed and finalized over voice call (app-to-app) between customers &amp;
+          shop-owners.</li>
+          <li> System suggestion of efficient delivery sequence.</li>
+          <li> Shop-owners and customers view reviews given by customers.</li>
+          </ul>
+          </p>
+        
+        
+        <h4 id="sec2.3">2.3 User Classes and Characteristics</h4>
+        <p>Two type of users will interact with our system’s app and website- customer, shop-owner. On the basis of their characteristics 
+        further divisions can be made,</p>
+          <p><u>Based on technical expertise</u>: </p>
+        <p><table style="width:100%">
+          <tr align="center">
+            <th>User class</th>
+            <th>Characteristic</th> 
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>Technophobes (majority)</td>
+            <td>Unwilling to use technology
+              such as mobile phones,
+              computers.</td>
+            <td>Housewife (customer),
+              domestic workers (customer),
+              old person etc.</td>
+          </tr>
+          <tr>
+            <td>Technology Shy</td>
+            <td>Moderate technical expertise.
+              Responsive to clear-cut,
+              visible benefits.</td>
+            <td>People who use phones and
+              computers where absolutely
+              necessary.</td>
+          </tr>
+          <tr>
+            <td>Tech-savvy</td>
+            <td>Comfortable with latest
+              technologies. Well-aware of
+              new trends.</td>
+            <td>Mostly young generation of
+
+              people.</td>
+          </tr>
+        </table>
+        </p>
+        
+        <p><u>Based on Shop type</u>: </p>
+          Initially app consists of three shop types- convenience stores, stationary stores and bakeries. Accordingly the shop-owner account 
+          types can be though of these three types as well.
+        </p>
+
+        
+        <h4 id="sec2.4">2.4 Operating Environments</h4>
+        <p><u>Android App</u>:</p>  
+        <ol>
+          <li>Device Hardware – 
+          	<ul>
+          	<li> “Android compatible” device.[1] </li>
+          	</ul>
+          
+          <li> Operating System – Android 5.1 (Lolipop) or above. </li>
+          <li> Software Component – Google Play Services, Sinch Android SDK. </li>
+        </ol>
+          <p><u>Website</u>: Any browser that runs html, css and javascript.</p>
+        
+        
+        <h4 id="sec2.5">2.5 Design and Implementation Constraints</h4>
+        <p><ul>
+        	<li> Shop-owner account’s legitimacy is a concern, since anyone can register.
+          Although we have phone number verification at sign-up implemented. </li>
+          	<li> Reliability of delivery and receiving is completely up to the users. The app is
+          merely a medium for confirmation. </li>
+          	<li> The basic (free) version API/SDKs, database, hosting service that are used
+          allow a threshold amount of usage. It is important to note that their
+          functionalities are essential for the system. </li>
+          	<li> Since the Android OS is open-source, it’s implementation differs from
+          manufacturer to manufacturer. Certain features of our app may not function
+          smoothly due to restrictions put in the OS implementation. </li>
+          	<li> The App requires user permission for working with components like- fetching
+          location, microphone-speaker access, camera access etc.</li>
+          	<li> The core features require continuous active internet connection. </li>
+          	<li> Majority of the target users for the system are technophobe, technology-shy
+          people. Acceptability of the designed UI/UX is uncertain.</li>
+        
+        </ul></p>
+        
+        
+        <h4 id="sec2.6">2.6 User Documentation</h4>
+        <p>A demo video of the app and website usage will be available to the users. No
+          documented manual is to be provided.</p>
+        
+        
+        <h4 id="sec2.7">2.7 Assumptions and Dependencies</h4>
+        <p>Assumptions: <br>
+        <ul>
+          	<li> Users will adhere to their consents made using the app. Such as- shop-
+          	owners will deliver and customers will pay on delivery according to their
+          	mutual consent, customers and shop-owner provide their actual home/store
+          	address etc. </li>
+		<li> Customers &amp; shop-owners phones have working microphone, speaker 
+		and/or headphone/earphone connectibility. </li>
+		<li> Shop-owners and staff account (if allowed) holders to have a working 
+		camera on phone that is compatible for working with scanning and text detection tools used. </li>
+        </ul></p>
+        <p>Dependencies:</p>
+        <ul>
+        	<li>Users need to have google play services installed on their android phones
+        	(which is pretty common). Particularly- Barcode Scanning &amp; TextRecognition from ML kit, Maps SDK, Fused Location API.</li>
+        </ul>
+
+<br><br><br>
+
+
+
+	<!-- Section-3 -->
+
+
+ <h2 style="color:#00C569;">3. External Interface</h2>
+        <h4 id="sec3.1">3.1 User Interfaces</h4>
+        <p>The UI of the app is designed in such a way that any user can interact with the application comfortably. When the user launches the app for the first time, the landing page welcomes the user with "Sign Up (Get Started)" or "Sign In" option.
+        </p><br>
+        <img class="center" style="border: 4px;" height = "450" width="300" src="image/SVG/getStarted.svg" alt=""><br><br>
+
+        <p>The "Sign In" option will land the user to the "Login" page where existing users can use their credentials (e.g., email and password) to log in.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/Screen – Login.svg" alt=""><br><br>
+	
+        <p>For the new user, the "Sign Up" option will take them to a page where they have to enter their phone number for verification. The OTP code will be needed to insert on the next page to continue the verification process.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/Screen – Verification.svg" alt=""> <br>
+        <img class="center" height = "450" width="300" src="image/SVG/Vcode.svg" alt=""> <br><br>
+
+        <p>After the successful mobile number verification, the user must have to set their profile by providing necessary information in the "Setup Profile" page.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/2 Sign Up.svg" alt=""><br><br>
+
+        <p>After completing the authentication process, the user will land on the map-view page locating all the nearby stores, which is also considered as the homepage of the application. Every store on the map has a status indicator (dot) where red, yellow, and green represent not available, busy, and available status.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/Location.svg" alt=""><br><br>
+
+        <p>To access a store, the user has to tap on the store icon or the name. This will take the user to the specific store page where the user can see the existing queue and a button/option to enter the shop.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/Queue.svg" alt=""><br><br>
+
+        <p>After entering the shop, the user can see his/her name on the queue and access the "Chat" window from the tab above the page. In the chat window, the user can chat with the existing customers in the queue.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/Queue final.svg" alt=""> <br>
+        <img class="center" height = "450" width="300" src="image/SVG/Chat.svg" alt=""><br><br>
+
+        <p>On the browse tab, the user can see the existing products and their prices that are available in the store.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/Cart.svg" alt=""><br><br>
+
+        <p>There is an option besides the search box on the navigation bar in the map-view page which allows users to access the menu. The “Menu” page contains several functionality which enables the user to edit profile, view pending orders, check order history and change application settings.</p>
+        <img class="center" height = "450" width="300" src="image/SVG/settings.svg" alt=""><br><br>
+
+        <p>
+          On the shop-owner version, the user(owner) will be landed on their shop's specific customer queue page after the authentication process. In the queue tab, the user can see the list of all the customers waiting for the service.
+          </p>
+          <img class="center" height = "450" width="300" src="image/SVG/Queue–shopowner.svg" alt=""> <br> <br>
+
+          <p>The "Next Customer" option at the bottom of the homepage takes the user (owner) to the "Purchase List" page. On that page, the user can add the items that the client agrees to buy. There are options for confirming the current order and controlling the ongoing phone call in the bottom section.</p>
+          <img class="center" height = "450" width="250" src="image/SVG/purchase-list.jpg" alt=""> <br> <br>
+          <p>On the browse tab (from homepage), there is a list of items that are currently available at the store.The shop-owner can add new items, modify the prices, and remove out of stock items from the list.</p>
+          <img class="center" height = "450" width="300" src="image/SVG/Cart – Swipe - Delete.svg" alt=""><br><br>
+    
+    	<br>
+    	<h5>
+    	<u>Prototype links</u>-
+    	<a target="_blank" href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/">Customer App</a>,  
+    	<a target="_blank" href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/">Shop-owner App</a>,  
+    	<a target="_blank" href="https://xd.adobe.com/view/51706922-6450-4b78-9f4e-c511cc7cbeb1-0423/">Website</a>
+	</h5> 
+	
+	<br>
+	
+        <h4 id="sec3.2">3.2 Hardware Interfaces</h4>
+        <p>The device that will run the application, requires WIFI and GPS for using the map and detecting the accurate user location. The device also needs the camera for barcode, product scanning and speaker, microphone for voice call.</p>
+
+        <h4 id="sec3.3">3.3 Software Interfaces</h4>
+        <p>The minimum android operating system version required to run the application is "Lolipop5.1 (API level 22)".  The application will work properly on any device with the latest (from android 5.1 to 10) android operating system.</p>
+        <p>The third-party software components that are going to be used are,
+        <ul>
+        	<li>Sinch SDK</li>
+        	<li>Fused Location API (Google Play Services) </li>
+        	<li>Maps SDK (Google Play Services) </li>
+        	<li>Barcode Scanning API (Google ML kit) </li>
+        	<li>Text Recognition API (Google ML kit) </li>
+        </ul> 
+        </p>
+
+        <h4 id="sec3.4">3.4 Communications Interfaces</h4>
+        <p>Real-time voice protocol (RTP) is used in this application for VoIP service, which allows the users to make calls using internet connections. For chatting or messaging, Firebase Cloud Message (FCM) is used, which ensures data protection (GDPR) and encryption.</p>
+        <br><br><br>
+        
+
+
+    <!-- Section-4 -->
+
+
+<h2 style="color:#00C569;">4. System Features</h2>
+<p>This section includes the requirements that describe all the essential functions of the system.
+
+<br><br>
+<h4 id="sec4.1">4.1 Use Case Diagram </h4>
+<img src="image/SVG/diagram.svg" style="max-width:100%;" alt="Diagram">
+
+
+
+<br><br><br>
+<h4 id="sec4.2">4.2.1 Create an account </h4> 
+<p> <u>Use case name</u>: Create an account</p>
+<p> <u>Use case type</u>: Primary.</p>
+<p> <u>Actors</u>: Customer, Shop-owner.</p>
+<p> <u>Brief Description</u>: Sign up by providing necessary information with the app.</p>
+
+<table>
+  <caption align= "center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b></caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Open the app.</td>
+    <td>2. Check if this is the first time. If so, show get started page. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/">customer UI link,</a> 
+    <a target="_blank" href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/"> shop-owner UI link</a>
+)</td>
+  </tr>
+
+  <tr>
+    <td>3. Select get started and enter phone number.</td>
+    <td>4. Show phone number entry page. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/6dfaadd6-0389-4b20-9d46-f4f415c44203">customer
+      UI link,</a>
+    
+    <a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/a51b787f-da28-4f69-8e9d-ed1538729c1f">
+      shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Enter phone number and press verify. </td>
+    <td>6. Record phone number and send sms with verification code show enter verification code page with a timer. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/66b490a8-e5d5-4d41-9750-a419a362ec97">customer
+      UI link,</a>
+    
+    <a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/c81e8ac3-51ee-4196-9019-799b38079d95">
+      shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>7. Enter verification code.</td>
+    <td>8. Check entered code then show profile setup page.</td>
+  </tr>
+
+  <tr>
+    <td>9. Enter necessary information.</td>
+    <td>10. Store given information.</td>
+  </tr>
+
+  <tr>
+    <td>11. Press the home/store address text box.</td>
+    <td>12. Show map with a dragable map icon and search bar at top.</td>
+  </tr>
+
+  <tr>
+    <td>13. Search for a place using the search bar and press enter.</td>
+    <td>14. Navigate map view to selected location.</td>
+  </tr>
+
+  <tr>
+    <td>15. Move dragable map icon and select desired location.</td>
+    <td>16. Go back to sign up page fill the address text box with address of that location.</td>
+  </tr>
+
+  <tr>
+    <td> 17. Click the sign up button.</td>
+    <td> 18. Show loading dialog, store all info to database and then show home screen.</td>
+  </tr>
+
+</table>
+<br>
+
+  <p style=" text-align: center;"> <b>Alternate Course of Action</b>
+  </p>  
+  <p>6.1 User inputs invalid phone number, show toast “invalid number” and a red exclamation mark on the input text box.</p>
+  <p>8.1 Verification code entry duration times out. Go back to phone number entry page.</p>
+  <p>8.2 Wrong verification code entered. Show toast “invalid code” and turn the text box red.</p>
+  <p>8.3 User attempts to enter wrong verification and/or timer times out a threshold number of times (this is set by the
+  authentication api used). Show error dialog “too many attempts! try again at least 24 hours later” and close the app.</p>
+  <p>8.4 User doesn’t receive any code in set duration, user requests a resend code. The process is repeated.</p>
+  <p>14.1 Can’t find the searched location, show “can’t find this location. try selecting from the suggestions” toast.</p>
+  <p>17.1 Empty input fields and/or invalid entries. Mark the corresponding input fields in red and show “invalid input” on
+  each field.</p>
+
+  <br><br>
+
+  <h4 id="sec4.2.2">4.2.2 Login & Logout </h4>
+  <p> <u>Use case name</u>: Login, logout</p>
+  <p> <u>Use case type</u>: Primary.</p>
+  <p> <u>Actors</u>: Customer, Shop-owner.</p>
+  <p> <u>Brief Description</u>: Login to the app with registered username/phone number and password.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Open the app.</td>
+    <td>2. Check if this is the first time. If not, show login page. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/0ad23ce8-52bb-4156-b39e-b7419397b32e">customer
+      UI link,</a>
+    
+    <a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/4fea902f-10cf-4a60-bd34-59824afd87af">
+      shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Enter username/phone number and password.</td>
+    <td>4. Check the username/phone number and password. Show home page. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/8ed7a533-15fa-4ac1-9c83-c4886991f4f7">customer
+      UI link,</a>
+    
+    <a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/e3fd4b82-318f-470c-8b65-c1e0e4eee58c">
+      shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Pick the show menu option.</td>
+    <td>6. Show the menu page. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/37d883b7-3099-4e42-87c2-7a287b63a7f4">customer
+      UI link,</a>
+    
+    <a target="_blank" href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/b946cd1d-8992-440c-bc1b-9390894c12d8"> shop-owner UI link</a>).</td>
+  </tr>
+
+  <tr>
+    <td>7. Pick Settings→Logout.</td>
+    <td>8. Logout user. Show login page.</td>
+  </tr>
+</table>
+
+  <br>
+  
+  <p style=" text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+
+  <p>4.1 Username/phone number and passwords don’t match any user registered. Show toast “wrong username and/or password.
+  check please.” make the input fields border red.</p>
+  <p>4.2 No internet connection. Show toast “You are not connected to the internet!”.</p>
+
+  <br><br>
+
+
+
+<h4 id="sec4.2.3">4.2.3 Set Store’s Service Status </h4>
+<p> <u>Use case name</u>: Set store’s service status.</p>
+<p> <u>Use case type</u>: Secondary (default status is automatically set to “Open”).</p>
+<p> <u>Actors</u>: Shop-owner.</p>
+<p> <u>Brief Description</u>: After login/sign-up, shop-owners can set current service status of the store- open, busy or closed. The status is
+reflected on the customer app’s map with colored dots: open = green, busy = yellow, closed = red.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here. But to get
+    to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Login/Sign-up just completed or User is already logged in and opens the app.</td>
+    <td>2. Default service status is set to “Open”. Present the home screen with two tabs and a menu option on top left.
+    (<a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/e3fd4b82-318f-470c-8b65-c1e0e4eee58c">shop-owner UI link</a>).</td>
+  </tr>
+
+  <tr>
+    <td>3. Pick the show menu option→ settings.</td>
+    <td>4. Show menu page then settings page. (<a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/b946cd1d-8992-440c-bc1b-9390894c12d8">shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Edit the status field.</td>
+    <td>6. Show a drop down with statuses- active, busy, closed.</td>
+  </tr>
+  </table>
+
+<br>
+<p  style="text-align: center;"> <b>Alternate Course of Action</b>
+</p>
+<p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here. But
+to get to this point login or sign up must be completed first.)</p>
+<p>None.</p>
+
+<br><br>
+
+<h4 id="sec4.2.4">4.2.4 Entry products info for the visible Product-List. </h4>
+<p> <u>Use case name</u>: Entry products for the visible product list.</p>
+<p> <u>Use case type</u>: Primary.</p>
+<p> <u>Actors</u>: Shop-owner.</p>
+<p> <u>Brief Description</u>: Upon successful login/signup the shop-owners can input products that will be visible to customers when they enter. Note
+that, the product-list won’t necessarily contain all the items sold in the shop, it’ll contain especially items that are
+rare to find however, this is up to the shop-owner.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+  <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2 these
+    are not repeated here. But to get
+    to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Login/Sign-up just completed or User is already logged in and opens the app.</td>
+    <td>2. Show the home page for shop-owner app, which is a page with two tabs- Customer queue, Product list. (<a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/e3fd4b82-318f-470c-8b65-c1e0e4eee58c">shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Press “Product-list” tab.</td>
+    <td>4. Show the product-list page containing currently listed products or is empty. (<a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/9d1560b6-1195-4d35-8e5b-215e04cfea87">shop-owner
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Press the “+” button.</td>
+    <td>6. Open up camera asking to point to product barcode.</td>
+  </tr>
+
+  <tr>
+    <td>7. Take picture with barcode inside target area.</td>
+    <td>8. Show “processing…” dialog. Scan barcode and find product name ask shop-owner for quantity and price/unit.</td>
+  </tr>
+
+  <tr>
+    <td>9. Input quantity and price/unit.</td>
+    <td>10. Add new product item entry to product-list.</td>
+  </tr>
+</table>
+
+<br>
+<p style="text-align: center;"> <b>Alternate Course of Action</b>
+</p>
+<p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+  But
+  to get to this point login or sign up must be completed first.)</p>
+<p>6.1 Camera access permission is not granted. Ask for user permission, but first present a dialog box with explanation
+why the camera access permission is required. If user still doesn’t grant permission, present a text input field for
+entering by typing manually.</p>
+<p>8.1 Picture taken doesn’t contain the barcode was not inside the target area. Show toast “failed to scan barcode. make
+sure the barcode is inside the square marked area.”</p>
+<p>8.2 The product info for the barcode scanned was not found by the API used. Ask user to take image of the front cover of
+the product and get the product name from there and show to user, this deduced name entry will be editable by the user.</p>
+
+
+
+
+
+<br><br>
+
+<h4 id="sec4.2.5">4.2.5 Browse Nearby Stores from Map. </h4>
+<p> <u>Use case name</u>: Browse nearby stores from map.</p>
+<p> <u>Use case type</u>: Primary.</p>
+<p> <u>Actors</u>: Customer.</p>
+<p> <u>Brief Description</u>: After login/signup the home page of the app is shown to the customer account. This map contains all the stores that are
+nearby. Nearby meaning the customers current position is inside the store’s given perimeter.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Login/Sign-up just completed or User is already logged in and opens the app.</td>
+    <td>2. Show a page with a map with specials icons for each kind of shops. Each icon has colored dots in the bottom left to
+    indicate its state- green for open, yellow for busy and red for closed.(<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/8ed7a533-15fa-4ac1-9c83-c4886991f4f7">customer
+      UI link</a>).</td>
+  </tr>
+
+  <tr>
+    <td>3. Press an icon.</td>
+    <td>4. Show the shop page consisting of three tabs- Chat, Customer Queue, Browse items. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/541fde34-d411-4c1b-af76-a381fe0a708a">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Pick the “Enter shop” button.</td>
+    <td>6. The customers name is now listed at the last of customer queue. The customer can now chat with others in queue while
+    waiting. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/08105988-45fb-4358-8acd-ddea532b8df7">customer
+      UI link</a>
+).</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+    But
+    to get to this point login or sign up must be completed first.)</p>
+    <p>6.1 The customer queue is empty. Pressing “Enter Shop” directly connects the customer with the shop-owner (upon
+    shop-owners approval).</p>
+
+
+<br><br>
+
+<h4 id="sec4.2.6">4.2.6 View the Customer-Queue </h4>
+<p> <u>Use case name</u>: View the customer queue.</p>
+<p> <u>Use case type</u>: Primary.</p>
+<p> <u>Actors</u>: Customer,Shop-owner.</p>
+<p> <u>Brief Description</u>: Shop-owner and customers both have a view of the customer queue- the list of customers waiting to connect to the
+shop-owner. Shop-owners have this view as their homepage, customer can see this after entering shops (Use case 4.5).</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Customer taps on a store icon from the map from the customer app.</td>
+    <td>2. The customer queue- list of customers who are waiting to connect with shop-owner is shown. The page has three tabs-
+    Chat, Customer Queue, Browse items; customer queue is shown first. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/541fde34-d411-4c1b-af76-a381fe0a708a">customer
+      UI link</a>
+ )</td>
+  </tr>
+
+  <tr>
+    <td>3. Shop-owner opens the shop-owner app. (with Login/sign-up done)</td>
+    <td>4. Shop-owner is presented the customer queue. The page has two tabs- Customer Queue, Enter Items.</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+    But
+    to get to this point login or sign up must be completed first.)</p>
+  <p>None.</p>
+<br><br>
+
+<h4 id="sec4.2.7">4.2.7 View/Browse available items in the store’s Product-List </h4>
+<p> <u>Use case name</u>: View/browse available items in the store’s product-list.</p>
+<p> <u>Use case type</u>: Secondary. (This action is optional)</p>
+<p> <u>Actors</u>: Customer.</p>
+<p> <u>Brief Description</u>: After login/sign-up and then picking a shop-icon customers can view the items listed in the shop’s product-list.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Login/Sign-up just completed or User is already logged in and opens the app.</td>
+    <td>2. Show a page with a map with specials icons for each kind of shops. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/8ed7a533-15fa-4ac1-9c83-c4886991f4f7">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Press an icon.</td>
+    <td>4. Show the shop page consisting of three tabs- Chat, Customer Queue, Browse items. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/541fde34-d411-4c1b-af76-a381fe0a708a">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Pick “Browse” tab</td>
+    <td>6. Present all the items listed in the shop.</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+    But
+    to get to this point login or sign up must be completed first.)</p>
+  <p>6.1 The product-list is empty. Show “Nothing to show” written on the browse page.</p>
+  
+  
+  <br><br>
+
+
+
+<h4 id="sec4.2.8">4.2.8 Chat with others on the Customer Queue </h4>
+<p> <u>Use case name</u>: Chat with others on the customer queue.</p>
+<p> <u>Use case type</u>: Secondary. (This action is optional)</p>
+<p> <u>Actors</u>: Customer.</p>
+<p> <u>Brief Description</u>: After login/sign-up, picking a shop-icon and then pressing “enter shop” customers can chat with others on the queue
+while waiting.</p>
+
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Login/Sign-up just completed or User is already logged in and opens the app.</td>
+    <td>2. Show a page with a map with specials icons for each kind of shops. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/8ed7a533-15fa-4ac1-9c83-c4886991f4f7">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Press an icon.</td>
+    <td>4. Show the shop page consisting of three tabs- Chat, Customer Queue, Browse items. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/541fde34-d411-4c1b-af76-a381fe0a708a">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>5. Pick “Enter shop” button.</td>
+    <td>6. The customers name is now listed at the last of customer queue and can now chat with others in queue while waiting.
+    (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/65958abb-5754-4d21-a951-c87c5e9c98cf">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>7. Pick “Chat” tab.</td>
+    <td>8. Present a global chat page where all messages shared publicly are visible.</td>
+  </tr>
+
+  <tr>
+    <td>9. Write a message and click send.</td>
+    <td>10. Show the message at top of the chat page.</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+    But
+    to get to this point login or sign up must be completed first.)</p>
+  <p>6.1 The customer queue is empty. Pressing “Enter Shop” directly connects the customer with the shop-owner (upon
+  shop-owners approval).</p>
+  
+  
+  <br><br>
+
+
+  <h4 id="sec4.2.9">4.2.9 Connect Customers and Shop-owners via App-to-App Voice Call </h4>
+  <p> <u>Use case name</u>: Connect customers and shop-owners via app-to-app voice call.</p>
+  <p> <u>Use case type</u>: Primary.</p>
+  <p> <u>Actors</u>: Customer, Shop-owner.</p>
+  <p> <u>Brief Description</u>: Shop-owners and customers are connected to each other via app-to-app voice call. Through their conversation the purchase
+  list will be setup and confirmed.</p>
+
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Customer picks the “Enter shop” button from customer app.</td>
+    <td>2. The customers name is now listed at the last of customer queue. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/08105988-45fb-4358-8acd-ddea532b8df7">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Shop-owner selects “Next customer” from shop-owner app.</td>
+    <td>4. A call is initiated between the customer at top of the customer queue and shop-owner.</td>
+  </tr>
+
+  <tr>
+    <td>5. The users talk from both end.</td>
+    <td>6. Each user’s voice transfers from one end to other simultaneously. The call screen is shown with- purchase list, call
+    options, duration of call (<a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/55ed4fd6-631f-4c59-bbce-6b72cd8c90ea">
+      common UI link</a>).</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+    But
+    to get to this point login or sign up must be completed first.)</p>
+  <p>6.1 Call is disconnected due to internet disruption, the API handles this by waiting for a certain amount of time and
+  then trying to reconnect. The call is disconnected and the users are notified with a dialog “Unfortunately the call was
+  disrupted, please check your internet connection”.</p>
+  
+  
+  <br><br>
+
+  <h4 id="sec4.2.10">4.2.10 Enter/Edit Purchase List (item,quantity, price) while in call </h4>
+  <p> <u>Use case name</u>: Enter/edit purchase list (item,quantity, price) while in call</p>
+  <p> <u>Use case type</u>: Primary.</p>
+  <p> <u>Actors</u>: Customer, Shop-owner.</p>
+  <p> <u>Brief Description</u>: After the call between customer & shop-owner has been initiated, during their conversation an editable list will be
+  presented to both. They can collaboratively make up this list together.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up, Login and Browse Nearby Stores from Map are the same as mentioned in 4.1, 4.2 and 4.5
+    respectively, these are not repeated here. But to get to these steps must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Customer picks the “Enter shop” button from customer app.</td>
+    <td>2. The customers name is now listed at the last of customer queue. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/08105988-45fb-4358-8acd-ddea532b8df7">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Shop-owner selects “Next customer” from shop-owner app.</td>
+    <td>4. A call is initiated from both customer and shop-owner ends.</td>
+  </tr>
+
+  <tr>
+    <td>5. Customers/shop-owner click the “+” button.</td>
+    <td>6. A new entry item is added to list. (<a target="_blank" href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/
+    screen/1cde9629-ad83-4c05-a22c-2af55abea82c"> common UI link</a>).</td>
+  </tr>
+
+  <tr>
+    <td>7. Both users edit the input filed.</td>
+    <td>8. The edit changes are shown to both party in real-time.</td>
+  </tr>
+
+  <tr>
+    <td>9. Confirm checkbox is clicked from both ends and one user picks “proceed”.</td>
+    <td>10. Show dialog “confirm your purchase list?” with options “yes”, “no, review”.</td>
+  </tr>
+
+  <tr>
+    <td>11. User picks “yes”.</td>
+    <td>12. The purchase list is finalized and the order is recorded on both end.</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up, Login and Browse Nearby Stores from Map are the same as mentioned in 4.1, 4.2
+  and 4.5 respectively, these are not repeated here. But to get to these steps must be completed first.)</p>
+  <p>8.1 Both users attempt to edit same field together. The customer is given precedence inputting the product name,
+  quantity input field and the price input field is only filled by the shop-owner.</p>
+  <p>10.1 One of the user picks “hang up” with the “Confirm” checkbox unchecked, show that user a dialog saying “Are you sure
+  you want to hang up before confirming the purchase list?” and options “yes, hang up”, “no”. Picking “yes, hang up” then
+  disconnects the call and notifies the other user that the call has been disconnected.</p>
+  <p>10.2 One of the user picks “proceed” with the other user’s “Confirm” checkbox unchecked, show the user who picked “hang
+  up” a dialog saying “The purchase list hasn’t been confirmed from the other end, please wait”.</p>
+  
+  <br><br>
+
+
+  <h4 id="sec4.2.11">4.2.11 Search for Store by Item </h4>
+  <p> <u>Use case name</u>: Search for stores by item.</p>
+  <p> <u>Use case type</u>: Primary.</p>
+  <p> <u>Actors</u>: Customer.</p>
+  <p> <u>Brief Description</u>: Using the search bar on top of the customer app’s home page customers can search for stores by giving input an (one)
+  item name. The input can be given through voice.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Login/Sign-up just completed or User is already logged in and opens the app.</td>
+    <td>2. Show a page with a map with specials icons for each kind of shops. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/8ed7a533-15fa-4ac1-9c83-c4886991f4f7">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Give input in the search bar by speaking or typing.</td>
+    <td>4. Show loading dialog as the system searches each nearby stores database for the item. Mark the borders
+    of found stores.</td>
+  </tr>
+</table>
+
+<br>
+<p style="text-align: center;"> <b>Alternate Course of Action</b>
+</p>
+<p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here. But
+to get to this point login or sign up must be completed first.)</p>
+<p>4.1 Searched item not found on any nearby store database. Show “item not found in any stores nearby” dialog.</p>
+
+<br><br>
+
+
+<h4 id="sec4.2.12">4.2.12 View and Confirm Pending Deliveries </h4>
+<p> <u>Use case name</u>: View and Confirm pending deliveries.</p>
+<p> <u>Use case type</u>: Primary.</p>
+<p> <u>Actors</u>: Customer.</p>
+<p> <u>Brief Description</u>: Customers confirm deliveries upon receiving items, shop-owners are alerted when confirmation is made.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Shop-owner/customer picks the “show menu” option from their app. (assuming they are already signed up and logged in)</td>
+    <td>2. The menu page is presented. (<a target="_blank"
+      href="https://xd.adobe.com/view/2f60c501-be96-4659-8549-485cd3f941c0-7a33/screen/37d883b7-3099-4e42-87c2-7a287b63a7f4">customer
+      UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Shop-owner/customer picks “pending deliveries”.</td>
+    <td>4. A list of pending deliveries that are unconfirmed is presented. Each list item contain the corresponding store name,
+    purchase-list and a “confirm” button. </td>
+  </tr>
+
+  <tr>
+    <td>5. Customer presses the confirm button.</td>
+    <td>6. A dialog box appears “Are you sure you want to confirm this order?” with button “yes”, “no”.</td>
+  </tr>
+
+  <tr>
+    <td>7. Customer presses “yes”.</td>
+    <td>8. The purchase is confirmed and removed from both customer and shop-owners pending deliveries list.</td>
+  </tr>
+</table>
+
+<br>
+<p style="text-align: center;"> <b>Alternate Course of Action</b>
+</p>
+<p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+  But to get to this point login or sign up must be completed first.)</p>
+<p>6.1 Customer picks “no”, the order remains pending.</p>
+
+<br><br>
+
+
+<h4 id="sec4.2.13">4.2.13 View and Cancel a Pending Delivery </h4>
+<p> <u>Use case name</u>: Cancel a pending delivery.</p>
+<p> <u>Use case type</u>: Secondary. (this is optional)</p>
+<p> <u>Actors</u>: Shop-owner.</p>
+<p> <u>Brief Description</u>: Shop-owners can cancel deliveries.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Shop-owner/customer picks “show menu” option from their app. (assuming they are already signed up and logged in)</td>
+    <td>2. The menu page is presented. (<a target="_blank"
+      href="https://xd.adobe.com/view/1a402db4-746c-418f-a0ec-677cfd103e6d-4f13/screen/b946cd1d-8992-440c-bc1b-9390894c12d8">
+      shop-owner UI link</a>
+).</td>
+  </tr>
+
+  <tr>
+    <td>3. Shop-owner picks “pending deliveries”.</td>
+    <td>4. A list of pending deliveries that are unconfirmed is presented. Each list item contains customer name, address, purchase
+    list and a button “cancel order”.</td>
+  </tr>
+
+  <tr>
+    <td>5. Shop-owner presses “cancel order”. (before the order is confirmed)</td>
+    <td>6. A dialog saying “Are you sure you want to cancel this order?” and buttons “yes, I am sure”, “no” is shown.</td>
+  </tr>
+
+  <tr>
+    <td>7. Shop-owner presses “yes, I am sure”.</td>
+    <td>8. The order is canceled. Customer is notified.</td>
+  </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>(Alternate course of action for Sign-up and Login are the same as mentioned in 4.1, 4.2 these are not repeated here.
+    But to get to this point login or sign up must be completed first.)</p>
+  <p>6.1 Shop-owner picks “no”, the order remains pending.</p>
+  
+  <br><br>
+
+
+
+<h4 id="sec4.2.14">4.2.14 Notify Customers of Canceled Deliveries </h4>
+<p> <u>Use case name</u>: Notify customers of canceled deliveries.</p>
+<p> <u>Use case type</u>: Secondary. (this is optional)</p>
+<p> <u>Actors</u>: System.</p>
+<p> <u>Brief Description</u>: Customers are notified if/when their orders are canceled by shop-owners.</p>
+
+<br>
+<p style="text-align: center;"> <b>Typical Course of Action</b>
+</p>
+<p>System Action- Present customer with a notification saying “An order you placed was canceled, Tap to view more.”</p>
+<p>Customer taps the notification and is shown details- store name & purchase-list of the order that was canceled.</p>
+
+<br><br>
+
+
+<h4 id="sec4.2.15">4.2.15 Notify Customer/Shop-owner of Pending Deliveries </h4>
+<p> <u>Use case name</u>: Notify shop-owner/customer of pending deliveries.</p>
+<p> <u>Use case type</u>: Secondary. (this is optional)</p>
+<p> <u>Actors</u>: System.</p>
+<p> <u>Brief Description</u>: System checks and notifies customers every one hour interval if they have an order pending.</p>
+
+<br>
+<p style="text-align: center;"> <b>Typical Course of Action</b>
+</p>
+<p>System Action- Check if any deliveries are pending on an hourly basis. Show a notification saying “You have deliveries
+pending! Tap to see more”</p>
+<p>Shop-owner/customer taps the notification and is shown the pending orders page (the pending order viewing procedure is
+explained in 4.12, 4.13).</p>
+
+<br><br>
+
+
+<h4 id="sec4.2.16">4.2.16 Keep track of every deal. </h4>
+<p> <u>Use case name</u>: Keep track of every deal.</p>
+<p> <u>Use case type</u>: Secondary.</p>
+<p> <u>Actors</u>: System.</p>
+<p> <u>Brief Description</u>: System stores data regarding each deal in database. Data stored- delivery time, conversation duration, delivery
+status(completed/canceled), the purchase-list.</p>
+
+<br>
+<p style="text-align: center;"> <b>Typical Course of Action</b>
+</p>
+<p>System Action- Runs in the background and stores relevant data to database.</p>
+
+
+<br><br>
+
+
+<h4 id="sec4.2.17">4.2.17 Prompt shop-owners to Update store’s Product-List. </h4>
+<p> <u>Use case name</u>: Prompt shop-owners to update product-list.</p>
+<p> <u>Use case type</u>: Secondary.</p>
+<p> <u>Actors</u>: System.</p>
+<p> <u>Brief Description</u>: System regularly shows shop-owner a notification requesting to add to or edit the product list.</p>
+
+<br>
+<p style="text-align: center;"> <b>Typical Course of Action</b>
+</p>
+<p>System Action- Once every 3 days show notification to shop-owner “Want to update you product-list? Tap here!”.</p>
+<p>Shop-owner/customer taps the notification and is shown the shop’s product-list page from where he can add/edit items.
+(the entry/edit procedure is explained in 4.4).</p>
+
+<br><br>
+
+
+<h4 id="sec4.2.18">4.2.18 Suggest efficient Delivery Sequence. </h4>
+<p> <u>Use case name</u>: Suggest efficient delivery sequence.</p>
+<p> <u>Use case type</u>: Secondary.</p>
+<p> <u>Actors</u>: System.</p>
+<p> <u>Brief Description</u>: System comes up with an efficient delivery sequence and the pending deliveries in the shop-owner app are ordered
+accordingly.</p>
+
+<br>
+<p style="text-align: center;"> <b>Typical Course of Action</b>
+</p>
+<p>System Action- Compute and analyze the distance from shop to customer location to come up with a sequence that enables
+lowest travel distance to complete all deliveries. Using a graph algorithm.</p>
+
+<br><br>
+
+
+
+<h4 id="sec4.2.19">4.2.19 Post/View Review about a Shop </h4>
+<p> <u>Use case name</u>: Post/view review about a shop.</p>
+<p> <u>Use case type</u>: Secondary. (this is optional)</p>
+<p> <u>Actors</u>: Customer.</p>
+<p> <u>Brief Description</u>: Customers can go to the website and post or view reviews about shops they have interacted with or are nearby to their
+home.</p>
+
+<table>
+  <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    <p style="text-align: center;">(Actions & Responses for Sign-up and Login are the same as mentioned in 4.1, 4.2
+      these
+      are not repeated here. But to get
+      to this point login or sign up must be completed first.)</p>
+  </caption>
+  <tr>
+    <th>Actor Action </th>
+    <th>System Response</th>
+  </tr>
+
+  <tr>
+    <td>1. Goes to website link.</td>
+    <td>2. Show a login page asking for username/phone number & password.(<a target="_blank"
+      href="https://xd.adobe.com/view/51706922-6450-4b78-9f4e-c511cc7cbeb1-0423/">page UI link</a>)</td>
+  </tr>
+
+  <tr>
+    <td>3. Enters username/phone number and password and presses Login button.</td>
+    <td>4. Check the username/phone number and password. Show home page with a list of shop name that are nearby to customer’s home
+    and/or the ones he/she has interacted with. (<a target="_blank"
+    href="https://xd.adobe.com/view/51706922-6450-4b78-9f4e-c511cc7cbeb1-0423/screen/a92f5ace-c2ef-4d44-9028-bd683d8022a0">page UI link</a>)</td>
+  </tr>
+
+  <tr>
+    <td>5. Clicks on a store from the list.</td>
+    <td>6. Show review page of the store with reviews from other users listed. Each review contains one of three tags- “good”,
+    “moderate”, “bad” and a text attached. There’s a “post a review” option at the top of the page with textbox(review
+    text), radio button (good, moderate, bad) and “post review” button. (<a target="_blank"
+      href="https://xd.adobe.com/view/51706922-6450-4b78-9f4e-c511cc7cbeb1-0423/screen/d6b8b456-075e-4b1a-a7e1-b7a010bc9e13">page UI link</a>)</td>
+  </tr>
+
+  <tr>
+    <td>7. Click “Post Review” after filling the input fields.</td>
+    <td>8. The review is posted and is visible to all.</td>
+  </tr>
+  </table>
+
+
+  <br>
+  <p style="text-align: center;"> <b>Typical Course of Action</b>
+  </p>
+  <p>4.1 User credentials are wrong, show error message above the form saying “Username and/or password is incorrect!” and
+  turn the text boxes red.</p>
+  <p>8.1 “Post Review” pressed without filling all the input fields, show error above the “post a review” section saying
+  “Your review must contain some description and a service quality selected” and turn the missing input field/s red.</p>
+  
+  <br><br>
+
+
+  <h4 id="sec4.2.20">4.2.20 View Shop Reviews </h4>
+  <p> <u>Use case name</u>: View shop reviews.</p>
+  <p> <u>Use case type</u>: Secondary. (this is optional)</p>
+  <p> <u>Actors</u>: Shop-owner.</p>
+  <p> <u>Brief Description</u>: Shop-owners can go to the website and view reviews on their shop posted by customers.</p>
+
+
+  <table>
+    <caption align="center" style="caption-side: top; width: auto; text-align: center;"> <b>Typical Course of Action</b>
+    </caption>
+    <tr>
+      <th>Actor Action </th>
+      <th>System Response</th>
+    </tr>
+  
+    <tr>
+      <td>1. Goes to website link.</td>
+      <td>2. Show website landing page which is the login page. (<a target="_blank"
+      href="https://xd.adobe.com/view/51706922-6450-4b78-9f4e-c511cc7cbeb1-0423/">page UI link</a>) </td>
+    </tr>
+  
+    <tr>
+      <td>3. Enter credentials and presses login.</td>
+      <td>4. Check the strore-name/phone number and password. Show home page with all the reviews listed on their shop. Each review
+      contains one of these tags- “good”, “moderate”, “bad” and a text attached.(<a target="_blank"
+      href="https://xd.adobe.com/view/51706922-6450-4b78-9f4e-c511cc7cbeb1-0423/screen/8ff55bba-847b-45cf-b78a-24bcf66727a6/">page UI link</a>)</td>
+    </tr>
+  </table>
+
+  <br>
+  <p style="text-align: center;"> <b>Alternate Course of Action</b>
+  </p>
+  <p>4.1 User credentials are wrong, show error message above the form saying “Store name and/or password is incorrect!” and
+  turn the text boxes red.</p>
+ 
+
+
+  <br> <br> <br>
+
+
+	
+
+
+
+<h2 style="color:#00C569;">5. Other Nonfunctional Requirements</h2>
+        <h4 id="sec5.1">5.1 Performance Requirements</h4>
+        <p>There are no specific performance requirements for this application. But, the real-time systems for messaging, VoIP service, and client-shop owner cart systems should be designed in such a way that there is no significant time delay in the application. The responsive UI has to perform precisely to ensure a smooth user experience.</p>
+        
+
+        <h4 id="sec5.2">5.2 Safety Requirements</h4>
+        <p>There are no specific performance requirements for this application. But, the real-time systems for messaging, VoIP service, and client-shop owner cart systems should be designed in such a way that there is no significant time delay in the application. The responsive UI has to perform precisely to ensure a smooth user experience.</p>
+        <h4 id="sec5.3">5.3 Security Requirements</h4>
+        <p>The users must have to verify their identity and provide authentic information for creating an application account. Each user must have their own user account to use the application. All kinds of user data will be kept safe, and the system will not enclose any user information without user concern. That will ensure data privacy. Moreover, the authentic users only system will provide security among the users of the application</p>
+
+        <h4 id="sec5.4">5.4 Software Quality Attributes</h4>
+        <p>The requirements in this section specify the required reliability, availability, and maintainability of the software system.
+
+        <h4 id="sec5.5">5.5 Business Rules</h4>
+        <p>The users will be provided with the freemium version of the application by default. The free version may contain ads. The users can upgrade their accounts, which will grant the premium version of the application with some extra services and free of ads. The migration to the premium version will be a onetime purchase for all the users. </p>
+
+
+
+
+        <br><br><br>
+
+        <h2 style="color:#00C569;" id="section6">6. Other Requirements</h2>
+        <p> One extra requirement of this project is to be inline with the latest technology trends and make sure it is a software worthy of the 
+        next era. We have taken global research and advisory firm - Gartner’s predictions as guideline to achieve this.</p>
+        <h4> The Project in light of Gartner Top Technology Trends </h4>
+        <p>According to Gartner the leading technologies in the software industries for this era are- AI, AR, block-chain, intelligent search 
+        features. Their most recent prediction consists of 10 technology trends for the year 2020 [2], which include- hyper-automation, multi-
+        experience, human augmentation, distributed cloud, AI security etc. The “find a store” system somewhat adheres to a few of these 
+        predictions in its features. Such as- </p>
+        
+        <ol>
+        	<li><u>Multi-experience</u>: Replacing necessity of technology-literate people with people-literate technology. “Find a store” 
+        	isn’t the traditional online shop app/website. The platform lets customers and shop-owners connect and interact with each other, 
+        	with special focus to small local businesses. The system attempts to virtualize these interactions that make local small 
+        	businesses stand out. </li><br>
+        	
+        	<li><u>AI</u>:  The system uses google play services ML kit provided SDKs- barcode scanning and text recognition to ease the 
+        	product list input process for the shops.</li><br>
+        	
+        	<li><u>Distributed Cloud</u>:  The main database for the system is the Google’s Cloud Firestore which is a serverless distributed 
+        	cloud service. Distributed cloud platforms make product scale up process much easier and cost saving.</li><br>
+        </ol>
+
+        <h3>Appendix A: Glossary</h3>
+        <p><table style="width:100%">
+          <tr align="center">
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+          <tr>
+            <td>System</td>
+            <td>The whole platform consisting of app and website.</td>
+          </tr>
+          
+          <tr>
+            <td>Customer</td>
+            <td>User using the customer-app with aim to find stores for buying day-to-day necessary items.</td>
+          </tr>
+          
+          <tr>
+            <td>Shop-owner</td>
+            <td>Small local small convenience store/stationary/bakery owner.</td>
+          </tr>
+          
+          <tr>
+            <td>Customer-Queue</td>
+            <td>A list of customers who have pressed “enter the store” button and are waiting to connect with shop-owner.</td>
+          </tr>
+          
+          <tr>
+            <td>Visible Product-List</td>
+            <td>The list of products that the shop-owners have inputted through the app. These are visible to customers through the “Browse” tab.
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Purchase-List</td>
+            <td>The list of items that customers and shop-owners have agreed upon for transaction. Each item in this list has three fields- 
+            name, quantity and price.</td>
+          </tr>
+          
+          </table></p>
+
+
+<br><br><br>
+
+      <div style="padding-top:20px;" class="row">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

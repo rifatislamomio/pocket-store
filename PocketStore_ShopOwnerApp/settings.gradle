@@ -1,0 +1,8 @@
+include ':phoneNumberVerification-module'
+include ':sinch-android-rtc-3.17.4'
+include ':voi-module'
+include ':customerQueue-module'
+include ':ui-modules'
+include ':addressPicker-module'
+include ':app'
+rootProject.name = "Pocket Store - Shop Owner App"
